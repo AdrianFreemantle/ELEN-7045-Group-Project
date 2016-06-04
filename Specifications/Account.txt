@@ -1,0 +1,32 @@
+=========================================================================
+During the account activation process, 
+the customer will supply account number and credentials
+
+these credentials are used to access the billing company website
+( the scraper needs this information )
+
+A cross check can be done to check that the account number
+that the customer has entered matches the account number on the
+site
+
+if this check fails the activation should be rejected and an appropriate
+message should be sent back to the customer
+
+
+*valid account number supplied
+	GIVEN an valid account number has been supplied by the customer
+	WHEN the account number is cross checked against the billing website
+	THEN the account activation should be accepted
+
+*invalid valid account number supplied	
+	GIVEN an invalid account number has been supplied by the customer
+	WHEN the account number is cross checked against the billing website
+	THEN the account activation should be rejected
+	AND an appropriate message should be sent back to the customer
+
+=========================================================================
+
+
+
+
+
