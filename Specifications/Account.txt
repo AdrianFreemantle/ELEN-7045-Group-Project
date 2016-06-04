@@ -23,7 +23,6 @@ message should be sent back to the customer
 	WHEN the account number is cross checked against the billing website
 	THEN the account activation should be rejected
 	AND an appropriate message should be sent back to the customer
-
 =========================================================================
 
 
