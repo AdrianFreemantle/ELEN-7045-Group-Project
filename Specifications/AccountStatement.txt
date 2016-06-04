@@ -1,0 +1,27 @@
+◘ Derived presentation of field
+
+♦Parse text data to numerical representation
+so that integrity checks can be performed
+
+1 - Parsing a valid numeric value from a data-pair
+GIVEN a data-pair that maps to a numeric value
+WHEN parsing the data-pair 
+THEN a valid decimal value is returned
+
+2 - Parsing a valid numeric value from a data-pair
+GIVEN a data-pair that maps to a numeric value
+AND the data pair contains an empty value
+WHEN parsing the data-pair
+THEN a invalid data-pair exception is thrown
+
+
+
+♦date conversion
+
+♦Currency
+
+♦Time
+
+♦
+
+
