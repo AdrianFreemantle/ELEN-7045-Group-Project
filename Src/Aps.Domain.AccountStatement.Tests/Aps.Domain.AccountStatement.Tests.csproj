@@ -61,12 +61,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="NumericValueParser.cs" />
     <Compile Include="Parsing_numeric_data_field.cs" />
     <Compile Include="Parsing_numeric_data_field.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
+      <Project>{B29B12BB-0520-40B9-B9F4-34A978D517DB}</Project>
+      <Name>Aps.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

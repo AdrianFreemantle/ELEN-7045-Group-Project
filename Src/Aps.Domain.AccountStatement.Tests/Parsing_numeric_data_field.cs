@@ -11,12 +11,12 @@ namespace Aps.Domain.AccountStatement.Tests
     public partial class Parsing_numeric_data_field
     {
         [TestMethod]
-        public void Parsing_a_valid_numeric_value_from_a_data_pair()
+        public void Parsing_a_currency_value_from_a_data_pair()
         {
             Runner.RunScenario(
-                Given_a_data_pair_that_maps_to_a_numeric_value,
-                When_parsing_the_data_pair,
-                Then_a_valid_decimal_value_is_returned);
+                given => A_data_pair_with_value("R 150.50"),
+                when => Parsing_the_data_pair(),
+                then => Decimal_value_returned_is(150.5M));
         }
     }
 }
