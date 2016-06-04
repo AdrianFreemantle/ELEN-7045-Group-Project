@@ -25,6 +25,17 @@ message should be sent back to the customer
 	AND an appropriate message should be sent back to the customer
 =========================================================================
 
+The user’s account status is changed from “active” to “inactive”. Once a user has updated their details,
+their account status is changed to “trying”.
+
+*reset inactive account status
+	GIVEN an account status is changed from active to inactive
+	WHEN the user updated their details
+	THEN the account status is set to retrying
+
+	
+	
+
 
 
 
