@@ -62,8 +62,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="NumericValueParser.cs" />
-    <Compile Include="Parsing_numeric_data_field.cs" />
-    <Compile Include="Parsing_numeric_data_field.Fixture.cs" />
+    <Compile Include="Parsing_numeric_value_from_a_text_value_pair.cs" />
+    <Compile Include="Parsing_numeric_value_from_a_text_value_pair.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

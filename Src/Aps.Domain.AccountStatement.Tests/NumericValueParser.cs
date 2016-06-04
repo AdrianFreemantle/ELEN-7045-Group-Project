@@ -13,17 +13,37 @@ namespace Aps.Domain.AccountStatement.Tests
             if (String.IsNullOrWhiteSpace(valuePair.FieldValue))
                 return 0;
 
-            string[] split = valuePair.FieldValue.Split('.');
+            bool isNegative = ValueIsNegative(valuePair.FieldValue);
+            var cleanedValue = CleanNumber(valuePair.FieldValue);
 
-            if(split.Length > 2)
-                throw new ArgumentException();
+            if(isNegative) 
+                return 0 - Decimal.Parse(cleanedValue);
 
-            string integerPart = GetAllDigits(split[0]);
-            string fractionalPart = GetAllDigits(split[1]);
+            return Decimal.Parse(cleanedValue);
+        }
 
-            string fullNumber = String.Format("{0},{1}", integerPart, fractionalPart);
+        private string CleanNumber(string fieldValue)
+        {
+            string[] split = fieldValue.Split('.');
 
-            return Decimal.Parse(fullNumber);
+            if (split.Length == 1)
+                return GetAllDigits(split[0]);
+            
+            if (split.Length == 2)
+            {
+                string integerPart = GetAllDigits(split[0]);
+                string fractionalPart = GetAllDigits(split[1]);
+                return String.Format("{0},{1}", integerPart, fractionalPart);
+            }
+
+            throw new ArgumentException("Value pair does not contain a numeric value");
+        }
+
+        bool ValueIsNegative(string fieldValue)
+        {
+            string trimmedValue = fieldValue.Trim();
+
+            return trimmedValue.StartsWith("-") || (trimmedValue.StartsWith("(") && trimmedValue.EndsWith(")"));
         }
 
         private string GetAllDigits(string value)

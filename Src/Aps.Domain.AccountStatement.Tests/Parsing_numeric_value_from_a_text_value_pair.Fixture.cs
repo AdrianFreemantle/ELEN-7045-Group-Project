@@ -4,7 +4,7 @@ using Shouldly;
 
 namespace Aps.Domain.AccountStatement.Tests
 {
-    public partial class Parsing_numeric_data_field : FeatureFixture
+    public partial class Parsing_numeric_value_from_a_text_value_pair : FeatureFixture
     {
         private TextValuePair valuePair;
         private decimal parseResult;
