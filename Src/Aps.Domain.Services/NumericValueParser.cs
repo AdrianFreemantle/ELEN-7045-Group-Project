@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.Services
 {
     public class NumericValueParser
     {
