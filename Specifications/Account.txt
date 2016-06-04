@@ -1,4 +1,13 @@
+*Customer cannot add a duplicate account	
+	GIVEN a company name, account number and credentials are parsed
+	WHEN an account is registered
+	AND the company name, account number already exists
+	THEN the new account should be rejected
+	AND an appropriate message should be sent back to the customer
+	
 =========================================================================
+3.6.1 
+
 During the account activation process, 
 the customer will supply account number and credentials
 
@@ -13,28 +22,33 @@ if this check fails the activation should be rejected and an appropriate
 message should be sent back to the customer
 
 
-*valid account number supplied
-	GIVEN an valid account number has been supplied by the customer
-	WHEN the account number is cross checked against the billing website
-	THEN the account activation should be accepted
-
 *invalid valid account number supplied	
-	GIVEN an invalid account number has been supplied by the customer
+	GIVEN a company name, account number and credentials are parsed
 	WHEN the account number is cross checked against the billing website
+	AND the account number is invalid
 	THEN the account activation should be rejected
 	AND an appropriate message should be sent back to the customer
+
+*valid account number supplied
+	GIVEN a company name, account number and credentials are parsed
+	WHEN the account number is cross checked against the billing website
+	AND the account number is valid
+	THEN the account activation should be accepted
+
 =========================================================================
+2.1.1
 
 The user’s account status is changed from “active” to “inactive”. Once a user has updated their details,
 their account status is changed to “trying”.
 
 *reset inactive account status
-	GIVEN an account status is changed from active to inactive
+	GIVEN an account status is inactive
 	WHEN the user updated their details
 	THEN the account status is set to retrying
+	
+=========================================================================
 
-	
-	
+
 
 
 
