@@ -1,27 +1,47 @@
-◘ Derived presentation of field
+◘◘ Parsing
 
-♦Parse text data to numerical representation
-so that integrity checks can be performed
+◘ Parse text data to numerical representation
+  so that integrity checks can be performed
 
-1 - Parsing a valid numeric value from a data-pair
-GIVEN a data-pair that maps to a numeric value
-WHEN parsing the data-pair 
-THEN a valid decimal value is returned
+♦Parsing a numeric value from a valid data-pair
+ Given a data-pair that maps to a numeric field
+ when parsing the data-pair 
+ then a valid decimal value is returned
 
-2 - Parsing a valid numeric value from a data-pair
-GIVEN a data-pair that maps to a numeric value
-AND the data pair contains an empty value
-WHEN parsing the data-pair
-THEN a invalid data-pair exception is thrown
+♦Parsing a numeric value from an empty data-pair
+ given a data-pair that maps to a numeric field
+ and the data pair contains an empty value
+ when parsing the data-pair
+ then a empty data-pair exception is thrown
+
+◘ Parse text data to time representation
+  so that time values can be presented in a consistent format
+
+♦Parsing a valid time value from a data-pair
+ Given a data-pair that maps to a time field 
+ when parsing the data-pair 
+ then a valid decimal value is returned
+
+♦Parsing a valid time value from a data-pair
+ given a data-pair that maps to a time field
+ and the data pair contains an empty value
+ when parsing the data-pair
+ then a empty data-pair exception is thrown
 
 
+◘◘ Data Integrity Checks 
 
-♦date conversion
+◘ VAT calculations
 
-♦Currency
+♦The VAT ammount should be re-calculated 
+ and verified against the scraped amount
 
-♦Time
+♦Duplicate fields should be compared to 
+ ensure they are the same
 
-♦
+♦The total-due should be re-calculated 
+ and verified against the scraped amount 
+
+
 
 

@@ -9,7 +9,7 @@ namespace Aps.Domain.AccountStatement.Tests
 {
     public partial class Parsing_numeric_data_field : FeatureFixture
     {
-        private void Then_a_valid_decimal_value_is_returned()
+        private void Given_a_data_pair_that_maps_to_a_numeric_value()
         {
             throw new NotImplementedException();
         }
@@ -19,9 +19,19 @@ namespace Aps.Domain.AccountStatement.Tests
             throw new NotImplementedException();
         }
 
-        private void Given_a_data_pair_that_maps_to_a_numeric_value()
+        private void Then_a_valid_decimal_value_is_returned()
         {
             throw new NotImplementedException();
         }
+    }
+
+    public class NumericValue
+    {
+        
+    }
+
+    public class NumericValueParser
+    {
+        
     }
 }
