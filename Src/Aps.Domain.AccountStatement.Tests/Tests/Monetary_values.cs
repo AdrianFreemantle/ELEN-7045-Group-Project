@@ -34,32 +34,5 @@ namespace Aps.Domain.AccountStatement.Tests.Tests
                 when => subtracting_an_amount_of(Money.FromAmount(100)),
                 then => the_balance_is(Balance.FromAmount(400)));
         }
-
-        [TestMethod]
-        public void Crediting_a_negative_balance_results_in_a_positive_balance()
-        {
-            Runner.RunScenario(
-                given => an_existing_balance_of(Balance.FromAmount(-100)),
-                when => crediting_the_balance_with_an_amount_of(Money.FromAmount(200)),
-                then => the_balance_is(Balance.FromAmount(100)));
-        }
-
-        [TestMethod]
-        public void Debiting_a_positive_balance_results_in_a_negative_balance()
-        {
-            Runner.RunScenario(
-                given => an_existing_balance_of(Balance.FromAmount(100)),
-                when => debiting_the_balance_with_an_amount_of(Money.FromAmount(200)),
-                then => the_balance_is(Balance.FromAmount(-100)));
-        }
-
-        [TestMethod]
-        public void Adding_positive_balances_results_in_a_positive_balance()
-        {
-            Runner.RunScenario(
-                given => an_existing_balance_of(Balance.FromAmount(100)),
-                when => crediting_the_balance_with_an_amount_of(Money.FromAmount(100)),
-                then => the_balance_is(Balance.FromAmount(200)));
-        }
     }
 }

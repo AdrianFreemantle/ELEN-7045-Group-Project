@@ -61,6 +61,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Tests\Fincancial_balances.cs" />
+    <Compile Include="Tests\Fincancial_balances.Fixture.cs" />
     <Compile Include="Tests\Monetary_values.cs" />
     <Compile Include="Tests\Monetary_values.Fixture.cs" />
     <Compile Include="Tests\Parsing_numeric_value_from_a_text_value_pair.cs" />
