@@ -1,10 +1,11 @@
 ﻿using Aps.Domain.Common;
+using Aps.Domain.Services;
 using LightBDD;
 using Shouldly;
 
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.AccountStatement.Tests.Tests
 {
-    public partial class Parsing_numeric_data_field : FeatureFixture
+    public partial class Parsing_numeric_value_from_a_text_value_pair : FeatureFixture
     {
         private TextValuePair valuePair;
         private decimal parseResult;
@@ -20,7 +21,7 @@ namespace Aps.Domain.AccountStatement.Tests
             parseResult = parser.Parse(valuePair);
         }
 
-        private void Decimal_value_returned_is(decimal result)
+        private void The_returned_numeric_value_is(decimal result)
         {
             parseResult.ShouldBe(result);
         }

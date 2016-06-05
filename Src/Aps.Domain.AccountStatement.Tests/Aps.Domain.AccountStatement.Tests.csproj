@@ -61,9 +61,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="NumericValueParser.cs" />
-    <Compile Include="Parsing_numeric_data_field.cs" />
-    <Compile Include="Parsing_numeric_data_field.Fixture.cs" />
+    <Compile Include="Tests\Monetary_values.cs" />
+    <Compile Include="Tests\Monetary_values.Fixture.cs" />
+    <Compile Include="Tests\Parsing_numeric_value_from_a_text_value_pair.cs" />
+    <Compile Include="Tests\Parsing_numeric_value_from_a_text_value_pair.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +72,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Aps.Domain.Services\Aps.Domain.Services.csproj">
+      <Project>{E07977A9-FE2C-473C-A6DC-E0FD341D1B24}</Project>
+      <Name>Aps.Domain.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
       <Project>{B29B12BB-0520-40B9-B9F4-34A978D517DB}</Project>
       <Name>Aps.Domain</Name>

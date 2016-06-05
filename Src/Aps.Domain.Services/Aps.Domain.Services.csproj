@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B29B12BB-0520-40B9-B9F4-34A978D517DB}</ProjectGuid>
+    <ProjectGuid>{E07977A9-FE2C-473C-A6DC-E0FD341D1B24}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Aps.Domain</RootNamespace>
-    <AssemblyName>Aps.Domain</AssemblyName>
+    <RootNamespace>Aps.Domain.Services</RootNamespace>
+    <AssemblyName>Aps.Domain.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,13 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountStatements\Balance.cs" />
-    <Compile Include="AccountStatements\Money.cs" />
-    <Compile Include="Guard.cs" />
-    <Compile Include="DomainException.cs" />
-    <Compile Include="ICompanyName.cs" />
+    <Compile Include="NumericValueParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Common\TextValuePair.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
+      <Project>{B29B12BB-0520-40B9-B9F4-34A978D517DB}</Project>
+      <Name>Aps.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
