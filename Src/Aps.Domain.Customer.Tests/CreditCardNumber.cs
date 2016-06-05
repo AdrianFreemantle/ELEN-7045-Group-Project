@@ -6,7 +6,15 @@ namespace Aps.Domain.Customer.Tests
     {
         public CreditCardNumber(string cardNumber) : this()
         {
-            throw new NotImplementedException();
+
+            Console.WriteLine(cardNumber);
+
+            int length = cardNumber.Length;
+
+            if (length != 16)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
