@@ -1,8 +1,6 @@
-using System;
-
 namespace Aps.Domain.AccountStatement.Tests.DomainTypes
 {
-    public class AccountStatement : IEquatable<AccountStatementId>, IEquatable<AccountStatement>
+    public class AccountStatement 
     {
         private readonly AccountStatementId id;
 
