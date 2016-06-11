@@ -61,9 +61,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Tests\Account_statement_factory.cs" />
+    <Compile Include="Tests\Account_statement_identity.cs" />
     <Compile Include="Tests\DomainTypes\AccountStatementId.cs" />
-    <Compile Include="Tests\Account_statment_identity.cs" />
-    <Compile Include="Tests\Account_statment_identity.Fixture.cs" />
+    <Compile Include="Tests\Account_statement_identity_equality.cs" />
+    <Compile Include="Tests\Account_statement_identity_equality.Fixture.cs" />
     <Compile Include="Tests\Stubs\AccountIdStub.cs" />
     <Compile Include="Tests\Account_statement_integrity_checks.cs" />
     <Compile Include="Tests\Aggregated_account_statements.cs" />
@@ -86,7 +88,9 @@
     <Compile Include="Tests\Previous_account_statements.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
