@@ -1,10 +1,10 @@
 ﻿using Aps.Domain.Account;
-using Aps.Domain.Account.Tests.Tests.Stubs;
-using Aps.Domain.Account.Tests.Tests.DomainTypes;
+using Aps.Domain.Account.Tests.DomainTypes;
+using Aps.Domain.Account.Tests.Stubs;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Aps.Domain.Account.Tests.Tests
+namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"An account should be uniquely identifiable")]

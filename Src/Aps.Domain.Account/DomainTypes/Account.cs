@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Aps.Domain.Account;
 
-namespace Aps.Domain.Account.Tests.Tests.DomainTypes
+namespace Aps.Domain.Account.Tests.DomainTypes
 {
     public struct Account
     {
