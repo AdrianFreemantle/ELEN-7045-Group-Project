@@ -43,8 +43,10 @@
     <Compile Include="AccountStatements\CalendarMonth.cs" />
     <Compile Include="AccountStatements\Money.cs" />
     <Compile Include="AccountStatements\NumericValue.cs" />
+    <Compile Include="Account\AccountNumber.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="DomainException.cs" />
+    <Compile Include="ICompanyName.cs" />
     <Compile Include="IAccountId.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\TextValuePair.cs" />
