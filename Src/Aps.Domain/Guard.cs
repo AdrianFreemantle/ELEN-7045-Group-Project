@@ -58,7 +58,7 @@ namespace Aps.Domain
         /// <param name="value">The value.</param>
         /// <param name="paramName">Name of the param.</param>
         /// <exception cref="ArgumentNullException">If <paramref name="value"/> is the default value.</exception>
-        public static void ThatParameterNotDefaut<T>(T value, string paramName) where T : struct, IEquatable<T>
+        public static void ThatParameterNotDefaut<T>(T value, string paramName) where T : struct
         {
             if (value.Equals(default(T)))
             {

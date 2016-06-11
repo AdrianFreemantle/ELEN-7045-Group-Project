@@ -61,6 +61,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Tests\DomainTypes\AccountStatementId.cs" />
+    <Compile Include="Tests\Account_statment_identity.cs" />
+    <Compile Include="Tests\Account_statment_identity.Fixture.cs" />
+    <Compile Include="Tests\Stubs\AccountIdStub.cs" />
     <Compile Include="Tests\Account_statement_integrity_checks.cs" />
     <Compile Include="Tests\Aggregated_account_statements.cs" />
     <Compile Include="Tests\Consistent_representation_of_account_statements.cs" />
@@ -75,8 +79,8 @@
     <Compile Include="Tests\Fincancial_balances.Fixture.cs" />
     <Compile Include="Tests\Monetary_values.cs" />
     <Compile Include="Tests\Monetary_values.Fixture.cs" />
-    <Compile Include="Tests\Parsing_numeric_value_from_a_text_value_pair.cs" />
-    <Compile Include="Tests\Parsing_numeric_value_from_a_text_value_pair.Fixture.cs" />
+    <Compile Include="Tests\Parsing_numeric_value_from_text.cs" />
+    <Compile Include="Tests\Parsing_numeric_value_from_text.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Previous_account_statements.Fixture.cs" />
     <Compile Include="Tests\Previous_account_statements.cs" />

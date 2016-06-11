@@ -2,7 +2,7 @@
 
 namespace Aps.Domain.Common
 {
-    public struct TextValuePair : IEquatable<TextValuePair>
+    public struct TextValuePair 
     {
         public string FieldName { get; private set; }
         public string FieldValue { get; private set; }
@@ -14,12 +14,6 @@ namespace Aps.Domain.Common
 
             FieldName = fieldName;
             FieldValue = fieldValue;
-        }
-
-        public bool Equals(TextValuePair other)
-        {
-            return other.FieldName == FieldName 
-                   && other.FieldValue == FieldValue;
         }
     }
 }
