@@ -61,15 +61,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Tests\Account_identity.cs" />
-    <Compile Include="Tests\Account_identity.Fixture.cs" />
-    <Compile Include="Tests\DomainTypes\Account.cs" />
-    <Compile Include="Tests\DomainTypes\AccountId.cs" />
-    <Compile Include="Tests\DomainTypes\AccountNumber.cs" />
-    <Compile Include="Tests\DomainTypes\AccountStatus.cs" />
-    <Compile Include="Tests\DomainTypes\Credential.cs" />
-    <Compile Include="Tests\Stubs\CustomerIdStub.cs" />
-    <Compile Include="Tests\Stubs\CompanyNameStub.cs" />
+    <Compile Include="Account_identity.cs" />
+    <Compile Include="Fixtures\Account_identity.Fixture.cs" />
+    <Compile Include="DomainTypes\Account.cs" />
+    <Compile Include="DomainTypes\AccountId.cs" />
+    <Compile Include="DomainTypes\AccountNumber.cs" />
+    <Compile Include="DomainTypes\AccountStatus.cs" />
+    <Compile Include="DomainTypes\Credential.cs" />
+    <Compile Include="Stubs\CustomerIdStub.cs" />
+    <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-namespace Aps.Domain.Account.Tests.Tests.DomainTypes
+namespace Aps.Domain.Account.Tests.DomainTypes
 {
     public struct AccountNumber
     {

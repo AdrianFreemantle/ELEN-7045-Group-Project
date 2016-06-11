@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Aps.Domain.Account.Tests.Tests.DomainTypes;
+using Aps.Domain.Account.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
-namespace Aps.Domain.Account.Tests.Tests
+// ReSharper disable once CheckNamespace
+namespace Aps.Domain.Account.Tests
 {
     public partial class Account_identity : FeatureFixture
     {

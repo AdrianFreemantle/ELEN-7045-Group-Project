@@ -1,6 +1,6 @@
 using System;
 
-namespace Aps.Domain.Account.Tests.Tests.DomainTypes
+namespace Aps.Domain.Account.Tests.DomainTypes
 {
     public class StatusNotificationRuleAttribute : Attribute
     {
