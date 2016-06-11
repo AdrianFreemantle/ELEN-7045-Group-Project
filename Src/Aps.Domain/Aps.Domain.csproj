@@ -43,6 +43,7 @@
     <Compile Include="AccountStatements\CalendarMonth.cs" />
     <Compile Include="AccountStatements\Money.cs" />
     <Compile Include="AccountStatements\NumericValue.cs" />
+    <Compile Include="EnumExtensions.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="DomainException.cs" />
     <Compile Include="ICompanyName.cs" />
