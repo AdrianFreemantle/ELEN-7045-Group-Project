@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Aps.Domain
 {
@@ -16,6 +17,11 @@ namespace Aps.Domain
             {
                 return String.Empty;
             }
+        }
+
+        public static string SplitCamelCase(this string input)
+        {
+            return Regex.Replace(input, "([A-Z])", " $1", RegexOptions.Compiled).Trim();
         }
     }
 }

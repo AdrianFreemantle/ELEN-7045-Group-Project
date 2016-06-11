@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aps.Domain.AccountStatement.Tests.Tests.DomainTypes;
+﻿using Aps.Domain.AccountStatement.Tests.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
 namespace Aps.Domain.AccountStatement.Tests.Tests
 {
-    public partial class Account_statment_identity : FeatureFixture
+    public partial class Account_statement_identity_equality : FeatureFixture
     {
         private AccountStatementId id1;
         private AccountStatementId id2;
         private bool areEqual;
-
 
         private void the_two_are_equal()
         {
