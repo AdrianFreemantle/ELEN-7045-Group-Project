@@ -16,8 +16,8 @@ namespace Aps.Domain.Account.Tests.Tests.DomainTypes
 
         public static AccountId Create<TCompanyName>(TCompanyName companyName, AccountNumber accountNumber) where TCompanyName : struct, ICompanyName
         {
-            Guard.ThatParameterNotDefaut(companyName, "companyName");
-            Guard.ThatParameterNotDefaut(accountNumber, "accountNumber");
+            Guard.ThatValueTypeNotDefaut(companyName, "companyName");
+            Guard.ThatValueTypeNotDefaut(accountNumber, "accountNumber");
 
             return new AccountId(companyName, accountNumber);
         }

@@ -1,10 +1,10 @@
-﻿using Aps.Domain.AccountStatement.Tests.Tests.DomainTypes;
-using Aps.Domain.AccountStatement.Tests.Tests.Stubs;
+﻿using Aps.Domain.AccountStatement.Tests.DomainTypes;
+using Aps.Domain.AccountStatement.Tests.Stubs;
 using Aps.Domain.AccountStatements;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
     [FeatureDescription(@"Account statement identities should be equatable")]

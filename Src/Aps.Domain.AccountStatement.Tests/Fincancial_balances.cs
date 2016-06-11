@@ -2,7 +2,7 @@ using Aps.Domain.AccountStatements;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
     [FeatureDescription("Financial balances can be credited or debited so that integrity checks can be performed.")]

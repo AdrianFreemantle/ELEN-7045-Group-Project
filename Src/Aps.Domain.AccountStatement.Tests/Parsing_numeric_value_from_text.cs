@@ -2,7 +2,7 @@
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
     [FeatureDescription(@"Parse text data to numerical representation so that integrity checks can be performed.")]

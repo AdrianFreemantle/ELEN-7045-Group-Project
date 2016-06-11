@@ -1,7 +1,7 @@
 using System;
 using Aps.Domain.AccountStatements;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests.DomainTypes
+namespace Aps.Domain.AccountStatement.Tests.DomainTypes
 {
     public struct AccountStatementId
     {
@@ -14,10 +14,18 @@ namespace Aps.Domain.AccountStatement.Tests.Tests.DomainTypes
             this.calendarMonth = calendarMonth;
         }
 
-        public static AccountStatementId Create<TAccountId>(TAccountId accountId, CalendarMonth calendarMonth) where TAccountId : struct, IAccountId
+        public static AccountStatementId Create(IAccountId accountId, DateTime runTime)
         {
-            Guard.ThatParameterNotDefaut(accountId, "accountId");
-            Guard.ThatParameterNotDefaut(calendarMonth, "calendarMonth");
+            Guard.ThatValueTypeNotDefaut(accountId, "accountId");
+            Guard.ThatValueTypeNotDefaut(runTime, "runTime");
+
+            return new AccountStatementId(accountId, new CalendarMonth(runTime));
+        }
+
+        public static AccountStatementId Create(IAccountId accountId, CalendarMonth calendarMonth) 
+        {
+            Guard.ThatValueTypeNotDefaut(accountId, "accountId");
+            Guard.ThatValueTypeNotDefaut(calendarMonth, "calendarMonth");
 
             return new AccountStatementId(accountId, calendarMonth);
         }

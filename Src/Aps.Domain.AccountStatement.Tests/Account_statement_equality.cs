@@ -2,7 +2,7 @@ using System;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
     [FeatureDescription(@"Account statments should be equatable based on identity and not on internal state")]

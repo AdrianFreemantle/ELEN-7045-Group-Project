@@ -2,7 +2,8 @@
 using LightBDD;
 using Shouldly;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+// ReSharper disable once CheckNamespace
+namespace Aps.Domain.AccountStatement.Tests
 {
     public partial class Monetary_values : FeatureFixture
     {

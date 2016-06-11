@@ -21,8 +21,8 @@ namespace Aps.Domain.Account.Tests.Tests.DomainTypes
 
         public static Account Create<TCustomerId>(TCustomerId customerId, AccountId accountId) where TCustomerId : struct, ICustomerId
         {
-            Guard.ThatParameterNotDefaut(customerId, "CustomerId");
-            Guard.ThatParameterNotDefaut(accountId, "AccountId");
+            Guard.ThatValueTypeNotDefaut(customerId, "CustomerId");
+            Guard.ThatValueTypeNotDefaut(accountId, "AccountId");
 
             return new Account(customerId, accountId);
         }

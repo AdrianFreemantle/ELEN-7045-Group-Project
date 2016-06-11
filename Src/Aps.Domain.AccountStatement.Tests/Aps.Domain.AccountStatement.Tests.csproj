@@ -61,32 +61,36 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Tests\Account_statement_factory.cs" />
-    <Compile Include="Tests\Account_statement_identity.cs" />
-    <Compile Include="Tests\DomainTypes\AccountStatementId.cs" />
-    <Compile Include="Tests\Account_statement_identity_equality.cs" />
-    <Compile Include="Tests\Account_statement_identity_equality.Fixture.cs" />
-    <Compile Include="Tests\Stubs\AccountIdStub.cs" />
-    <Compile Include="Tests\Account_statement_integrity_checks.cs" />
-    <Compile Include="Tests\Aggregated_account_statements.cs" />
-    <Compile Include="Tests\Consistent_representation_of_account_statements.cs" />
-    <Compile Include="Tests\Consistent_representation_of_entry_types.cs" />
-    <Compile Include="Tests\Current_account_statement.cs" />
-    <Compile Include="Tests\Account_statement_integrity_checks.Fixture.cs" />
-    <Compile Include="Tests\Aggregated_account_statements.Fixture.cs" />
-    <Compile Include="Tests\Consistent_representation_of_account_statements.Fixture.cs" />
-    <Compile Include="Tests\Consistent_representation_of_entry_types.Fixture.cs" />
-    <Compile Include="Tests\Current_account_statement.Fixture.cs" />
-    <Compile Include="Tests\Fincancial_balances.cs" />
-    <Compile Include="Tests\Fincancial_balances.Fixture.cs" />
-    <Compile Include="Tests\Monetary_values.cs" />
-    <Compile Include="Tests\Monetary_values.Fixture.cs" />
-    <Compile Include="Tests\Parsing_numeric_value_from_text.cs" />
-    <Compile Include="Tests\Parsing_numeric_value_from_text.Fixture.cs" />
+    <Compile Include="Fixtures\Account_statement_equality.Fixture.cs" />
+    <Compile Include="Fixtures\Account_statement_factory.Fixture.cs" />
+    <Compile Include="DomainTypes\AccountStatementFactory.cs" />
+    <Compile Include="DomainTypes\AccountStatement.cs" />
+    <Compile Include="Account_statement_factory.cs" />
+    <Compile Include="Account_statement_equality.cs" />
+    <Compile Include="DomainTypes\AccountStatementId.cs" />
+    <Compile Include="Account_statement_identity_equality.cs" />
+    <Compile Include="Fixtures\Account_statement_identity_equality.Fixture.cs" />
+    <Compile Include="Stubs\AccountIdStub.cs" />
+    <Compile Include="Account_statement_integrity_checks.cs" />
+    <Compile Include="Aggregated_account_statements.cs" />
+    <Compile Include="Consistent_representation_of_account_statements.cs" />
+    <Compile Include="Consistent_representation_of_entry_types.cs" />
+    <Compile Include="Current_account_statement.cs" />
+    <Compile Include="Fixtures\Account_statement_integrity_checks.Fixture.cs" />
+    <Compile Include="Fixtures\Aggregated_account_statements.Fixture.cs" />
+    <Compile Include="Fixtures\Consistent_representation_of_account_statements.Fixture.cs" />
+    <Compile Include="Fixtures\Consistent_representation_of_entry_types.Fixture.cs" />
+    <Compile Include="Fixtures\Current_account_statement.Fixture.cs" />
+    <Compile Include="Fincancial_balances.cs" />
+    <Compile Include="Fixtures\Fincancial_balances.Fixture.cs" />
+    <Compile Include="Monetary_values.cs" />
+    <Compile Include="Fixtures\Monetary_values.Fixture.cs" />
+    <Compile Include="Parsing_numeric_value_from_text.cs" />
+    <Compile Include="Parsing_numeric_value_from_text.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Previous_account_statements.Fixture.cs" />
-    <Compile Include="Tests\Previous_account_statements.cs" />
-    <Compile Include="Tests\Stubs\ScrapeResultStub.cs" />
+    <Compile Include="Previous_account_statements.Fixture.cs" />
+    <Compile Include="Previous_account_statements.cs" />
+    <Compile Include="Stubs\ScrapeResultStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -104,6 +108,7 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

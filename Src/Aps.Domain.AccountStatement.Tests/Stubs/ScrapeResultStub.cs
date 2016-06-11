@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests.Stubs
+namespace Aps.Domain.AccountStatement.Tests.Stubs
 {
     public class ScrapeResultStub : IScrapeSessionResult
     {

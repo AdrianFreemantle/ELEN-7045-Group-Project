@@ -3,7 +3,7 @@ using Aps.Domain.Common;
 using LightBDD;
 using Shouldly;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+namespace Aps.Domain.AccountStatement.Tests
 {
     public partial class Parsing_numeric_value_from_text : FeatureFixture
     {

@@ -1,4 +1,4 @@
-namespace Aps.Domain.AccountStatement.Tests.Tests.Stubs
+namespace Aps.Domain.AccountStatement.Tests.Stubs
 {
     public struct AccountIdStub : IAccountId
     {
