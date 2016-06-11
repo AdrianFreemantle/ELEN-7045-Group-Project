@@ -17,7 +17,7 @@ namespace Aps.Domain.AccountStatement.Tests
         private DomainTypes.AccountStatement statement2;
         private bool result;
 
-        private void The_two_account_statements_are_identical()
+        private void the_two_account_statements_are_equal()
         {
             result.ShouldBe(true);
         }
@@ -39,7 +39,7 @@ namespace Aps.Domain.AccountStatement.Tests
             statement2 = new DomainTypes.AccountStatement(id2);
         }
 
-        private void Two_account_statements_for_calendar_month(DateTime runTime)
+        private void two_account_statements_for_calendar_month(DateTime runTime)
         {
             callCalendarMonth1 = new CalendarMonth(runTime);
             callCalendarMonth2 = new CalendarMonth(runTime);

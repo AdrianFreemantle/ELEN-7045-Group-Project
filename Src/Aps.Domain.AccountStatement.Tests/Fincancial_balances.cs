@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
+    [ScenarioCategory("Account Statements")]
     [FeatureDescription("Financial balances can be credited or debited so that integrity checks can be performed.")]
     public partial class Fincancial_balances
     {

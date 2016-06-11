@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
+    [ScenarioCategory("Account Statements")]
     [FeatureDescription("Monetary values can be added and subtracted from each other so that integrity checks can be performed.")]
     public partial class Monetary_values
     {

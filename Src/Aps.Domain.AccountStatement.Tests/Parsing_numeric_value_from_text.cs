@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
+    [ScenarioCategory("Account Statements")]
     [FeatureDescription(@"Parse text data to numerical representation so that integrity checks can be performed.")]
     public partial class Parsing_numeric_value_from_text
     {

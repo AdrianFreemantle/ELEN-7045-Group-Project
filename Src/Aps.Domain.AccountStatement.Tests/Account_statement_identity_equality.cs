@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
+    [ScenarioCategory("Account Statements")]
     [FeatureDescription(@"Account statement identities should be equatable")]
     public partial class Account_statement_identity_equality
     {

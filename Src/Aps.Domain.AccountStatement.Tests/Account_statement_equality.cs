@@ -10,17 +10,13 @@ namespace Aps.Domain.AccountStatement.Tests
     public partial class Account_statement_equality : FeatureFixture
     {
         [TestMethod]
-        [Label("Story-1")]
         public void Two_account_statement_with_the_same_identities_are_equal()
         {
-            string accountId = "12345";
-            DateTime runTime = DateTime.Today;
-
             Runner.RunScenario(
-                given => Two_account_statements_for_calendar_month(runTime),
-                and => for_account(accountId),
+                given => two_account_statements_for_calendar_month(DateTime.Today),
+                and => for_account("12345"),
                 when => performing_an_equality_comparison(),
-                then => The_two_account_statements_are_identical());
+                then => the_two_account_statements_are_equal());
         }
     }
 }

@@ -86,9 +86,9 @@
     <Compile Include="Monetary_values.cs" />
     <Compile Include="Fixtures\Monetary_values.Fixture.cs" />
     <Compile Include="Parsing_numeric_value_from_text.cs" />
-    <Compile Include="Parsing_numeric_value_from_text.Fixture.cs" />
+    <Compile Include="Fixtures\Parsing_numeric_value_from_text.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Previous_account_statements.Fixture.cs" />
+    <Compile Include="Fixtures\Previous_account_statements.Fixture.cs" />
     <Compile Include="Previous_account_statements.cs" />
     <Compile Include="Stubs\ScrapeResultStub.cs" />
   </ItemGroup>
