@@ -68,6 +68,7 @@
     <Compile Include="Tests\DomainTypes\AccountNumber.cs" />
     <Compile Include="Tests\DomainTypes\AccountStatus.cs" />
     <Compile Include="Tests\DomainTypes\Credential.cs" />
+    <Compile Include="Tests\Stubs\CustomerIdStub.cs" />
     <Compile Include="Tests\Stubs\CompanyNameStub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
