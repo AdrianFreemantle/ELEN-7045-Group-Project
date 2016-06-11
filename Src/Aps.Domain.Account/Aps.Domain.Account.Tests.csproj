@@ -63,9 +63,12 @@
   <ItemGroup>
     <Compile Include="Tests\Account_identity.cs" />
     <Compile Include="Tests\Account_identity.Fixture.cs" />
+    <Compile Include="Tests\DomainTypes\Account.cs" />
     <Compile Include="Tests\DomainTypes\AccountId.cs" />
+    <Compile Include="Tests\DomainTypes\AccountNumber.cs" />
+    <Compile Include="Tests\DomainTypes\AccountStatus.cs" />
+    <Compile Include="Tests\DomainTypes\Credential.cs" />
     <Compile Include="Tests\Stubs\CompanyNameStub.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
