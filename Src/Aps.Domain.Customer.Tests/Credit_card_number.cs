@@ -17,5 +17,6 @@ namespace Aps.Domain.Customer.Tests
                 when => creating_a_credit_card_number_value_object(),
                 then => success());
         }
+
     }
 }

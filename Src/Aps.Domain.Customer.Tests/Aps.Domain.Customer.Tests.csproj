@@ -61,6 +61,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Ccv.cs" />
+    <Compile Include="CcvNumber.cs" />
+    <Compile Include="Ccv_Number_Fixture.cs" />
     <Compile Include="CreditCardNumber.cs" />
     <Compile Include="Credit_card_number.cs" />
     <Compile Include="Credit_card_number.Fixture.cs" />
