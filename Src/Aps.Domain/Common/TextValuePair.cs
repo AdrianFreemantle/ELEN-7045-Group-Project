@@ -1,25 +1,20 @@
-﻿using System;
-
-namespace Aps.Domain.Common
+﻿namespace Aps.Domain.Common
 {
-    public struct TextValuePair : IEquatable<TextValuePair>
+    public struct TextValuePair 
     {
+        public string Id { get; private set; }
         public string FieldName { get; private set; }
         public string FieldValue { get; private set; }
 
-        public TextValuePair(string fieldName, string fieldValue) : this()
+        public TextValuePair(string id, string fieldName, string fieldValue) : this()
         {
+            Guard.ThatParameterNotNullOrEmpty(id, "id");
             Guard.ThatParameterNotNullOrEmpty(fieldName, "fieldName");
             Guard.ThatParameterNotNull(fieldValue, "fieldValue");
 
+            Id = id;
             FieldName = fieldName;
             FieldValue = fieldValue;
-        }
-
-        public bool Equals(TextValuePair other)
-        {
-            return other.FieldName == FieldName 
-                   && other.FieldValue == FieldValue;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aps.Domain
 {
-    public interface ICompanyName
+    public interface ICustomerId
     {
         
     }

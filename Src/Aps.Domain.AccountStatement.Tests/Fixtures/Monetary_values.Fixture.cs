@@ -2,7 +2,8 @@
 using LightBDD;
 using Shouldly;
 
-namespace Aps.Domain.AccountStatement.Tests.Tests
+// ReSharper disable once CheckNamespace
+namespace Aps.Domain.AccountStatement.Tests
 {
     public partial class Monetary_values : FeatureFixture
     {
@@ -28,19 +29,6 @@ namespace Aps.Domain.AccountStatement.Tests.Tests
             balance.ShouldBe(amount);
         }
 
-        private void an_existing_balance_of(Balance balance)
-        {
-            this.balance = balance;
-        }
 
-        private void crediting_the_balance_with_an_amount_of(Money amount)
-        {
-            balance = balance.Credit(amount);
-        }
-
-        private void debiting_the_balance_with_an_amount_of(Money amount)
-        {
-            balance = balance.Debit(amount);
-        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 namespace Aps.Domain
@@ -8,7 +7,7 @@ namespace Aps.Domain
     /// <summary>
     /// A static class which simplifies the basic checking of parameters.
     /// </summary>
-    [DebuggerStepThrough]
+    //[DebuggerStepThrough]
     public static class Guard
     {
         /// <summary>
@@ -58,9 +57,14 @@ namespace Aps.Domain
         /// <param name="value">The value.</param>
         /// <param name="paramName">Name of the param.</param>
         /// <exception cref="ArgumentNullException">If <paramref name="value"/> is the default value.</exception>
-        public static void ThatParameterNotDefaut<T>(T value, string paramName) where T : struct, IEquatable<T>
+        public static void ThatValueTypeNotDefaut<T>(T value, string paramName) 
         {
-            if (value.Equals(default(T)))
+            if(value == null || !value.GetType().IsValueType)
+                throw new ArgumentException(String.Format("Parameter {0} is not a value type", paramName), paramName);
+
+            var defaultInstance = Activator.CreateInstance(value.GetType());
+
+            if (value.Equals(defaultInstance))
             {
                 throw new ArgumentException(String.Format("A non-default value is required for parameter {0}", paramName), paramName);
             }
