@@ -67,6 +67,8 @@
     <Compile Include="CreditCardNumber.cs" />
     <Compile Include="Credit_card_number.cs" />
     <Compile Include="Credit_card_number.Fixture.cs" />
+    <Compile Include="CustomerRegistrationAPS2.cs" />
+    <Compile Include="CustomerRegistrationAPS1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
