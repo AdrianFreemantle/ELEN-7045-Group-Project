@@ -17,18 +17,15 @@ namespace Aps.Domain.Customer.Tests
         private String custName;
         private String custSurname;
         private String custEmail;
+        private String loginvalid;
 
 
         private void that_a_customer_enters_a_name(string custName)
         {
-
-           
-
             if (custName.Length < 1)
             {
                 throw new NotImplementedException();
-            }
-           
+            }  
         }
 
         private void a_customer_enters_a_surname(string custSurname)
@@ -78,6 +75,41 @@ namespace Aps.Domain.Customer.Tests
         private void a_email_is_sent_to_confirm_the_registration()
         {
          //   throw new NotImplementedException();
+        }
+
+
+        private void A_customer_has_received_a_valid_username(string validusername)
+        {
+            if (validusername.Length < 1)
+            {
+                throw new Exception("Invalid user name provided");
+            }
+        }
+
+        private void A_cusotmer_has_receive_a_valid_password(string validpassword)
+        {
+            if (validpassword.Length < 1)
+            {
+                throw new Exception("Invalid password provided");
+            }
+
+        }
+
+
+        private void The_customer_attempts_to_login()
+        {
+            loginvalid = "valid";
+            if (loginvalid != "valid")
+            {
+                throw new Exception("Login not valid");
+            }
+
+
+        }
+
+        private void The_customer_is_able_to_login()
+        {
+            Console.WriteLine("Customer logged in");
         }
     }
 }

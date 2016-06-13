@@ -20,5 +20,16 @@ namespace Aps.Domain.Customer.Tests
                 Then  => a_email_is_sent_to_confirm_the_registration());
         }
 
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Runner.RunScenario(
+                Given => A_customer_has_received_a_valid_username("validusername"),
+                And => A_cusotmer_has_receive_a_valid_password("validpassword"),
+                When => The_customer_attempts_to_login(),
+                Then => The_customer_is_able_to_login());
+        }
     }
+
 }
+
