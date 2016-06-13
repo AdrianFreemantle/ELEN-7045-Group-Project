@@ -1,13 +1,6 @@
-*Customer cannot add a duplicate account	
-	GIVEN a company name, account number and credentials are parsed
-	WHEN an account is registered
-	AND the company name, account number already exists
-	THEN the new account should be rejected
-	AND an appropriate message should be sent back to the customer
-	
-=========================================================================
-3.6.1 
-
+﻿===================================================================
+Account 
+===================================================================
 During the account activation process, 
 the customer will supply account number and credentials
 
@@ -21,36 +14,113 @@ site
 if this check fails the activation should be rejected and an appropriate
 message should be sent back to the customer
 
+*Customer cannot add a duplicate account	
+	GIVEN a company name, account number and valid credentials are parsed
+	WHEN an account is registered
+	AND the company name, account number already exists
+	THEN the new account should be rejected
+	AND an appropriate message should be sent back to the customer
 
-*invalid valid account number supplied	
-	GIVEN a company name, account number and credentials are parsed
+*invalid account number supplied	
+	GIVEN a company name, account number and valid credentials are parsed
 	WHEN the account number is cross checked against the billing website
 	AND the account number is invalid
 	THEN the account activation should be rejected
 	AND an appropriate message should be sent back to the customer
 
 *valid account number supplied
-	GIVEN a company name, account number and credentials are parsed
+	GIVEN a company name, account number and valid credentials are parsed
 	WHEN the account number is cross checked against the billing website
 	AND the account number is valid
 	THEN the account activation should be accepted
 
 =========================================================================
-2.1.1
+Credentials	
+=========================================================================
 
+
+*invalid date of birth credential
+	GIVEN a credential is parsed
+	AND its an DateOfBirth
+	WHEN its not a valid Date
+	THEN invalid DateOfBirth
+	
+*date of birth in future is invalid
+	GIVEN a credential is parsed
+	AND its an DateOfBirth
+	WHEN when its in the future
+	THEN invalid DateOfBirth
+	
+*invalid creditcard number credential	
+	GIVEN a credential is parsed
+	AND its a creditcard number
+	WHEN when its length is not 16
+	THEN invalid Creditcard number
+
+*invalid username credential	
+	GIVEN a credential is parsed
+	AND its a username
+	WHEN when its length is larger than 100
+	THEN invalid username
+	
+*invalid email credential	
+	GIVEN a credential is parsed
+	AND its a email
+	WHEN when its not a valid email address
+	THEN invalid email
+	
+*invalid accountnumber credential	
+	GIVEN a credential is parsed
+	AND its a accountnumber
+	WHEN when its length is larger than 100
+	THEN invalid accountnumber
+	
+*invalid telephonenumber credential	
+	GIVEN a credential is parsed
+	AND its a telephonenumber
+	WHEN when its not a valid phone number
+	THEN invalid telephonenumber
+
+*invalid securitycode credential	
+	GIVEN a credential is parsed
+	AND its a securitycode
+	WHEN when its length is larger than 100
+	THEN invalid securitycode
+	
+*invalid pinnumber credential	
+	GIVEN a credential is parsed
+	AND its a pinnumber 
+	WHEN when its length is larger than 100
+	THEN invalid pinnumber 
+	
+*invalid password credential	
+	GIVEN a credential is parsed
+	AND its a password  
+	WHEN when its length is larger than 100
+	THEN invalid password  
+	
+===================================================================
+Account Status
+===================================================================
 The user’s account status is changed from “active” to “inactive”. Once a user has updated their details,
 their account status is changed to “trying”.
 
 *reset inactive account status
-	GIVEN an account status is inactive
+	GIVEN an account status is "inactive"
 	WHEN the user updated their details
-	THEN the account status is set to retrying
+	THEN the account status is set to "trying"
+
+If the credentials are found to be invalid, the service should notify the user and request that
+the user supply their updated credentials before the scrape is attempted again. The user’s
+account status is changed from “active” to “inactive”. Once a user has updated their details,
+their account status is changed to “trying”.
+
+*set account status to inactive
+	GIVEN an account status is "active"
+	WHEN the account credentials is invalid
+	THEN the account status is set to "inactive"
 	
-=========================================================================
-
-
-
-
-
-
-
+*set account status to active
+	GIVEN an account status is "trying"
+	WHEN a scrape was successful
+	THEN the account status is set to "active"
