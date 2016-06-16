@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.Credential;
 
 namespace Aps.Domain.Common
 {
-    internal struct DateOfBirth : ICredential
+    internal struct DateOfBirth : IIdentificationField
     {
         private readonly DateTime _dateofbirth;
 
