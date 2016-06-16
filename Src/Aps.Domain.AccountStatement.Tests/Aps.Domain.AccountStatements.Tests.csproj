@@ -43,6 +43,7 @@
     <Reference Include="LightBDD.MsTest">
       <HintPath>..\packages\LightBDD.MsTest.1.7.0.0\lib\net40\LightBDD.MsTest.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Shouldly">
       <HintPath>..\packages\Shouldly.2.7.0\lib\net40\Shouldly.dll</HintPath>
     </Reference>
@@ -61,6 +62,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\AccountStatmentEntry.cs" />
+    <Compile Include="DomainTypes\AccountStatmentEntryFactory.cs" />
     <Compile Include="Fixtures\Account_statement_equality.Fixture.cs" />
     <Compile Include="Fixtures\Account_statement_factory.Fixture.cs" />
     <Compile Include="Account_statement_factory.cs" />
@@ -104,9 +107,7 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DomainTypes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

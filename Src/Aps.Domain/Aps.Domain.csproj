@@ -56,13 +56,15 @@
     <Compile Include="Common\Balance.cs" />
     <Compile Include="Common\CalendarMonth.cs" />
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
+    <Compile Include="Common\AccountStatmentEntryType.cs" />
+    <Compile Include="Common\DataType.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />
     <Compile Include="Common\Encryption.cs" />
+    <Compile Include="Common\StatementEntryDataTypeAttribute.cs" />
     <Compile Include="Credential\Password.cs" />
     <Compile Include="Credential\SecurityCode.cs" />
     <Compile Include="Credential\PinNumber.cs" />
-    <Compile Include="Credential\TelePhoneNumber.cs" />
     <Compile Include="IScrapeSessionId.cs" />
     <Compile Include="IDecryptionService.cs" />
     <Compile Include="IEncryptionService.cs" />

@@ -1,4 +1,5 @@
 using System;
+using Aps.Domain.Common;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -12,6 +13,10 @@ namespace Aps.Domain.AccountStatements.Tests
         [TestMethod]
         public void Test()
         {
+            var statmentMonth = AccountStatmentEntryType.StatementMonth;
+
+            DataType dataType = statmentMonth.GetDataType();
+
             Runner.RunScenario(NotImplemented);
         }
 
@@ -19,11 +24,5 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             throw new NotImplementedException();
         }
-    }
-
-
-    public class AccountStatmentEntryType
-    {
-        
     }
 }
