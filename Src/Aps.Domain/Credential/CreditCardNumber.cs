@@ -19,5 +19,7 @@ namespace Aps.Domain.Credential
         {
             return _creditcardnumber;
         }
+
+        //To-Do Add encryption 
     }
 }
