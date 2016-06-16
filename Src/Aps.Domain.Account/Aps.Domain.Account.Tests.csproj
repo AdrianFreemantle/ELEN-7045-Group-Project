@@ -67,7 +67,6 @@
     <Compile Include="DomainTypes\AccountId.cs" />
     <Compile Include="DomainTypes\AccountNumber.cs" />
     <Compile Include="DomainTypes\AccountStatus.cs" />
-    <Compile Include="DomainTypes\Credential.cs" />
     <Compile Include="Stubs\CustomerIdStub.cs" />
     <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
