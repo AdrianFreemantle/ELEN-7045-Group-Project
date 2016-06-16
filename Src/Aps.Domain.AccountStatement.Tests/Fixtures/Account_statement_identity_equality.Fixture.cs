@@ -1,9 +1,9 @@
-﻿using Aps.Domain.AccountStatement.Tests.DomainTypes;
+﻿using Aps.Domain.AccountStatements.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.AccountStatements.Tests
 {
     public partial class Account_statement_identity : FeatureFixture
     {

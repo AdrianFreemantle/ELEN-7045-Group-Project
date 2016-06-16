@@ -1,10 +1,17 @@
-namespace Aps.Domain.AccountStatement.Tests.DomainTypes
+using System;
+
+namespace Aps.Domain.AccountStatements.Tests.DomainTypes
 {
-    public class AccountStatement 
+    public class AccountStatement
     {
         private readonly AccountStatementId id;
 
-        public AccountStatement(AccountStatementId id)
+        //just to ensure that the default constructor can't be called
+        protected AccountStatement()
+        {
+        }
+
+        internal AccountStatement(AccountStatementId id)
         {
             this.id = id;
         }
@@ -20,6 +27,16 @@ namespace Aps.Domain.AccountStatement.Tests.DomainTypes
                 return false;
 
             return Equals(other.id);
+        }
+
+        public bool IsForMonth(CalendarMonth month)
+        {
+            return id.Month.Equals(month);
+        }
+
+        public bool IsForAccount(IAccountId accountId)
+        {
+            return id.AccountId.Equals(accountId);
         }
     }
 }
