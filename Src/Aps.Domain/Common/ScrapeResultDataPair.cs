@@ -10,7 +10,7 @@
         {
             Guard.ThatParameterNotNullOrEmpty(id, "id");
             Guard.ThatParameterNotNullOrEmpty(fieldName, "fieldName");
-            Guard.ThatParameterNotNull(fieldValue, "fieldValue");
+            Guard.ThatParameterNotNullOrEmpty(fieldValue, "fieldValue");
 
             Id = id;
             FieldName = fieldName;
