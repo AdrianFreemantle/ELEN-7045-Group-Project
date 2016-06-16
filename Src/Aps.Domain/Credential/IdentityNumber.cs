@@ -1,10 +1,10 @@
 namespace Aps.Domain.Credential
 {
-    internal struct IdentityNumber : IIdentificationField
+    public struct IdentityNumber : IIdentificationField
     {
         private readonly string _identityNumber;
 
-        private IdentityNumber(string identityNumber)
+        public IdentityNumber(string identityNumber)
         {
             Guard.ThatParameterNotNullOrEmpty(identityNumber, "Identity Number"); 
             if (!Validator.IdentityNumberIsValid(identityNumber))

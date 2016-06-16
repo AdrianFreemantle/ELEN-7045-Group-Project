@@ -1,10 +1,10 @@
 namespace Aps.Domain.Credential
 {
-    internal struct UserName : IIdentificationField
+    public struct UserName : IIdentificationField
     {
         private readonly string _userName;
 
-        private UserName(string userName)
+        public UserName(string userName)
         {
             Guard.ThatParameterNotNullOrEmpty(userName, "User Name");
 

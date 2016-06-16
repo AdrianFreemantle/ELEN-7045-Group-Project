@@ -2,7 +2,7 @@
 
 namespace Aps.Domain.Credential
 {
-    internal struct SecurityCode : ISecurityField
+    public struct SecurityCode : ISecurityField
     {
         private readonly byte[] encryptedData;
 
