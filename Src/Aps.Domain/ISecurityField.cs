@@ -2,6 +2,7 @@
 {
     public interface ISecurityField
     {
+        string GetDetails(IDecryptionService decryptionService);
     }
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

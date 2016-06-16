@@ -55,10 +55,11 @@
     <Compile Include="AccountStatements\Money.cs" />
     <Compile Include="AccountStatements\NumericValue.cs" />
     <Compile Include="Common\EncryptionStub.cs" />
+    <Compile Include="Credential\PinNumber.cs" />
     <Compile Include="IDecryptionService.cs" />
     <Compile Include="IEncryptionService.cs" />
-    <Compile Include="Credential\ISecurityField.cs" />
-    <Compile Include="Credential\IdentificationField.cs" />
+    <Compile Include="ISecurityField.cs" />
+    <Compile Include="IIdentificationField.cs" />
     <Compile Include="Credential\CreditCardNumber.cs" />
     <Compile Include="Credential\DateOfBirth.cs" />
     <Compile Include="Credential\IdentityNumber.cs" />
