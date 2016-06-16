@@ -1,5 +1,4 @@
-﻿using Aps.Domain.AccountStatements.Tests.DomainTypes;
-using LightBDD;
+﻿using LightBDD;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace

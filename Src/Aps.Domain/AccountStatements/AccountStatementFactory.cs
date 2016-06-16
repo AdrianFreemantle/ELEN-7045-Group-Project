@@ -1,6 +1,6 @@
-using Aps.Domain.AccountStatements;
+using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatements.Tests.DomainTypes
+namespace Aps.Domain.AccountStatements
 {
     public class AccountStatementFactory
     {

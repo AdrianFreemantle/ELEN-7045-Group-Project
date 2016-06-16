@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Aps.Domain.AccountStatements.Tests.DomainTypes;
 using Aps.Domain.AccountStatements.Tests.Stubs;
+using Aps.Domain.Common;
 using LightBDD;
 using Shouldly;
 

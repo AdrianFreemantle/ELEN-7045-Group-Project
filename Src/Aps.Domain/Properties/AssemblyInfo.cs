@@ -13,11 +13,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: InternalsVisibleTo("Aps.Domain.Account.Tests")]
-[assembly: InternalsVisibleTo("Aps.Domain.AccountStatements.Tests")]
-[assembly: InternalsVisibleTo("Aps.Domain.Company.Tests")]
-[assembly: InternalsVisibleTo("Aps.Domain.Customer.Tests")]
-[assembly: InternalsVisibleTo("APS.Domain.Services.Tests")]
+[assembly: InternalsVisibleTo("Aps.Domain.Account.Tests", AllInternalsVisible = true)]
+[assembly: InternalsVisibleTo("Aps.Domain.AccountStatements.Tests", AllInternalsVisible = true)]
+[assembly: InternalsVisibleTo("Aps.Domain.Company.Tests", AllInternalsVisible = true)]
+[assembly: InternalsVisibleTo("Aps.Domain.Customer.Tests", AllInternalsVisible = true)]
+[assembly: InternalsVisibleTo("APS.Domain.Services.Tests", AllInternalsVisible = true)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

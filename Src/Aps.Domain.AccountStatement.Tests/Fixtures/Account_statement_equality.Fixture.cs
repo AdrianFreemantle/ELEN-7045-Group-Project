@@ -1,7 +1,7 @@
 ﻿using System;
-using Aps.Domain.AccountStatements.Tests.DomainTypes;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.AccountStatements;
+using Aps.Domain.Common;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace
@@ -13,8 +13,8 @@ namespace Aps.Domain.AccountStatements.Tests
         private CalendarMonth callCalendarMonth2;
         private AccountIdStub accountId1;
         private AccountIdStub accountId2;
-        private DomainTypes.AccountStatement statement1;
-        private DomainTypes.AccountStatement statement2;
+        private AccountStatement statement1;
+        private AccountStatement statement2;
         private bool result;
 
         private void the_two_account_statements_are_equal()
@@ -35,8 +35,8 @@ namespace Aps.Domain.AccountStatements.Tests
             var id1 = AccountStatementId.Create(accountId1, callCalendarMonth1);
             var id2 = AccountStatementId.Create(accountId2, callCalendarMonth2);
 
-            statement1 = new DomainTypes.AccountStatement(id1);
-            statement2 = new DomainTypes.AccountStatement(id2);
+            statement1 = new AccountStatement(id1);
+            statement2 = new AccountStatement(id2);
         }
 
         private void two_account_statements_for_calendar_month(DateTime runTime)

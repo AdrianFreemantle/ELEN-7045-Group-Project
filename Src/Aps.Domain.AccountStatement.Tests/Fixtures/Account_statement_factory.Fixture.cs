@@ -1,7 +1,7 @@
 ﻿using System;
-using Aps.Domain.AccountStatements.Tests.DomainTypes;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.AccountStatements;
+using Aps.Domain.Common;
 using LightBDD;
 using Shouldly;
 
@@ -13,7 +13,7 @@ namespace Aps.Domain.AccountStatements.Tests
         private AccountIdStub accountId;
         private ScrapeResultStub scrapeSessionResult;
         private AccountStatementFactory accountStatementFactory;
-        private DomainTypes.AccountStatement accountStatement;
+        private AccountStatement accountStatement;
 
         private void a_valid_account_statement_is_created()
         {

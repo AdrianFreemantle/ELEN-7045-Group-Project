@@ -1,4 +1,5 @@
 using Aps.Domain.AccountStatements;
+using Aps.Domain.Common;
 using LightBDD;
 using Shouldly;
 

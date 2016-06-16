@@ -1,6 +1,6 @@
 using System;
 
-namespace Aps.Domain.AccountStatements
+namespace Aps.Domain.Common
 {
     public struct Balance 
     {

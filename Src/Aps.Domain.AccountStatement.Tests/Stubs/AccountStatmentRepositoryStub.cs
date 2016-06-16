@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Aps.Domain.AccountStatements.Tests.DomainTypes;
 
 namespace Aps.Domain.AccountStatements.Tests.Stubs
 {

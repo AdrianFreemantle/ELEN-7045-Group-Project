@@ -20,4 +20,10 @@ namespace Aps.Domain.AccountStatements.Tests
             throw new NotImplementedException();
         }
     }
+
+
+    public class AccountStatmentEntryType
+    {
+        
+    }
 }

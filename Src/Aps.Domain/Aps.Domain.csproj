@@ -50,10 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountStatements\Balance.cs" />
-    <Compile Include="AccountStatements\CalendarMonth.cs" />
-    <Compile Include="AccountStatements\Money.cs" />
-    <Compile Include="AccountStatements\NumericValue.cs" />
+    <Compile Include="AccountStatements\AccountStatement.cs" />
+    <Compile Include="AccountStatements\AccountStatementFactory.cs" />
+    <Compile Include="AccountStatements\AccountStatementId.cs" />
+    <Compile Include="Common\Balance.cs" />
+    <Compile Include="Common\CalendarMonth.cs" />
+    <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
+    <Compile Include="Common\Money.cs" />
+    <Compile Include="Common\NumericValue.cs" />
     <Compile Include="Common\EncryptionStub.cs" />
     <Compile Include="Credential\Password.cs" />
     <Compile Include="Credential\SecurityCode.cs" />
