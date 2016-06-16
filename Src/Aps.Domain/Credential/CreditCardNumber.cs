@@ -14,12 +14,6 @@ namespace Aps.Domain.Credential
 
             this._creditcardnumber = creditcardnumber;
 
-            int length = creditcardnumber.Length;
-            if (length != 16)
-            {
-                throw new DomainException("Credit Card Credential", "Invalid Number of digits");
-            }
-
         }
 
         public override string ToString()

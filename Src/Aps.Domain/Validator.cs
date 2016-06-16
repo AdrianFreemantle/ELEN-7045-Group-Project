@@ -66,5 +66,24 @@ namespace Aps.Domain
             return true;
         }
 
+
+        static Regex ValidPhoneNoRegex = CreateValidPhoneRegex();
+
+        private static Regex CreateValidPhoneRegex()
+        {
+            string validPhonePattern = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
+            
+            return new Regex(validPhonePattern, RegexOptions.IgnoreCase);
+        }
+
+        internal static bool PhoneIsValid(string telephoneNumber)
+        {
+            bool PhoneValid = ValidPhoneNoRegex.IsMatch(telephoneNumber);
+
+            return PhoneValid;
+        }
+
+
+
     }
 }

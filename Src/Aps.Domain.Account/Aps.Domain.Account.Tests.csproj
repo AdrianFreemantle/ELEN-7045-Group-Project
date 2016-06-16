@@ -61,8 +61,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Password_identity.cs" />
+    <Compile Include="EmailAddress_identity.cs" />
+    <Compile Include="CreditCardNumber_identity.cs" />
+    <Compile Include="DateOfBirth_identity.cs" />
     <Compile Include="AccountStatus_identity.cs" />
     <Compile Include="Account_identity.cs" />
+    <Compile Include="Fixtures\CreditCardNumber_identity.Fixture.cs" />
+    <Compile Include="Fixtures\Password_identity.Fixture.cs" />
+    <Compile Include="Fixtures\PinNumber_identity.Fixture.cs" />
+    <Compile Include="Fixtures\SecurityCode_identity.Fixture.cs" />
+    <Compile Include="Fixtures\EmailAddress_identity.Fixture.cs" />
+    <Compile Include="Fixtures\UserName_identity.Fixture.cs" />
+    <Compile Include="Fixtures\DateOfBirth_identity.Fixture.cs" />
     <Compile Include="Fixtures\AccountStatus_identity.Fixture.cs" />
     <Compile Include="Fixtures\Account_identity.Fixture.cs" />
     <Compile Include="DomainTypes\Account.cs" />

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Aps.Domain.Company.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
@@ -32,6 +28,11 @@ namespace Aps.Domain.Company.Tests
         private void the_two_are_equal()
         {
             areEqual.ShouldBe(true);
+        }
+
+        private void the_two_are_not_equal()
+        {
+            areEqual.ShouldBe(false);
         }
     }
 }

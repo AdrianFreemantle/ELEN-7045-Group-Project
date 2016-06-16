@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.Account.Tests
 {
     [TestClass]
-    [FeatureDescription(@"An account status should be uniquely identifiable")]
+    [FeatureDescription(@"Equality checks and In-equality checks for Account Status")]
     public partial class AccountStatus_identity
     {
         [TestMethod]
