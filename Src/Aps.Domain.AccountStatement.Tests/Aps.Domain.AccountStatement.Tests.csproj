@@ -68,7 +68,7 @@
     <Compile Include="Account_statement_factory.cs" />
     <Compile Include="Account_statement_equality.cs" />
     <Compile Include="DomainTypes\AccountStatementId.cs" />
-    <Compile Include="Account_statement_identity_equality.cs" />
+    <Compile Include="Account_statement_identity.cs" />
     <Compile Include="Fixtures\Account_statement_identity_equality.Fixture.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
     <Compile Include="Account_statement_integrity_checks.cs" />

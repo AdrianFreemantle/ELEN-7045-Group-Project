@@ -5,7 +5,7 @@ using Shouldly;
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.AccountStatement.Tests
 {
-    public partial class Account_statement_identity_equality : FeatureFixture
+    public partial class Account_statement_identity : FeatureFixture
     {
         private AccountStatementId id1;
         private AccountStatementId id2;

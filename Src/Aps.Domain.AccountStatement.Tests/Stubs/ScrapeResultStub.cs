@@ -9,14 +9,14 @@ namespace Aps.Domain.AccountStatement.Tests.Stubs
         public IAccountId AccountId { get; private set; }
         public DateTime RunDateTime { get; private set; }
         public Uri BaseUri { get; private set; }
-        public ICollection<TextValuePair> TextValuePairs { get; private set; }
+        public ICollection<ScrapeResultDataPair> TextValuePairs { get; private set; }
 
         public ScrapeResultStub(IAccountId accountId, DateTime runDate)
-            :this(accountId, runDate, new TextValuePair[0])
+            :this(accountId, runDate, new ScrapeResultDataPair[0])
         {
         }
 
-        public ScrapeResultStub(IAccountId accountId, DateTime runDate, ICollection<TextValuePair> textValuePairs)
+        public ScrapeResultStub(IAccountId accountId, DateTime runDate, ICollection<ScrapeResultDataPair> textValuePairs)
         {
             AccountId = accountId;
             RunDateTime = runDate;

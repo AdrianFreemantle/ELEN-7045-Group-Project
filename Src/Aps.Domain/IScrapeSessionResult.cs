@@ -9,6 +9,6 @@ namespace Aps.Domain
         IAccountId AccountId { get; }
         DateTime RunDateTime { get; }
         Uri BaseUri { get; }
-        ICollection<TextValuePair> TextValuePairs { get; }
+        ICollection<ScrapeResultDataPair> TextValuePairs { get; }
     }
 }

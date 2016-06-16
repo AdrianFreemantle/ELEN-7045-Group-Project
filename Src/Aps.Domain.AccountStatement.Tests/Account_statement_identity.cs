@@ -9,7 +9,7 @@ namespace Aps.Domain.AccountStatement.Tests
     [TestClass]
     [ScenarioCategory("Account Statements")]
     [FeatureDescription(@"Account statement identities should be equatable")]
-    public partial class Account_statement_identity_equality
+    public partial class Account_statement_identity
     {
         [TestMethod]
         public void Two_account_statement_identities_with_the_same_calendar_month_and_account_number_are_equal()
