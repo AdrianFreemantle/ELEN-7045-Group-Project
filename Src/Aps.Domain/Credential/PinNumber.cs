@@ -9,11 +9,11 @@ namespace Aps.Domain.Credential
         public PinNumber(string pin, string confirmpin, IEncryptionService encryptionService)
         {
             if (String.IsNullOrWhiteSpace(pin) || String.IsNullOrWhiteSpace(confirmpin))
-                throw new Exception();
+                throw new DomainException("Pin Number Credential", "Invalid Pin Number passed");
 
             if (pin != confirmpin)
-                throw new Exception();
-
+                throw new DomainException("Pin Number Credential", "Pin Number and Confirm Pin Number does not match");
+            
             encryptedData = encryptionService.Encrypt(pin);
         }
 
