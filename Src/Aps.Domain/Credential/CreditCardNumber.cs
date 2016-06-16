@@ -13,6 +13,7 @@ namespace Aps.Domain.Credential
             }
 
             this._creditcardnumber = creditcardnumber;
+
         }
 
         public override string ToString()

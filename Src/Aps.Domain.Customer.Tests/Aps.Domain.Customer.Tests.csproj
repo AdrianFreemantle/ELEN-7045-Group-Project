@@ -75,6 +75,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
+      <Project>{b29b12bb-0520-40b9-b9f4-34a978d517db}</Project>
+      <Name>Aps.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
