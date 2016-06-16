@@ -1,19 +1,19 @@
 ﻿using System;
-using Aps.Domain.AccountStatement.Tests.DomainTypes;
-using Aps.Domain.AccountStatement.Tests.Stubs;
+using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.AccountStatements;
+using Aps.Domain.Common;
 using LightBDD;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.AccountStatements.Tests
 {
     public partial class Account_statement_factory : FeatureFixture
     {
         private AccountIdStub accountId;
         private ScrapeResultStub scrapeSessionResult;
         private AccountStatementFactory accountStatementFactory;
-        private DomainTypes.AccountStatement accountStatement;
+        private AccountStatement accountStatement;
 
         private void a_valid_account_statement_is_created()
         {

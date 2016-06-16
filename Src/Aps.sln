@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.AccountStatement.Tests", "Aps.Domain.AccountStatement.Tests\Aps.Domain.AccountStatement.Tests.csproj", "{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.AccountStatements.Tests", "Aps.Domain.AccountStatement.Tests\Aps.Domain.AccountStatements.Tests.csproj", "{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{16EE261D-40B6-4E2B-8E7A-D9047526210D}"
 	ProjectSection(SolutionItems) = preProject

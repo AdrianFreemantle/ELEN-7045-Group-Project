@@ -2,14 +2,14 @@
 
 namespace Aps.Domain.Credential
 {
-    class Password : ISecurityField
+    public struct Password : ISecurityField
     {
         private readonly byte[] encryptedData;
 
         public Password(string password, string confirmpassword, IEncryptionService encryptionService)
         {
-            if (String.IsNullOrWhiteSpace(password) || String.IsNullOrWhiteSpace(confirmpassword))
-                throw new DomainException("Password Credential", "Invalid Password passed");
+            Guard.ThatParameterNotNullOrEmpty(password, "Password");
+            Guard.ThatParameterNotNullOrEmpty(confirmpassword, "Confirm Password");
 
             if (password != confirmpassword)
                 throw new DomainException("Password Credential", "Password and Confirm Password does not match");

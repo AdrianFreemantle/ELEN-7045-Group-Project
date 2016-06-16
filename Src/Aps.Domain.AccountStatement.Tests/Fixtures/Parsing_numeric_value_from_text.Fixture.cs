@@ -4,7 +4,7 @@ using LightBDD;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.AccountStatements.Tests
 {
     public partial class Parsing_numeric_value_from_text : FeatureFixture
     {

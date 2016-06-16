@@ -3,11 +3,11 @@ using Aps.Domain.Credential;
 
 namespace Aps.Domain.Common
 {
-    internal struct DateOfBirth : IIdentificationField
+    public struct DateOfBirth : IIdentificationField
     {
         private readonly DateTime _dateofbirth;
 
-        private DateOfBirth(DateTime dateofbirth)
+        public DateOfBirth(DateTime dateofbirth)
         {
             Guard.ThatValueTypeNotDefaut(dateofbirth, "Date Of Birth");
 
@@ -18,5 +18,6 @@ namespace Aps.Domain.Common
 
             this._dateofbirth = dateofbirth;
         }
+        //To-Do Add encryption 
     }
 }

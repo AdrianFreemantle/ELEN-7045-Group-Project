@@ -1,6 +1,6 @@
 ﻿namespace Aps.Domain
 {
-    interface IEncryptionService
+    public interface IEncryptionService
     {
         byte[] Encrypt(string data);
     }

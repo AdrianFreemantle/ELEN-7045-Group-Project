@@ -1,12 +1,22 @@
 using System;
-using Aps.Domain.AccountStatements;
+using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatement.Tests.DomainTypes
+namespace Aps.Domain.AccountStatements
 {
     public struct AccountStatementId
     {
         private readonly CalendarMonth calendarMonth;
         private readonly IAccountId accountId;
+
+        internal CalendarMonth Month
+        {
+            get { return calendarMonth; }
+        }
+
+        internal IAccountId AccountId
+        {
+            get { return accountId; }
+        }
 
         private AccountStatementId(IAccountId accountId, CalendarMonth calendarMonth)
         {
