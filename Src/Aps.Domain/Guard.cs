@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Aps.Domain
@@ -7,7 +8,7 @@ namespace Aps.Domain
     /// <summary>
     /// A static class which simplifies the basic checking of parameters.
     /// </summary>
-    //[DebuggerStepThrough]
+    [DebuggerStepThrough]
     public static class Guard
     {
         /// <summary>

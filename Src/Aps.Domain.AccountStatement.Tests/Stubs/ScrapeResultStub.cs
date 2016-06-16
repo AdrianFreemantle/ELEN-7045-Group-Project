@@ -6,6 +6,7 @@ namespace Aps.Domain.AccountStatement.Tests.Stubs
 {
     public class ScrapeResultStub : IScrapeSessionResult
     {
+        public IScrapeSessionResultCode ResultCode { get; private set; }
         public IAccountId AccountId { get; private set; }
         public DateTime RunDateTime { get; private set; }
         public Uri BaseUri { get; private set; }

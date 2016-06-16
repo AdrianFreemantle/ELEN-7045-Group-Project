@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Account.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Company.Tests", "Aps.Domain.Company.Tests\Aps.Domain.Company.Tests.csproj", "{89CB6383-8591-47A7-95D9-7BBA2EBD25E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APS.Domain.Services.Orchestration.Tests", "APS.Domain.Services.Orchestration.Tests\APS.Domain.Services.Orchestration.Tests.csproj", "{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APS.Domain.Services.Tests", "APS.Domain.Services.Tests\APS.Domain.Services.Tests.csproj", "{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
