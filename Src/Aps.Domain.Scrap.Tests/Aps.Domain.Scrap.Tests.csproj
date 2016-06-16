@@ -66,15 +66,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DomainTypes\ScrapSessionID.cs" />
-    <Compile Include="DomainTypes\ScrapSessionFactory.cs" />
     <Compile Include="DomainTypes\ScrapSessionStatus.cs" />
+    <Compile Include="Fixtures\ScrapResultDataPair_Data_Collection.Fixture.cs" />
     <Compile Include="Fixtures\ScrapSessionID_Identity.Fixture.cs" />
+    <Compile Include="ScrapResultDataPair_Data_Collection.cs" />
     <Compile Include="Stubs\ScrapSessionIdStub.cs" />
     <Compile Include="Stubs\ScrapeResultStub.cs" />
     <Compile Include="ScrapSessionID_Identity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

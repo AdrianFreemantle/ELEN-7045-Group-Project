@@ -33,7 +33,7 @@ namespace Aps.Domain.Scrap.Tests.DomainTypes
         public static ScrapSessionStatus Processed { get { return new ScrapSessionStatus(ScrapSessionStatusType.processed); } }
         public static ScrapSessionStatus BrokenScript { get { return new ScrapSessionStatus(ScrapSessionStatusType.brokenscript); } }
 
-        private ScrapSessionStatus(ScrapSessionStatusType scrapSessionStatus)
+        private ScrapSessionStatus(ScrapSessionStatusType scrapSessionStatus) : this()
         {
             this.scrapSessionStatus = scrapSessionStatus;
         }
