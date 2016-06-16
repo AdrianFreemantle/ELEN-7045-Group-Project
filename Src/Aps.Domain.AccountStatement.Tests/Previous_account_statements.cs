@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Aps.Domain.AccountStatements.Tests.DomainTypes;
+using Aps.Domain.AccountStatements.Tests.Stubs;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Shouldly;
 
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.AccountStatements.Tests
 {
     [TestClass]
     [ScenarioCategory("Account Statements")]
@@ -10,14 +15,19 @@ namespace Aps.Domain.AccountStatement.Tests
     public partial class Previous_account_statements
     {
         [TestMethod]
-        public void Test()
+        public void Account_statement_repository_cant_fetch_all_prior_statments_for_an_account()
         {
-            Runner.RunScenario(NotImplemented);
-        }
+            AccountStatmentRepositoryStub repository = new AccountStatmentRepositoryStub();
+            AccountIdStub accountId = new AccountIdStub("12345");
+            CalendarMonth month = new CalendarMonth(DateTime.Now);
+            AccountStatementId accountStatementId = AccountStatementId.Create(accountId, month);
+            AccountStatement statement = new AccountStatement(accountStatementId);
+            repository.Save(statement);
 
-        private static void NotImplemented()
-        {
-            throw new NotImplementedException();
+            ICollection<AccountStatement> result = repository.FetchAllForAccount(new AccountIdStub("12345"));
+            result.Any().ShouldBe(true);
         }
     }
+
+    
 }

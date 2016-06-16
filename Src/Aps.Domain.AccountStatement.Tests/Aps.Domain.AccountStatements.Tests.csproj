@@ -6,7 +6,7 @@
     <ProjectGuid>{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Aps.Domain.AccountStatement.Tests</RootNamespace>
+    <RootNamespace>Aps.Domain.AccountStatements.Tests</RootNamespace>
     <AssemblyName>Aps.Domain.AccountStatement.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -61,6 +61,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\IAccountStatementRepository.cs" />
     <Compile Include="Fixtures\Account_statement_equality.Fixture.cs" />
     <Compile Include="Fixtures\Account_statement_factory.Fixture.cs" />
     <Compile Include="DomainTypes\AccountStatementFactory.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Fixtures\Previous_account_statements.Fixture.cs" />
     <Compile Include="Previous_account_statements.cs" />
+    <Compile Include="Stubs\AccountStatmentRepositoryStub.cs" />
     <Compile Include="Stubs\ScrapeResultStub.cs" />
   </ItemGroup>
   <ItemGroup>
