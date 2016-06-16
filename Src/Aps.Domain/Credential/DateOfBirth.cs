@@ -3,7 +3,7 @@ using Aps.Domain.Credential;
 
 namespace Aps.Domain.Common
 {
-    internal struct DateOfBirth : IIdentificationField
+    public struct DateOfBirth : IIdentificationField
     {
         private readonly DateTime _dateofbirth;
 

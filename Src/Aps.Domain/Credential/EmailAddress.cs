@@ -1,6 +1,6 @@
 namespace Aps.Domain.Credential
 {
-    internal struct EmailAddress : IIdentificationField
+    public struct EmailAddress : IIdentificationField
     {
         private readonly string _address;
 

@@ -1,6 +1,6 @@
 namespace Aps.Domain.Credential
 {
-    internal struct IdentityNumber : IIdentificationField
+    public struct IdentityNumber : IIdentificationField
     {
         private readonly string _identityNumber;
 
