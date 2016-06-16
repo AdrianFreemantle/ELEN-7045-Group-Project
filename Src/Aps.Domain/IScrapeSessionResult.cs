@@ -4,7 +4,7 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain
 {
-    public interface IScrapeSessionResult
+  public interface IScrapeSessionResult
     {
         IAccountId AccountId { get; }
         DateTime RunDateTime { get; }

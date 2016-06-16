@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.AccountStatement.Tests", "Aps.Domain.AccountStatement.Tests\Aps.Domain.AccountStatement.Tests.csproj", "{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}"
 EndProject
@@ -23,6 +23,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Account.Tests", "Aps.Domain.Account\Aps.Domain.Account.Tests.csproj", "{958463CA-8108-4539-927A-669A5A16C7E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Company.Tests", "Aps.Domain.Company.Tests\Aps.Domain.Company.Tests.csproj", "{89CB6383-8591-47A7-95D9-7BBA2EBD25E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APS.Domain.Services.Orchestration.Tests", "APS.Domain.Services.Orchestration.Tests\APS.Domain.Services.Orchestration.Tests.csproj", "{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,10 @@ Global
 		{89CB6383-8591-47A7-95D9-7BBA2EBD25E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89CB6383-8591-47A7-95D9-7BBA2EBD25E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89CB6383-8591-47A7-95D9-7BBA2EBD25E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,5 +69,6 @@ Global
 		{4262FF7B-4934-41BE-BB53-40D2B5753519} = {6BA4A1ED-0DE4-49CB-A726-46C79070E783}
 		{958463CA-8108-4539-927A-669A5A16C7E5} = {6BA4A1ED-0DE4-49CB-A726-46C79070E783}
 		{89CB6383-8591-47A7-95D9-7BBA2EBD25E0} = {6BA4A1ED-0DE4-49CB-A726-46C79070E783}
+		{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A} = {6BA4A1ED-0DE4-49CB-A726-46C79070E783}
 	EndGlobalSection
 EndGlobal
