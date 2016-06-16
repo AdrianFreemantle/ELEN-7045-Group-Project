@@ -1,0 +1,17 @@
+namespace Aps.Domain.Credential
+{
+    internal struct EmailAddress  : ICredential
+    {
+        private string _address;
+
+        private EmailAddress(string address)
+        {
+            if (!Validator.EmailIsValid(address))
+            {
+                throw new DomainException("Email Credential", "Invalid Email Address passed");
+            }
+
+            this._address = address;
+        }
+    }
+}

@@ -8,6 +8,5 @@ namespace Aps.Domain
 {
     public interface ICredential
     {
-        bool IsValid();
     }
 }
