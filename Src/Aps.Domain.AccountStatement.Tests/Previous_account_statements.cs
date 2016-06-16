@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Aps.Domain.AccountStatements.Tests.DomainTypes;
-using Aps.Domain.AccountStatements.Tests.Stubs;
-using LightBDD;
+﻿using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Shouldly;
 
 namespace Aps.Domain.AccountStatements.Tests
 {
@@ -17,17 +11,13 @@ namespace Aps.Domain.AccountStatements.Tests
         [TestMethod]
         public void Account_statement_repository_cant_fetch_all_prior_statments_for_an_account()
         {
-            AccountStatmentRepositoryStub repository = new AccountStatmentRepositoryStub();
-            AccountIdStub accountId = new AccountIdStub("12345");
-            CalendarMonth month = new CalendarMonth(DateTime.Now);
-            AccountStatementId accountStatementId = AccountStatementId.Create(accountId, month);
-            AccountStatement statement = new AccountStatement(accountStatementId);
-            repository.Save(statement);
+            string accountNumber = "12345";
 
-            ICollection<AccountStatement> result = repository.FetchAllForAccount(new AccountIdStub("12345"));
-            result.Any().ShouldBe(true);
+            Runner.RunScenario(
+                given => an_account_statement_repository(),
+                and => it_contains_account_statements_for_account(accountNumber),
+                when => fetching_all_account_statements_for_account_number(accountNumber),
+                then => account_statements_are_returned());
         }
     }
-
-    
 }
