@@ -1,4 +1,5 @@
-﻿using Aps.Domain.Credential;
+﻿using Aps.Domain.Common;
+using Aps.Domain.Credential;
 using LightBDD;
 using Shouldly;
 
@@ -19,7 +20,9 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = password1.Equals(password2);
+            IDecryptionService service = new Encryption();
+
+            areEqual = password1.GetDetails(service).Equals(password2.GetDetails(service));
         }
 
         private void another_Password(Password password)
