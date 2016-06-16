@@ -64,13 +64,12 @@
     <Compile Include="Credential\DateOfBirth.cs" />
     <Compile Include="Credential\IdentityNumber.cs" />
     <Compile Include="Credential\EmailAddress.cs" />
-    <Compile Include="Credential\UserNameCredential .cs" />
+    <Compile Include="Credential\UserName.cs" />
     <Compile Include="EnumExtensions.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="DomainException.cs" />
     <Compile Include="IAccountStatementCreationService.cs" />
     <Compile Include="ICompanyName.cs" />
-    <Compile Include="ICredential.cs" />
     <Compile Include="ICustomerId.cs" />
     <Compile Include="IAccountId.cs" />
     <Compile Include="ICustomerNotificationService.cs" />

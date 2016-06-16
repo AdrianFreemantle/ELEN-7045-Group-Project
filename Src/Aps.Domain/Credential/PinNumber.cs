@@ -2,7 +2,7 @@
 
 namespace Aps.Domain.Credential
 {
-    class PinNumber
+    class PinNumber : ISecurityField
     {
         private readonly byte[] encryptedData;
 

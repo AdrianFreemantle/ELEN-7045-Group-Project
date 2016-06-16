@@ -1,6 +1,6 @@
 namespace Aps.Domain.Credential
 {
-    internal struct CreditCardNumber  : ICredential
+    internal struct CreditCardNumber  : IIdentificationField
     {
         private readonly string _creditcardnumber;
 
@@ -13,6 +13,11 @@ namespace Aps.Domain.Credential
             }
 
             this._creditcardnumber = creditcardnumber;
+        }
+
+        public override string ToString()
+        {
+            return _creditcardnumber;
         }
     }
 }

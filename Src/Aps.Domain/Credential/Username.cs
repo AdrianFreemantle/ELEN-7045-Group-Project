@@ -1,6 +1,6 @@
 namespace Aps.Domain.Credential
 {
-    internal struct UserName  : ICredential
+    internal struct UserName : IIdentificationField
     {
         private readonly string _userName;
 
@@ -13,6 +13,11 @@ namespace Aps.Domain.Credential
             }            
     
             this._userName = userName;
+        }
+
+        public override string ToString()
+        {
+            return _userName;
         }
     }
 }

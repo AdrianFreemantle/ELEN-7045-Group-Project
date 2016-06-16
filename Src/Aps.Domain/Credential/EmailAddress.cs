@@ -1,6 +1,6 @@
 namespace Aps.Domain.Credential
 {
-    internal struct EmailAddress  : ICredential
+    internal struct EmailAddress : IIdentificationField
     {
         private readonly string _address;
 
@@ -13,6 +13,11 @@ namespace Aps.Domain.Credential
             }
 
             this._address = address;
+        }
+
+        public override string ToString()
+        {
+            return _address;
         }
     }
 }
