@@ -1,4 +1,5 @@
 ﻿using System;
+using Aps.Domain.Company.Tests.DomainTypes;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -32,21 +33,6 @@ namespace Aps.Domain.Company.Tests
                 and => another_company_name(second),
                 when => performing_an_equality_comparison(),
                 then => the_two_are_not_equal());
-        }
-    }
-
-    public struct CompanyName : IEquatable<CompanyName>
-    {
-        public string Name { get; private set; }
-
-        public CompanyName(string name)
-        {
-            this.Name = name;
-        }
-
-        public bool Equals(CompanyName other)
-        {
-            return Name.Equals(other.Name);
         }
     }
 }
