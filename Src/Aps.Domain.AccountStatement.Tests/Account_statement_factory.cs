@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.AccountStatement.Tests
 {
     [TestClass]
+    [ScenarioCategory("Account Statements")]
     [FeatureDescription(@"An account factory creates a valid instance of an account")]
     public partial class Account_statement_factory 
     {

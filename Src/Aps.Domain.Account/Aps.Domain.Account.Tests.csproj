@@ -61,13 +61,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AccountStatus_identity.cs" />
     <Compile Include="Account_identity.cs" />
+    <Compile Include="Fixtures\AccountStatus_identity.Fixture.cs" />
     <Compile Include="Fixtures\Account_identity.Fixture.cs" />
     <Compile Include="DomainTypes\Account.cs" />
     <Compile Include="DomainTypes\AccountId.cs" />
     <Compile Include="DomainTypes\AccountNumber.cs" />
     <Compile Include="DomainTypes\AccountStatus.cs" />
-    <Compile Include="DomainTypes\Credential.cs" />
     <Compile Include="Stubs\CustomerIdStub.cs" />
     <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

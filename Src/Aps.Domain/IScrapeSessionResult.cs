@@ -6,9 +6,10 @@ namespace Aps.Domain
 {
     public interface IScrapeSessionResult
     {
+        IScrapeSessionResultCode ResultCode { get; }
         IAccountId AccountId { get; }
         DateTime RunDateTime { get; }
         Uri BaseUri { get; }
-        ICollection<TextValuePair> TextValuePairs { get; }
+        ICollection<ScrapeResultDataPair> TextValuePairs { get; }
     }
 }

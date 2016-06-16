@@ -32,7 +32,7 @@ namespace Aps.Domain.AccountStatement.Tests.DomainTypes
 
         public override string ToString()
         {
-            return String.Format("{0} {1}", accountId, calendarMonth);
+            return String.Format("{0}-{1}", accountId, calendarMonth);
         }
     }
 }

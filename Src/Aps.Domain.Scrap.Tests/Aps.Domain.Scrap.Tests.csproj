@@ -63,6 +63,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\ScrapSessionRepository.cs" />
+    <Compile Include="DomainTypes\ScrapFileParser.cs" />
+    <Compile Include="DomainTypes\ScrapSessionStatus.cs" />
+    <Compile Include="DomainTypes\ScrapSessionFactory.cs" />
+    <Compile Include="DomainTypes\ScrapRequest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -42,6 +42,16 @@ namespace Aps.Domain.AccountStatements
             return new Balance(left.balance - right.balance);
         }
 
+        public static bool operator >(Balance left, Balance right)
+        {
+            return left.balance > right.balance;
+        }
+
+        public static bool operator <(Balance left, Balance right)
+        {
+            return left.balance < right.balance;
+        }
+
         public override string ToString()
         {
             return String.Format("{0:C}", balance);
