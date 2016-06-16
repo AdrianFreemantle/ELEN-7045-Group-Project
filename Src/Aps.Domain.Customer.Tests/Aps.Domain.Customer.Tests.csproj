@@ -70,6 +70,7 @@
     <Compile Include="CustomerRegistrationAPS2.cs" />
     <Compile Include="CustomerRegistrationAPS1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
