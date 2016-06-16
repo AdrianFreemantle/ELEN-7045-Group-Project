@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Aps.Domain.Company.Tests
 {
     [TestClass]
-    public class Company_Identity
+    public class CompanyFactory
     {
         [TestMethod]
         public void TestMethod1()
