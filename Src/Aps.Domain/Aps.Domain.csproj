@@ -55,6 +55,8 @@
     <Compile Include="AccountStatements\Money.cs" />
     <Compile Include="AccountStatements\NumericValue.cs" />
     <Compile Include="Common\EncryptionStub.cs" />
+    <Compile Include="Credential\Password.cs" />
+    <Compile Include="Credential\SecurityCode.cs" />
     <Compile Include="Credential\PinNumber.cs" />
     <Compile Include="IDecryptionService.cs" />
     <Compile Include="IEncryptionService.cs" />

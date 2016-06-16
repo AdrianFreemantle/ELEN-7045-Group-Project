@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace Aps.Domain.Credential
+{
+    class Password : ISecurityField
+    {
+        private readonly byte[] encryptedData;
+
+        public Password(string password, string confirmpassword, IEncryptionService encryptionService)
+        {
+            if (String.IsNullOrWhiteSpace(password) || String.IsNullOrWhiteSpace(confirmpassword))
+                throw new DomainException("Password Credential", "Invalid Password passed");
+
+            if (password != confirmpassword)
+                throw new DomainException("Password Credential", "Password and Confirm Password does not match");
+
+            encryptedData = encryptionService.Encrypt(password);
+        }
+
+        public string GetDetails(IDecryptionService decryptionService)
+        {
+            return decryptionService.Decrypt(encryptedData);
+        }
+    }
+}
