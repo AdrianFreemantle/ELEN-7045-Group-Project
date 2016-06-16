@@ -43,6 +43,9 @@
     <Compile Include="AccountStatements\CalendarMonth.cs" />
     <Compile Include="AccountStatements\Money.cs" />
     <Compile Include="AccountStatements\NumericValue.cs" />
+    <Compile Include="Common\EncryptionStub.cs" />
+    <Compile Include="IDecryptionService.cs" />
+    <Compile Include="IEncryptionService.cs" />
     <Compile Include="Credential\ISecurityField.cs" />
     <Compile Include="Credential\IdentificationField.cs" />
     <Compile Include="Credential\CreditCardNumber.cs" />
