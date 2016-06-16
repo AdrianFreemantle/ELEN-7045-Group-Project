@@ -58,22 +58,36 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DomainTypes\ScrapSessionRepository.cs" />
-    <Compile Include="DomainTypes\ScrapFileParser.cs" />
-    <Compile Include="DomainTypes\ScrapSessionStatus.cs" />
+    <Compile Include="DomainTypes\ScrapSessionID.cs" />
     <Compile Include="DomainTypes\ScrapSessionFactory.cs" />
-    <Compile Include="DomainTypes\ScrapRequest.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DomainTypes\ScrapSessionStatus.cs" />
+    <Compile Include="Fixtures\ScrapSessionID_Identity.Fixture.cs" />
+    <Compile Include="Stubs\ScrapSessionIdStub.cs" />
+    <Compile Include="Stubs\ScrapeResultStub.cs" />
+    <Compile Include="ScrapSessionID_Identity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aps.Domain.Services\Aps.Domain.Services.csproj">
+      <Project>{e07977a9-fe2c-473c-a6dc-e0fd341d1b24}</Project>
+      <Name>Aps.Domain.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
+      <Project>{b29b12bb-0520-40b9-b9f4-34a978d517db}</Project>
+      <Name>Aps.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
