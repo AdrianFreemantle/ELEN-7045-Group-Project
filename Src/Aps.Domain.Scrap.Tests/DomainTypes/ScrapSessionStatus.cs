@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography;
 
 namespace Aps.Domain.Scrap.Tests.DomainTypes
 {

@@ -58,11 +58,15 @@
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />
-    <Compile Include="Common\EncryptionStub.cs" />
+    <Compile Include="Common\Encryption.cs" />
     <Compile Include="Credential\Password.cs" />
     <Compile Include="Credential\SecurityCode.cs" />
     <Compile Include="Credential\PinNumber.cs" />
+<<<<<<< HEAD
     <Compile Include="Credential\TelePhoneNumber.cs" />
+=======
+    <Compile Include="IScrapeSessionId.cs" />
+>>>>>>> 8ad4c4d018a1275ebc649524e10697202ed284bb
     <Compile Include="IDecryptionService.cs" />
     <Compile Include="IEncryptionService.cs" />
     <Compile Include="ISecurityField.cs" />
