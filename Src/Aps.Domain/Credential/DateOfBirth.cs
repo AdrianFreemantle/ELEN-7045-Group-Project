@@ -8,6 +8,8 @@ namespace Aps.Domain.Common
 
         private DateOfBirth(DateTime dateofbirth)
         {
+            Guard.ThatValueTypeNotDefaut(dateofbirth, "Date Of Birth");
+
             if (dateofbirth > DateTime.Now)
             {
                 throw new DomainException("Date Of Birth Credential", "Invalid Date Of Birth Passed");

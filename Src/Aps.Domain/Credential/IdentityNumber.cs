@@ -6,6 +6,7 @@ namespace Aps.Domain.Credential
 
         private IdentityNumber(string identityNumber)
         {
+            Guard.ThatParameterNotNullOrEmpty(identityNumber, "Identity Number"); 
             if (!Validator.IdentityNumberIsValid(identityNumber))
             {
                 throw new DomainException("Identity Number Credential", "Invalid Identity Number Passed");

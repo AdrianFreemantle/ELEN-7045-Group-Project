@@ -43,7 +43,7 @@
     <Compile Include="AccountStatements\CalendarMonth.cs" />
     <Compile Include="AccountStatements\Money.cs" />
     <Compile Include="AccountStatements\NumericValue.cs" />
-    <Compile Include="Credential\SecurityField.cs" />
+    <Compile Include="Credential\ISecurityField.cs" />
     <Compile Include="Credential\IdentificationField.cs" />
     <Compile Include="Credential\CreditCardNumber.cs" />
     <Compile Include="Credential\DateOfBirth.cs" />

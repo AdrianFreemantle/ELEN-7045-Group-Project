@@ -1,13 +1,7 @@
 ﻿namespace Aps.Domain.Credential
 {
-    public class SecurityField : ICredential
+    public interface ISecurityField
     {
-        private string _field;
-
-        private SecurityField(string field)
-        {
-            this._field = field;
-        }
     }
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

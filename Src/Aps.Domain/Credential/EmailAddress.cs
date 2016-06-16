@@ -6,6 +6,7 @@ namespace Aps.Domain.Credential
 
         private EmailAddress(string address)
         {
+            Guard.ThatParameterNotNullOrEmpty(address, "Email Address"); 
             if (!Validator.EmailIsValid(address))
             {
                 throw new DomainException("Email Credential", "Invalid Email Address passed");
