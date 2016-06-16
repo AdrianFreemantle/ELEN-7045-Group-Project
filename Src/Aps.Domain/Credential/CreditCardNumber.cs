@@ -4,7 +4,7 @@ namespace Aps.Domain.Credential
     {
         private readonly string _creditcardnumber;
 
-        private CreditCardNumber(string creditcardnumber)
+        public CreditCardNumber(string creditcardnumber)
         {
             Guard.ThatParameterNotNullOrEmpty(creditcardnumber, "Credit Card Number");
             if (!Validator.CreditCardIsValid(creditcardnumber))

@@ -4,7 +4,7 @@ namespace Aps.Domain.Credential
     {
         private readonly string _address;
 
-        private EmailAddress(string address)
+        public EmailAddress(string address)
         {
             Guard.ThatParameterNotNullOrEmpty(address, "Email Address"); 
             if (!Validator.EmailIsValid(address))

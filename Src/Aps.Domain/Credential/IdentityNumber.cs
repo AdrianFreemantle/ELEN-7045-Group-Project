@@ -4,7 +4,7 @@ namespace Aps.Domain.Credential
     {
         private readonly string _identityNumber;
 
-        private IdentityNumber(string identityNumber)
+        public IdentityNumber(string identityNumber)
         {
             Guard.ThatParameterNotNullOrEmpty(identityNumber, "Identity Number"); 
             if (!Validator.IdentityNumberIsValid(identityNumber))
