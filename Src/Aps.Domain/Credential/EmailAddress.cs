@@ -1,10 +1,10 @@
 namespace Aps.Domain.Credential
 {
-    internal struct EmailAddress  : ICredential
+    public struct EmailAddress : IIdentificationField
     {
-        private string _address;
+        private readonly string _address;
 
-        private EmailAddress(string address)
+        public EmailAddress(string address)
         {
             Guard.ThatParameterNotNullOrEmpty(address, "Email Address"); 
             if (!Validator.EmailIsValid(address))
@@ -13,6 +13,11 @@ namespace Aps.Domain.Credential
             }
 
             this._address = address;
+        }
+
+        public override string ToString()
+        {
+            return _address;
         }
     }
 }

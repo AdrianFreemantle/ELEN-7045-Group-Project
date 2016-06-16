@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace APS.Domain.Services.Orchestration.Tests
+namespace Aps.Domain.Scrap.Tests
 {
     [TestClass]
     public class UnitTest1
@@ -10,15 +10,5 @@ namespace APS.Domain.Services.Orchestration.Tests
         public void TestMethod1()
         {
         }
-    }
-
-    public class Orchestrator
-    {
-
-    }
-
-    public interface IProcessScrapeResult
-    {
-
     }
 }

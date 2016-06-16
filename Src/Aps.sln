@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.AccountStatement.Tests", "Aps.Domain.AccountStatement.Tests\Aps.Domain.AccountStatement.Tests.csproj", "{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.AccountStatements.Tests", "Aps.Domain.AccountStatement.Tests\Aps.Domain.AccountStatements.Tests.csproj", "{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{16EE261D-40B6-4E2B-8E7A-D9047526210D}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Account.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Company.Tests", "Aps.Domain.Company.Tests\Aps.Domain.Company.Tests.csproj", "{89CB6383-8591-47A7-95D9-7BBA2EBD25E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APS.Domain.Services.Orchestration.Tests", "APS.Domain.Services.Orchestration.Tests\APS.Domain.Services.Orchestration.Tests.csproj", "{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APS.Domain.Services.Tests", "APS.Domain.Services.Tests\APS.Domain.Services.Tests.csproj", "{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

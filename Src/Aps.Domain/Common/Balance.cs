@@ -1,6 +1,6 @@
 using System;
 
-namespace Aps.Domain.AccountStatements
+namespace Aps.Domain.Common
 {
     public struct Balance 
     {
@@ -40,6 +40,16 @@ namespace Aps.Domain.AccountStatements
         public static Balance operator -(Balance left, Balance right)
         {
             return new Balance(left.balance - right.balance);
+        }
+
+        public static bool operator >(Balance left, Balance right)
+        {
+            return left.balance > right.balance;
+        }
+
+        public static bool operator <(Balance left, Balance right)
+        {
+            return left.balance < right.balance;
         }
 
         public override string ToString()

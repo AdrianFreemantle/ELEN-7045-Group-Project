@@ -1,7 +1,7 @@
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Aps.Domain.AccountStatement.Tests
+namespace Aps.Domain.AccountStatements.Tests
 {
     [TestClass]
     [ScenarioCategory("Account Statements")]

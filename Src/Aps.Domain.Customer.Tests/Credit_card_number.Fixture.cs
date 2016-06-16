@@ -24,6 +24,12 @@ namespace Aps.Domain.Customer.Tests
             try
             {
                 var cc = new CreditCardNumber(cardNumber);
+                
+       //       var cc = new Aps.Domain.Credential.CreditCardNumber(cardNumber);
+
+
+
+
             }
             catch (Exception ex)
             {

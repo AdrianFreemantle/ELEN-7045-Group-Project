@@ -1,7 +1,6 @@
 using System;
-using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatements
+namespace Aps.Domain.Common
 {
     public struct NumericValue
     {
