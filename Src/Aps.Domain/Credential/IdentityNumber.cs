@@ -2,7 +2,7 @@ namespace Aps.Domain.Credential
 {
     internal struct IdentityNumber : ICredential
     {
-        private string _identityNumber;
+        private readonly string _identityNumber;
 
         private IdentityNumber(string identityNumber)
         {

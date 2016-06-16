@@ -2,7 +2,7 @@ namespace Aps.Domain.Credential
 {
     internal struct CreditCardNumber  : ICredential
     {
-        private string _creditcardnumber;
+        private readonly string _creditcardnumber;
 
         private CreditCardNumber(string creditcardnumber)
         {

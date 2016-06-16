@@ -2,7 +2,7 @@ namespace Aps.Domain.Credential
 {
     internal struct EmailAddress  : ICredential
     {
-        private string _address;
+        private readonly string _address;
 
         private EmailAddress(string address)
         {

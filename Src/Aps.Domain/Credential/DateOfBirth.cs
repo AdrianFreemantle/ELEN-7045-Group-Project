@@ -4,7 +4,7 @@ namespace Aps.Domain.Common
 {
     internal struct DateOfBirth : ICredential
     {
-        private DateTime _dateofbirth;
+        private readonly DateTime _dateofbirth;
 
         private DateOfBirth(DateTime dateofbirth)
         {
