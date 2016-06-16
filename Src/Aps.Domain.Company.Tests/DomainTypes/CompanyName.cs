@@ -6,7 +6,7 @@ namespace Aps.Domain.Company.Tests.DomainTypes
     {
         public string Name { get; private set; }
 
-        public CompanyName(string name)
+        public CompanyName(string name) : this()
         {
             this.Name = name;
         }

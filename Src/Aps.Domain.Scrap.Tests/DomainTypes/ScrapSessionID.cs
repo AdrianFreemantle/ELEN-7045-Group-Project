@@ -8,7 +8,7 @@ namespace Aps.Domain.Scrap.Tests.DomainTypes
         public String GUI { get; private set; }
 
 
-        public ScrapSessionID(String GUI)
+        public ScrapSessionID(String GUI) : this()
         {
             this.GUI = GUI;
         }
