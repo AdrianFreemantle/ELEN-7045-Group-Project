@@ -8,8 +8,8 @@ namespace Aps.Domain.Credential
 
         public PinNumber(string pin, string confirmpin, IEncryptionService encryptionService)
         {
-            if (String.IsNullOrWhiteSpace(pin) || String.IsNullOrWhiteSpace(confirmpin))
-                throw new DomainException("Pin Number Credential", "Invalid Pin Number passed");
+            Guard.ThatParameterNotNullOrEmpty(pin, "Pin Number");
+            Guard.ThatParameterNotNullOrEmpty(confirmpin, "Confirm Pin Number");
 
             if (pin != confirmpin)
                 throw new DomainException("Pin Number Credential", "Pin Number and Confirm Pin Number does not match");

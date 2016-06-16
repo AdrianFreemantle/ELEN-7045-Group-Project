@@ -8,8 +8,8 @@ namespace Aps.Domain.Credential
 
         public SecurityCode(string code, string confirmcode, IEncryptionService encryptionService)
         {
-            if (String.IsNullOrWhiteSpace(code) || String.IsNullOrWhiteSpace(confirmcode))
-                throw new DomainException("Security Code Credential", "Invalid Security Code passed");
+            Guard.ThatParameterNotNullOrEmpty(code, "Security Code");
+            Guard.ThatParameterNotNullOrEmpty(confirmcode, "Confirm Security Code");
 
             if (code != confirmcode)
                 throw new DomainException("Security Code Credential", "Security Code and Confirm Security Code does not match");
