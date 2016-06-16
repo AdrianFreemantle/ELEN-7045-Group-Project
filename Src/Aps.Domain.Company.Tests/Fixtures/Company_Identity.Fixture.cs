@@ -33,5 +33,10 @@ namespace Aps.Domain.Company.Tests
         {
             areEqual.ShouldBe(true);
         }
+
+        private void the_two_are_not_equal()
+        {
+            areEqual.ShouldBe(false);
+        }
     }
 }

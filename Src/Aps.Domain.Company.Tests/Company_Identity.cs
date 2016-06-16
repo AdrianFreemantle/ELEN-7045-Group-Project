@@ -24,7 +24,14 @@ namespace Aps.Domain.Company.Tests
         [TestMethod]
         public void Two_companies_with_different_names_are_not_equal()
         {
-            
+            var first = new CompanyName("Company1");
+            var second = new CompanyName("Company2");
+
+            Runner.RunScenario(
+                given => a_company_name(first),
+                and => another_company_name(second),
+                when => performing_an_equality_comparison(),
+                then => the_two_are_not_equal());
         }
     }
 
