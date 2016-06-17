@@ -11,7 +11,7 @@ namespace Aps.Domain.Scrap.Tests.DomainTypes
         public DateTime RunDateTime { get; private set; }
         public ICollection<ScrapeResultDataPair> TextValuePairs { get; private set; }
 
-        public ScrapeSessionResult(ScrapeSessionResultCode resultCode, IAccountId accountId, DateTime runDateTime, ICollection<ScrapeResultDataPair> textValuePairs)
+        public ScrapeSessionResult(ScrapeSessionResultCode resultCode, IAccountId accountId, DateTime runDateTime, ICollection<ScrapeResultDataPair> textValuePairs) :this()
         {
 
             Guard.ThatValueTypeNotDefaut(resultCode, "resultCode");
