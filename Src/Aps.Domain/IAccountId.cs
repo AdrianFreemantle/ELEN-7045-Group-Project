@@ -6,6 +6,7 @@ namespace Aps.Domain
 {
     public interface IAccountId
     {
-        
+        IAccountNumber AccountNumber { get; }   
+        ICompanyName CompanyName { get; }   
     }
 }
