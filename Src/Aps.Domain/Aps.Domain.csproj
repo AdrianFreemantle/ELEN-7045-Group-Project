@@ -61,6 +61,8 @@
     <Compile Include="Common\AccountStatmentEntryType.cs" />
     <Compile Include="Common\DataType.cs" />
     <Compile Include="Credential\CcvNumber.cs" />
+    <Compile Include="Credential\NameVO.cs" />
+    <Compile Include="Credential\SurnameVO.cs" />
     <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />

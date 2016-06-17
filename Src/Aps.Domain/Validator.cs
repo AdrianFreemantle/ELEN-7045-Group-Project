@@ -82,6 +82,33 @@ namespace Aps.Domain
             return true;
         }
 
+        internal static bool NameVoIsValid(string namevo)
+        {
+            if (string.IsNullOrEmpty(namevo))
+            {
+                return false;
+            }
+
+            if (namevo.Length > 100)
+            {
+                return false; 
+            }
+            return true;
+        }
+
+        internal static bool SurnameVoIsValid(string surnamevo)
+        {
+            if (string.IsNullOrEmpty(surnamevo))
+            {
+                return false;
+            }
+
+            if (surnamevo.Length > 100)
+            {
+                return false;
+            }
+            return true;
+        }
 
         static Regex ValidPhoneNoRegex = CreateValidPhoneRegex();
 
