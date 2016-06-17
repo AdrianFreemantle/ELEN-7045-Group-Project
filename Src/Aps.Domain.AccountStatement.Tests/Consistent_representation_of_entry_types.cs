@@ -25,6 +25,7 @@ namespace Aps.Domain.AccountStatements.Tests
         [TestMethod]
         public void An_account_statment_entry_for_a_total_due_statement_field_is_presented_correctly()
         {
+            //todo: need test without checking against ToString, this is too fragile and will break if the string format changes
             string expectedValue = String.Format(DefaultFomratProvider.NumberFormat, "001 - {0} : {1:C}", AccountStatmentEntryType.TotalDue, 1500);
 
             accountStatmentEntryFactory = new AccountStatmentEntryFactory();
