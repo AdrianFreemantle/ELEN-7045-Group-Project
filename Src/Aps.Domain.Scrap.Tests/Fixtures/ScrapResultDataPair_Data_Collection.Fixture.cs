@@ -9,6 +9,7 @@ using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 
+// ReSharper disable once CheckNamespace
 namespace Aps.Domain.Scrap.Tests
 {
     public partial class ScrapResultDataPair_Data_Collection : FeatureFixture

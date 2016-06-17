@@ -7,21 +7,22 @@ using Aps.Domain.Scrap.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
+// ReSharper disable once CheckNamespace
 namespace Aps.Domain.Scrap.Tests
 {
-    public partial class ScrapSessionID_Identity : FeatureFixture
+    public partial class ScrapeRequestID_Identity : FeatureFixture
     {
 
-        private ScrapSessionID Session1;
-        private ScrapSessionID Session2;
+        private ScrapeRequestId Session1;
+        private ScrapeRequestId Session2;
         private bool areEqual;
 
-        private void a_scrapperSessionid(ScrapSessionID sessionId1)
+        private void a_scrapperSessionid(ScrapeRequestId sessionId1)
         {
             Session1 = sessionId1;
         }
 
-        private void another_scrapperSessionid(ScrapSessionID sessionId2)
+        private void another_scrapperSessionid(ScrapeRequestId sessionId2)
         {
             Session2 = sessionId2;
         }

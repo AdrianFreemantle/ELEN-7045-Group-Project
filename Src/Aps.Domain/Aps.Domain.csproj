@@ -65,6 +65,7 @@
     <Compile Include="Credential\Password.cs" />
     <Compile Include="Credential\SecurityCode.cs" />
     <Compile Include="Credential\PinNumber.cs" />
+    <Compile Include="IAccountNumber.cs" />
     <Compile Include="IScrapeSessionId.cs" />
     <Compile Include="IDecryptionService.cs" />
     <Compile Include="IEncryptionService.cs" />
