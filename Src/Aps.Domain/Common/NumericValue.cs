@@ -2,8 +2,9 @@ using System;
 
 namespace Aps.Domain.Common
 {
-    public struct NumericValue
+    public struct NumericValue : IFormattable
     {
+        private const string DefaultNumberFormat = "{0:00}";
         private readonly decimal value;
 
         private NumericValue(decimal value)
@@ -66,9 +67,48 @@ namespace Aps.Domain.Common
             return trimmedValue.StartsWith("-") || (trimmedValue.StartsWith("(") && trimmedValue.EndsWith(")"));
         }
 
+        public int ToInt32()
+        {
+            return Convert.ToInt32(value);
+        }
+
+        public decimal ToDecimal()
+        {
+            return value;
+        }
+
+        public double ToDouble()
+        {
+            return Convert.ToDouble(value);
+        }
+
         public override string ToString()
         {
-            return String.Format("{0:00}", value);
+            return ToString(GetDefaultFormatProvider());
+        }
+
+        public string ToString(IFormatProvider provider)
+        {
+            return ToString(DefaultNumberFormat, provider);
+        }
+
+        public string ToString(string format)
+        {
+            return ToString(DefaultNumberFormat, GetDefaultFormatProvider());
+        }
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            IFormatProvider provider = formatProvider ?? GetDefaultFormatProvider();
+            format = format ?? DefaultNumberFormat;
+
+            return String.Format(provider, format, value);
+        }
+
+        private static IFormatProvider GetDefaultFormatProvider()
+        {
+            DefaultFormatProviderSettings formatProviderSettings = new DefaultFormatProviderSettings();
+            return formatProviderSettings.NumberFormat;
         }
     }
 }

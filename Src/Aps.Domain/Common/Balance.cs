@@ -2,8 +2,9 @@ using System;
 
 namespace Aps.Domain.Common
 {
-    public struct Balance 
+    public struct Balance : IFormattable
     {
+        private const string DefaultCurrencyFormat = "{0:C}";
         private readonly decimal balance;
 
         public Balance(decimal balance)
@@ -54,7 +55,31 @@ namespace Aps.Domain.Common
 
         public override string ToString()
         {
-            return String.Format("{0:C}", balance);
+            return ToString(GetDefaultFormatProvider());
+        }        
+
+        public string ToString(IFormatProvider provider)
+        {
+            return ToString(DefaultCurrencyFormat, provider);
+        }
+
+        public string ToString(string format)
+        {
+            return ToString(DefaultCurrencyFormat, GetDefaultFormatProvider());
+        }
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            IFormatProvider provider = formatProvider ?? GetDefaultFormatProvider();
+            format = format ?? DefaultCurrencyFormat;
+            
+            return String.Format(provider, format, balance);
+        }
+
+        private static IFormatProvider GetDefaultFormatProvider()
+        {
+            DefaultFormatProviderSettings formatProviderSettings = new DefaultFormatProviderSettings();
+            return formatProviderSettings.NumberFormat;
         }
     }
 }

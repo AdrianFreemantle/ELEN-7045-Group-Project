@@ -62,8 +62,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DomainTypes\AccountStatmentEntry.cs" />
-    <Compile Include="DomainTypes\AccountStatmentEntryFactory.cs" />
     <Compile Include="Fixtures\Account_statement_equality.Fixture.cs" />
     <Compile Include="Fixtures\Account_statement_factory.Fixture.cs" />
     <Compile Include="Account_statement_factory.cs" />
@@ -107,7 +105,9 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DomainTypes\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

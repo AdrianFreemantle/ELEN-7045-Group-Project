@@ -53,11 +53,14 @@
     <Compile Include="AccountStatements\AccountStatement.cs" />
     <Compile Include="AccountStatements\AccountStatementFactory.cs" />
     <Compile Include="AccountStatements\AccountStatementId.cs" />
+    <Compile Include="AccountStatements\AccountStatmentEntry.cs" />
+    <Compile Include="AccountStatements\AccountStatmentEntryFactory.cs" />
     <Compile Include="Common\Balance.cs" />
     <Compile Include="Common\CalendarMonth.cs" />
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
     <Compile Include="Common\AccountStatmentEntryType.cs" />
     <Compile Include="Common\DataType.cs" />
+    <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />
     <Compile Include="Common\Encryption.cs" />
