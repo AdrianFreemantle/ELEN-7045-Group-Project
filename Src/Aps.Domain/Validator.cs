@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Net.Configuration;
 using System.Text.RegularExpressions;
 
 namespace Aps.Domain
@@ -28,6 +29,21 @@ namespace Aps.Domain
             }  
 
             return true;
+        }
+
+        internal static bool CcvIsValid(string ccvNumber)
+        {
+            if (ccvNumber.Length != 3)
+            {
+                return false; 
+            }
+
+            if (!ccvNumber.All(c => c >= '0' && c <= '9'))
+            {
+                return false;
+            }
+
+            return true; 
         }
 
         internal static bool IdentityNumberIsValid(string identityNumber)
