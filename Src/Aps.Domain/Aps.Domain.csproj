@@ -60,7 +60,6 @@
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
     <Compile Include="Common\AccountStatmentEntryType.cs" />
     <Compile Include="Common\DataType.cs" />
-    <Compile Include="Credential\CcvNumber.cs" />
     <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />
