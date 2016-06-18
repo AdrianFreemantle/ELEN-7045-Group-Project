@@ -38,5 +38,10 @@ namespace Aps.Domain.Company.Tests.DomainTypes
         {
             return _companyType.Equals(other._companyType);
         }
+
+        public override string ToString()
+        {
+            return _companyType.GetDescription();
+        }
     }
 }
