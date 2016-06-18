@@ -76,5 +76,31 @@ namespace Aps.Domain.AccountStatements.Tests
             then => the_description_should_be_expected("Total Call Duration"),
             and => the_value_should_be_expected("00:12:25"));
         }
+
+        [TestMethod]
+        public void A_scrape_result_data_pair_for_a_due_date_field_is_converted_and_presented_correctly()
+        {
+            Runner.RunScenario(
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.DueDate),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Due by", "2016-01-31"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Due Date"),
+            and => the_value_should_be_expected("2016/01/31"));
+        }
+
+        [TestMethod]
+        public void A_scrape_result_data_pair_for_a_statement_month_field_is_converted_and_presented_correctly()
+        {
+            Runner.RunScenario(
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.StatementMonth),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Month", "03"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Statement Month"),
+            and => the_value_should_be_expected("Mar"));
+        }
     }
 }
