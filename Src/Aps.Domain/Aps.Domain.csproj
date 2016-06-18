@@ -66,6 +66,7 @@
     <Compile Include="Common\CalendarMonth.cs" />
     <Compile Include="Common\Duration.cs" />
     <Compile Include="Common\KilowattHour.cs" />
+    <Compile Include="Common\Month.cs" />
     <Compile Include="Common\Percentage.cs" />
     <Compile Include="Common\TextValue.cs" />
     <Compile Include="Common\Balance.cs" />
