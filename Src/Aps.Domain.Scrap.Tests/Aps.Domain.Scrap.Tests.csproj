@@ -73,18 +73,8 @@
     <Compile Include="Fixtures\ScrapeDataAudit_Identity.Fixture.cs" />
     <Compile Include="ScrapeDataAudit_Identity.cs" />
     <Compile Include="Scrape_Request_Factory.cs" />
-    <Compile Include="DomainTypes\IScrapRequestRepository.cs" />
-    <Compile Include="DomainTypes\ScrapeDataAudit.cs" />
-    <Compile Include="DomainTypes\ScrapeRequest.cs" />
-    <Compile Include="DomainTypes\ScrapeRequestFactory.cs" />
-    <Compile Include="DomainTypes\ScrapeRequestId.cs" />
-    <Compile Include="DomainTypes\ScrapeSessionResult.cs" />
-    <Compile Include="DomainTypes\ScrapeSessionResultCode.cs" />
     <Compile Include="Fixtures\ScrapResultDataPair_Data_Collection.Fixture.cs" />
     <Compile Include="Fixtures\ScrapSessionID_Identity.Fixture.cs" />
-    <Compile Include="DomainTypes\Scraper.cs" />
-    <Compile Include="DomainTypes\ScraperScript.cs" />
-    <Compile Include="DomainTypes\IScraperScriptParser.cs" />
     <Compile Include="ScrapResultDataPair_Data_Collection.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
     <Compile Include="Stubs\CompanyNameStub.cs" />
@@ -107,7 +97,9 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DomainTypes\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

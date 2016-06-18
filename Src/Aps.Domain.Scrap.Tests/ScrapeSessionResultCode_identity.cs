@@ -1,6 +1,7 @@
 ﻿using Aps.Domain.Scrap;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scrap.Tests.Stubs;
+using Aps.Domain.Scraping;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

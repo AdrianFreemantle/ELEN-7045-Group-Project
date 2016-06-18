@@ -1,6 +1,6 @@
 using System;
 
-namespace Aps.Domain.Scrap.Tests.DomainTypes
+namespace Aps.Domain.Scraping
 {
     public struct ScrapeDataAudit
     {

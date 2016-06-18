@@ -2,6 +2,7 @@
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using Aps.Domain.Scrap.Tests.DomainTypes;
+using Aps.Domain.Scraping;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Aps.Domain.Common;
 
-namespace Aps.Domain.Scrap.Tests.DomainTypes
+namespace Aps.Domain.Scraping
 {
     public struct ScrapeSessionResult
     {

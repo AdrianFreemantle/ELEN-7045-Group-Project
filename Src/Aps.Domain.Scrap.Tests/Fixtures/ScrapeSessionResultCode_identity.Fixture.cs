@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Aps.Domain.Scrap.Tests.DomainTypes;
+using Aps.Domain.Scraping;
 using LightBDD;
 using Shouldly;
 
