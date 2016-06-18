@@ -72,6 +72,7 @@
     <Compile Include="DomainTypes\CompanyName.cs" />
     <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
+    <Compile Include="Fixtures\Company_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_name.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CompanyName_Identity.cs" />
