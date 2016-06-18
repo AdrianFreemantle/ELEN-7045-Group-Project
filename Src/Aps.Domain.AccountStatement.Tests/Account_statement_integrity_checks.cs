@@ -10,14 +10,9 @@ namespace Aps.Domain.AccountStatements.Tests
     public partial class Account_statement_integrity_checks
     {
         [TestMethod]
-        public void Test()
+        public void Addition_checking()
         {
-            Runner.RunScenario(NotImplemented);
-        }
-
-        private static void NotImplemented()
-        {
-            throw new NotImplementedException();
+            Assert.Inconclusive("Not Implemented");
         }
     }
 }
