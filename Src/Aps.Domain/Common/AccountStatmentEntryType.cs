@@ -142,7 +142,7 @@ namespace Aps.Domain.Common
 
         public override string ToString()
         {
-            return entryType.ToString();
+            return entryType.GetDescription();
         }
     }
 }

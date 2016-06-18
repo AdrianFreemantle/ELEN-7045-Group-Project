@@ -12,31 +12,17 @@ namespace Aps.Domain.AccountStatements.Tests
     [FeatureDescription(@"As a customer I want to have all entry types presented in a consistent manner for all of my accounts in order to prevent confusion when viewing account statements from different billing companies")]
     public partial class Consistent_representation_of_entry_types
     {
-        private static readonly DefaultFormatProviderSettings DefaultFomratProvider = new DefaultFormatProviderSettings();
-
-        private AccountStatmentEntryType accountStatmentEntryType;
-        private AccountStatmentEntryFactory accountStatmentEntryFactory;
-        private ScrapeResultDataPair scrapeResultDataPair;
-        private AccountStatmentEntry accountStatmentEntry;
-        private string fieldId;
-        private string fieldName;
-        private string fieldValue;
-
         [TestMethod]
-        public void An_account_statment_entry_for_a_total_due_statement_field_is_presented_correctly()
+        public void A_scrape_result_data_pair_for_a_total_due_statement_field_is_converted_and_presented_correctly()
         {
-            //todo: need test without checking against ToString, this is too fragile and will break if the string format changes
-            string expectedValue = String.Format(DefaultFomratProvider.NumberFormat, "001 - {0} : {1:C}", AccountStatmentEntryType.TotalDue, 1500);
-
-            accountStatmentEntryFactory = new AccountStatmentEntryFactory();
-            accountStatmentEntryType = AccountStatmentEntryType.TotalDue;
-            fieldId = "001";
-            fieldName = "Total Amount Due";
-            fieldValue = "R1500.00";
-            scrapeResultDataPair = new ScrapeResultDataPair(fieldId, fieldName, fieldValue);
-            accountStatmentEntry = accountStatmentEntryFactory.Build(accountStatmentEntryType, scrapeResultDataPair);
-            accountStatmentEntry.ToString().ShouldBe(expectedValue);
+            Runner.RunScenario(
+            given => given_an_account_statement_entry_factory(),
+            and => and_given_account_statment_entry_type(AccountStatmentEntryType.TotalDue),
+            and => and_given_scrape_result_data_pair_with_id_and_description_and_value("001", "Total Amount Due", "1500"),
+            when => when_building_an_account_statment_entry(),
+            and => and_when_getting_the_account_statement_entry_display_value(),
+            then => Then_the_description_should_be_expected("Total Due"),
+            and => and_the_value_should_be_expected("R1,500.00"));
         }
-
     }
 }
