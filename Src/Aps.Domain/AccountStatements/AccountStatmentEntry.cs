@@ -4,9 +4,9 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
-    public class AccountStatmentEntry 
+    public class AccountStatmentEntry : IEquatable<AccountStatmentEntry>
     {
-        private readonly int id;
+        private readonly AccountStatmentEntryId id;
         private readonly dynamic value;
         private readonly AccountStatmentEntryType entryType;
 
@@ -14,7 +14,7 @@ namespace Aps.Domain.AccountStatements
         {
         }
 
-        internal AccountStatmentEntry(int id, AccountStatmentEntryType entryType, IFormattable value)
+        internal AccountStatmentEntry(AccountStatmentEntryId id, AccountStatmentEntryType entryType, IFormattable value)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
@@ -30,9 +30,17 @@ namespace Aps.Domain.AccountStatements
             return new AccountStatementEntryDisplayValue(entryType.ToString(), value.ToString());
         }
 
+        public bool Equals(AccountStatmentEntry other)
+        {
+            if (other == null)
+                return false;
+
+            return other.id.Equals(id);
+        }
+
         public override string ToString()
         {
-            return String.Format("{0:D3} - {1} : {2}", id, entryType, value);
+            return String.Format("{0} - {1} : {2}", id, entryType, value);
         }
     }
 

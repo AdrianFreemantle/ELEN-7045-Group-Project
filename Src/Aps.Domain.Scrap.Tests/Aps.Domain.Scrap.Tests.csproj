@@ -79,7 +79,6 @@
     <Compile Include="Stubs\AccountIdStub.cs" />
     <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Stubs\ScrapSessionIdStub.cs" />
-    <Compile Include="Stubs\ScrapeResultStub.cs" />
     <Compile Include="ScrapeRequestID_Identity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

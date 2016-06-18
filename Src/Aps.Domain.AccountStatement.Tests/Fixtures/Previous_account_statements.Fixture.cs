@@ -33,7 +33,7 @@ namespace Aps.Domain.AccountStatements.Tests
             month = new CalendarMonth(DateTime.Now);
             accountId = new AccountIdStub(accountNumber);
             accountStatementId = AccountStatementId.Create(accountId, month);
-            statement = new AccountStatement(accountStatementId);
+            statement = new AccountStatement(accountStatementId, new List<AccountStatmentEntry>());
             repository.Save(statement);
         }
 

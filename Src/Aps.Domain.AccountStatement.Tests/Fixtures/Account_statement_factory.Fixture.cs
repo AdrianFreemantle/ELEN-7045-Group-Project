@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.AccountStatements;
 using Aps.Domain.Common;
+using Aps.Domain.Scraping;
 using LightBDD;
 using Shouldly;
 
@@ -11,7 +13,7 @@ namespace Aps.Domain.AccountStatements.Tests
     public partial class Account_statement_factory : FeatureFixture
     {
         private AccountIdStub accountId;
-        private ScrapeResultStub scrapeSessionResult;
+        private ScrapeSessionResult scrapeSessionResult;
         private AccountStatementFactory accountStatementFactory;
         private AccountStatement accountStatement;
 
@@ -34,7 +36,7 @@ namespace Aps.Domain.AccountStatements.Tests
 
         private void a_scrape_session_result()
         {
-            scrapeSessionResult = new ScrapeResultStub(accountId, DateTime.Now);
+            scrapeSessionResult = new ScrapeSessionResult(ScrapeSessionResultCode.Complete, accountId, DateTime.Now, new List<ScrapeResultDataPair>());
         }
 
         private void account_id()
