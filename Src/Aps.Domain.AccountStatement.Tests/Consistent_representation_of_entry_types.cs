@@ -63,5 +63,18 @@ namespace Aps.Domain.AccountStatements.Tests
             then => the_description_should_be_expected("Interest Rate"),
             and => the_value_should_be_expected("12.0 %"));
         }
+
+        [TestMethod]
+        public void A_scrape_result_data_pair_for_a_total_call_duration_field_is_converted_and_presented_correctly()
+        {
+            Runner.RunScenario(
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.TotalCallDuration),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Call Length", "00:12:25"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Total Call Duration"),
+            and => the_value_should_be_expected("00:12:25"));
+        }
     }
 }

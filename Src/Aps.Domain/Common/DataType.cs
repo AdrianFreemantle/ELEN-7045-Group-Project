@@ -4,6 +4,8 @@
     {
         Unkown,
         Date,
+        Time,
+        Duration,
         Month,
         Percentage, //created converter
         Balance, //created converter

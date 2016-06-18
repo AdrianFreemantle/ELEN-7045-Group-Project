@@ -4,7 +4,7 @@ namespace Aps.Domain.Common
 {
     public struct NumericValue : IFormattable
     {
-        private const string DefaultNumberFormat = "{0:00}";
+        private const string DefaultNumberFormat = "{0:0}";
         private readonly decimal value;
 
         private NumericValue(decimal value)
