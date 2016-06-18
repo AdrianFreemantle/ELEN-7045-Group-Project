@@ -87,7 +87,6 @@
     <Compile Include="Fixtures\Previous_account_statements.Fixture.cs" />
     <Compile Include="Previous_account_statements.cs" />
     <Compile Include="Stubs\AccountStatmentRepositoryStub.cs" />
-    <Compile Include="Stubs\ScrapeResultStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

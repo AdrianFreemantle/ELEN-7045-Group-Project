@@ -55,6 +55,7 @@
     <Compile Include="AccountStatements\AccountStatementId.cs" />
     <Compile Include="AccountStatements\AccountStatmentEntry.cs" />
     <Compile Include="AccountStatements\AccountStatmentEntryFactory.cs" />
+    <Compile Include="AccountStatements\AccountStatmentEntryId.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\BalanceDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\DateDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\DurationTypeConverter.cs" />
@@ -74,11 +75,10 @@
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
     <Compile Include="Common\AccountStatmentEntryType.cs" />
     <Compile Include="Common\DataType.cs" />
-    <Compile Include="Company\AccountStatementEntryMapping.cs" />
-    <Compile Include="Company\CompanyName.cs" />
     <Compile Include="Credential\CcvNumber.cs" />
     <Compile Include="Credential\NameVO.cs" />
     <Compile Include="Credential\SurnameVO.cs" />
+    <Compile Include="Credential\TelePhoneNumber.cs" />
     <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />
@@ -106,7 +106,6 @@
     <Compile Include="ICustomerId.cs" />
     <Compile Include="IAccountId.cs" />
     <Compile Include="ICustomerNotificationService.cs" />
-    <Compile Include="IScrapeSessionResult.cs" />
     <Compile Include="IScrapeSessionResultCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\ScrapeResultDataPair.cs" />
