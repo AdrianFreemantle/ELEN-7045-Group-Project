@@ -58,7 +58,10 @@ namespace Aps.Domain.Common
             ElectricityUsed,
                 
             [StatementEntryDataType(Type = DataType.Percentage)]
-            InterestRate
+            InterestRate,
+
+            [StatementEntryDataType(Type = DataType.Duration)]
+            TotalCallDuration
         }
 
         public static AccountStatmentEntryType AccountNumber
@@ -139,6 +142,11 @@ namespace Aps.Domain.Common
         public static AccountStatmentEntryType InterestRate
         {
             get { return new AccountStatmentEntryType(AccountStatementEntryEnum.InterestRate); }
+        }
+
+        public static AccountStatmentEntryType TotalCallDuration
+        {
+            get { return new AccountStatmentEntryType(AccountStatementEntryEnum.TotalCallDuration); }
         }
 
         private AccountStatmentEntryType(AccountStatementEntryEnum entryType)

@@ -19,6 +19,7 @@ namespace Aps.Domain.AccountStatements
                 new TextDataTypeConverter(), 
                 new KilowattHourTypeConverter(), 
                 new PercentageTypeConverter(), 
+                new DurationTypeConverter(), 
             };
         }
 
