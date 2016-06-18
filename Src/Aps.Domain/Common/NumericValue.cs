@@ -72,6 +72,11 @@ namespace Aps.Domain.Common
             return Convert.ToInt32(value);
         }
 
+        public uint ToUInt32()
+        {
+            return Convert.ToUInt32(value);
+        }
+
         public decimal ToDecimal()
         {
             return value;

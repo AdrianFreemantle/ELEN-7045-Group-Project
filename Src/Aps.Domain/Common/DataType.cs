@@ -6,7 +6,8 @@
         Date,
         Month,
         Percentage,
-        Balance,
-        Text,
+        Balance, //created converter
+        Text, //created converter
+        KilowattHour
     }
 }

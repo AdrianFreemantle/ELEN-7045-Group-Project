@@ -52,7 +52,10 @@ namespace Aps.Domain.Common
 
             [Description("VAT Amount")]
             [StatementEntryDataType(Type = DataType.Balance)]
-            VatAmount
+            VatAmount,
+
+            [StatementEntryDataType(Type = DataType.KilowattHour)]
+            ElectricityUsed
         }
 
         public static AccountStatmentEntryType AccountNumber
@@ -123,6 +126,11 @@ namespace Aps.Domain.Common
         public static AccountStatmentEntryType VatAmount
         {
             get { return new AccountStatmentEntryType(AccountStatementEntryEnum.VatAmount); }
+        }
+
+        public static AccountStatmentEntryType ElectricityUsed
+        {
+            get { return new AccountStatmentEntryType(AccountStatementEntryEnum.ElectricityUsed); }
         }
 
         private AccountStatmentEntryType(AccountStatementEntryEnum entryType)

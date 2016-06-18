@@ -37,5 +37,18 @@ namespace Aps.Domain.AccountStatements.Tests
             then => the_description_should_be_expected("Statement Number"),
             and => the_value_should_be_expected("1601-34567890"));
         }
+
+        [TestMethod]
+        public void A_scrape_result_data_pair_for_an_electricity_used_statement_field_is_converted_and_presented_correctly()
+        {
+            Runner.RunScenario(
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.ElectricityUsed),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Elec. Use", "567kwh"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Electricity Used"),
+            and => the_value_should_be_expected("567 kWh"));
+        }
     }
 }
