@@ -17,6 +17,9 @@ namespace Aps.Domain.AccountStatements
             {
                 new BalanceDataTypeConverter(),
                 new TextDataTypeConverter(), 
+                new KilowattHourTypeConverter(), 
+                new PercentageTypeConverter(), 
+                new DurationTypeConverter(), 
             };
         }
 

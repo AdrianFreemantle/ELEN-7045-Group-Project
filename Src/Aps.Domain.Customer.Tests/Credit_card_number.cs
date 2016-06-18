@@ -9,17 +9,17 @@ namespace Aps.Domain.Customer.Tests
     public partial class Credit_card_number : FeatureFixture
     {
 
-        //Its broken please fix Leslie
+      
 
-        //[TestMethod]
-        //public void TestMethod1()
-        //{
-        //    //resharper shortcut for method extraction is CTRL-R-M 
-        //    Runner.RunScenario(
-        //        given => a_credit_card_number("1111222233334444"),
-        //        when => creating_a_credit_card_number_value_object(),
-        //        then => success());
-        //}
+        [TestMethod]
+        public void TestMethod1()
+        {
+            //resharper shortcut for method extraction is CTRL-R-M 
+            Runner.RunScenario(
+                given => a_credit_card_number("1111222233334444"),
+                when => creating_a_credit_card_number_value_object(),
+                then => success());
+        }
 
     }
 }

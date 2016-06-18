@@ -4,7 +4,7 @@ namespace Aps.Domain.Common
 {
     public struct NumericValue : IFormattable
     {
-        private const string DefaultNumberFormat = "{0:00}";
+        private const string DefaultNumberFormat = "{0:0}";
         private readonly decimal value;
 
         private NumericValue(decimal value)
@@ -70,6 +70,11 @@ namespace Aps.Domain.Common
         public int ToInt32()
         {
             return Convert.ToInt32(value);
+        }
+
+        public uint ToUInt32()
+        {
+            return Convert.ToUInt32(value);
         }
 
         public decimal ToDecimal()

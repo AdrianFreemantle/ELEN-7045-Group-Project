@@ -3,10 +3,13 @@
     public enum DataType
     {
         Unkown,
-        Date,
+        Date, 
+        Time,
+        Duration, //created converter
         Month,
-        Percentage,
-        Balance,
-        Text,
+        Percentage, //created converter
+        Balance, //created converter
+        Text, //created converter
+        KilowattHour //created converter
     }
 }
