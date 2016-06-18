@@ -1,6 +1,8 @@
-﻿namespace Aps.Domain.Company.Tests.DomainTypes
+﻿using System;
+
+namespace Aps.Domain.Company.Tests.DomainTypes
 {
-    public struct CompanyType
+    public struct CompanyType : IEquatable<CompanyType>
     {
         private readonly CompanyTypeEnum _companyType;
 
@@ -30,6 +32,11 @@
         private CompanyType(CompanyTypeEnum companyType)
         {
             this._companyType = companyType;
+        }
+
+        public bool Equals(CompanyType other)
+        {
+            return _companyType.Equals(other._companyType);
         }
     }
 }

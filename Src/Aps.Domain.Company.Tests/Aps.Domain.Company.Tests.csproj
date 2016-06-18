@@ -76,6 +76,7 @@
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_name.Fixture.cs" />
+    <Compile Include="Fixtures\Company_type_identity.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CompanyName_Identity.cs" />
     <Compile Include="Company_Identity.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Stubs\BillingCycleStub.cs" />
     <Compile Include="Stubs\CompanyTypeStub.cs" />
     <Compile Include="Stubs\ScraperScriptStub.cs" />
+    <Compile Include="Company_type_identity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
