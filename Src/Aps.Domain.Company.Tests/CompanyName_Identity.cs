@@ -10,7 +10,7 @@ namespace Aps.Domain.Company.Tests
     public partial class CompanyName_Identity
     {
         [TestMethod]
-        public void Two_companies_with_the_same_name_are_equal()
+        public void Two_company_names_with_the_same_name_are_equal()
         {
             var first = new CompanyName("Company1");
             var second = new CompanyName("Company1");
@@ -23,7 +23,7 @@ namespace Aps.Domain.Company.Tests
         }
 
         [TestMethod]
-        public void Two_companies_with_different_names_are_not_equal()
+        public void Two_company_names_with_different_names_are_not_equal()
         {
             var first = new CompanyName("Company1");
             var second = new CompanyName("Company2");

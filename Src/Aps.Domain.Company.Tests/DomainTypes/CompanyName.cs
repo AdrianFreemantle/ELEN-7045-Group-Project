@@ -4,16 +4,21 @@ namespace Aps.Domain.Company.Tests.DomainTypes
 {
     public struct CompanyName : IEquatable<CompanyName>
     {
-        public string Name { get; private set; }
+        private readonly string companyName;
 
-        public CompanyName(string name) : this()
+        public CompanyName(string name)
         {
-            this.Name = name;
+            companyName = name;
         }
 
         public bool Equals(CompanyName other)
         {
-            return Name.Equals(other.Name);
+            return companyName.Equals(other.ToString());
+        }
+
+        public override string ToString()
+        {
+            return companyName;
         }
     }
 }
