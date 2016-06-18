@@ -5,9 +5,9 @@
         Unkown,
         Date,
         Month,
-        Percentage,
+        Percentage, //created converter
         Balance, //created converter
         Text, //created converter
-        KilowattHour
+        KilowattHour //created converter
     }
 }

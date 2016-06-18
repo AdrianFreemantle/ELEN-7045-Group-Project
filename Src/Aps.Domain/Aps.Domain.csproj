@@ -57,9 +57,11 @@
     <Compile Include="AccountStatements\AccountStatmentEntryFactory.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\BalanceDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\KilowattHourTypeConverter.cs" />
+    <Compile Include="AccountStatements\DataTypeConverters\PercentageTypeConverter.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\TextDataTypeConverter.cs" />
     <Compile Include="Common\KilowattHour.cs" />
+    <Compile Include="Common\Percentage.cs" />
     <Compile Include="Common\TextValue.cs" />
     <Compile Include="Common\Balance.cs" />
     <Compile Include="Common\CalendarMonth.cs" />

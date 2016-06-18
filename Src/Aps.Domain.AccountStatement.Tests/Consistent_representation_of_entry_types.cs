@@ -8,7 +8,7 @@ using Shouldly;
 namespace Aps.Domain.AccountStatements.Tests
 {
     [TestClass]
-    [ScenarioCategory("Account Statements")]
+    [ScenarioCategory("Account Statement Entries")]
     [FeatureDescription(@"As a customer I want to have all entry types presented in a consistent manner for all of my accounts in order to prevent confusion when viewing account statements from different billing companies")]
     public partial class Consistent_representation_of_entry_types
     {
@@ -49,6 +49,19 @@ namespace Aps.Domain.AccountStatements.Tests
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Electricity Used"),
             and => the_value_should_be_expected("567 kWh"));
+        }
+
+        [TestMethod]
+        public void A_scrape_result_data_pair_for_an_interest_rate_field_is_converted_and_presented_correctly()
+        {
+            Runner.RunScenario(
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.InterestRate),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Interest Rt.", "12"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Interest Rate"),
+            and => the_value_should_be_expected("12.0 %"));
         }
     }
 }
