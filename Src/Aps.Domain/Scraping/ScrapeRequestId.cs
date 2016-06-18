@@ -1,7 +1,6 @@
 using System;
-using Aps.Domain.Scrap;
 
-namespace Aps.Domain.Scrap.Tests.DomainTypes
+namespace Aps.Domain.Scraping
 {
     public struct ScrapeRequestId : IEquatable<ScrapeRequestId>
     {

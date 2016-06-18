@@ -1,8 +1,7 @@
 ﻿using System;
-using System.IO;
 using Aps.Domain.Credential;
 
-namespace Aps.Domain.Scrap.Tests.DomainTypes
+namespace Aps.Domain.Scraping
 {
     public interface Scraper
     {
