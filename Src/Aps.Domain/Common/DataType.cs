@@ -3,9 +3,9 @@
     public enum DataType
     {
         Unkown,
-        Date,
+        Date, 
         Time,
-        Duration,
+        Duration, //created converter
         Month,
         Percentage, //created converter
         Balance, //created converter

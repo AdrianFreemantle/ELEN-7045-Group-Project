@@ -62,6 +62,7 @@
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\TextDataTypeConverter.cs" />
     <Compile Include="Common\Duration.cs" />
+    <Compile Include="Common\KilowattHour.cs" />
     <Compile Include="Common\Percentage.cs" />
     <Compile Include="Common\TextValue.cs" />
     <Compile Include="Common\Balance.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Credential\CcvNumber.cs" />
     <Compile Include="Credential\NameVO.cs" />
     <Compile Include="Credential\SurnameVO.cs" />
-    <Compile Include="Credential\TelePhoneNumber.cs" />
     <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />
