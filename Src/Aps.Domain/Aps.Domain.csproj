@@ -71,6 +71,7 @@
     <Compile Include="Credential\CcvNumber.cs" />
     <Compile Include="Credential\NameVO.cs" />
     <Compile Include="Credential\SurnameVO.cs" />
+    <Compile Include="Credential\TelePhoneNumber.cs" />
     <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Money.cs" />
     <Compile Include="Common\NumericValue.cs" />

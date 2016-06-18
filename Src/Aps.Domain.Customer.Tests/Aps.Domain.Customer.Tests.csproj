@@ -64,6 +64,8 @@
     <Compile Include="Credit_card_number.cs" />
     <Compile Include="CustomerRegistrationAPS2.cs" />
     <Compile Include="CustomerRegistrationAPS1.cs" />
+    <Compile Include="Fixtures\Ccv_Number.Fixture.cs" />
+    <Compile Include="Fixtures\Credit_card_number.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,9 +78,7 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Fixtures\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
