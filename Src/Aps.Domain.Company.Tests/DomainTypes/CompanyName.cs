@@ -8,6 +8,8 @@ namespace Aps.Domain.Company.Tests.DomainTypes
 
         public CompanyName(string name)
         {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentException("Cannot create a company without a name");
             companyName = name;
         }
 

@@ -11,7 +11,7 @@ namespace Aps.Domain.Company.Tests
         [TestMethod]
         public void Two_companies_with_the_same_name_are_equal()
         {
-
+            
         }
 
         [TestMethod]
