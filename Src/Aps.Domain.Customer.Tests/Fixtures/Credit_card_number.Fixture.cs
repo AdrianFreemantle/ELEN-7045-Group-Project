@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aps.Domain.Credential;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,6 @@ namespace Aps.Domain.Customer.Tests
             {
                 var cc = new CreditCardNumber(cardNumber);
                 
-       //       var cc = new Aps.Domain.Credential.CreditCardNumber(cardNumber);
-
-
-
-
             }
             catch (Exception ex)
             {

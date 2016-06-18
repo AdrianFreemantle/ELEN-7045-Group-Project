@@ -2,16 +2,22 @@ namespace Aps.Domain.AccountStatements.Tests.Stubs
 {
     public struct AccountIdStub : IAccountId
     {
-        private readonly string accountId;
 
-        public AccountIdStub(string accountId)
+        public AccountIdStub(string accountId) : this()
         {
-            this.accountId = accountId;
+            AccountId = accountId;
+            AccountNumber = null;
+            CompanyName = null;
+
         }
 
         public override string ToString()
         {
-            return accountId;
+            return AccountId;
         }
+
+        public string AccountId { get; set; }
+        public IAccountNumber AccountNumber { get; set; }
+        public ICompanyName CompanyName { get; set; }
     }
 }

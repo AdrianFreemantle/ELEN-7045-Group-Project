@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aps.Domain.Credential;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Aps.Domain.Customer.Tests
 {
-    public partial class CcvNumber
+    public partial class Ccv_Number
     {
 
         private string ccvNumber;
@@ -26,7 +27,7 @@ namespace Aps.Domain.Customer.Tests
 
             try
             {
-                var ccv = new Ccv(ccvNumber);
+                var ccv = new CcvNumber(ccvNumber);
             }
             catch (Exception ex)
             {

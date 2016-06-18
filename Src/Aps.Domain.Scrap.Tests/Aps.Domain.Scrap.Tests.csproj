@@ -67,14 +67,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DomainTypes\ScrapSessionID.cs" />
-    <Compile Include="DomainTypes\ScrapSessionStatus.cs" />
+    <Compile Include="DomainTypes\AccountIdStub.cs" />
+    <Compile Include="DomainTypes\IScrapRequestRepository.cs" />
+    <Compile Include="DomainTypes\ScrapeDataAudit.cs" />
+    <Compile Include="DomainTypes\ScrapeRequest.cs" />
+    <Compile Include="DomainTypes\ScrapeRequestFactory.cs" />
+    <Compile Include="DomainTypes\ScrapeRequestId.cs" />
+    <Compile Include="DomainTypes\ScrapeSessionResult.cs" />
+    <Compile Include="DomainTypes\ScrapeSessionResultCode.cs" />
     <Compile Include="Fixtures\ScrapResultDataPair_Data_Collection.Fixture.cs" />
     <Compile Include="Fixtures\ScrapSessionID_Identity.Fixture.cs" />
+    <Compile Include="DomainTypes\Scraper.cs" />
+    <Compile Include="DomainTypes\ScraperScript.cs" />
+    <Compile Include="DomainTypes\IScraperScriptParser.cs" />
+    <Compile Include="ScrapeResultCodeTest.cs" />
     <Compile Include="ScrapResultDataPair_Data_Collection.cs" />
     <Compile Include="Stubs\ScrapSessionIdStub.cs" />
     <Compile Include="Stubs\ScrapeResultStub.cs" />
-    <Compile Include="ScrapSessionID_Identity.cs" />
+    <Compile Include="ScrapeRequestID_Identity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

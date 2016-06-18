@@ -2,8 +2,9 @@ using System;
 
 namespace Aps.Domain.Common
 {
-    public struct Money 
+    public struct Money : IFormattable
     {
+        private const string DefaultCurrencyFormat = "{0:C}";
         private readonly decimal amount;
 
         public static Money Zero { get { return new Money(0); } }
@@ -42,9 +43,43 @@ namespace Aps.Domain.Common
             return new Balance(left.amount - right.amount);
         }
 
+        public static bool operator >(Money left, Money right)
+        {
+            return left.amount > right.amount;
+        }
+
+        public static bool operator <(Money left, Money right)
+        {
+            return left.amount < right.amount;
+        }
+
         public override string ToString()
         {
-            return String.Format("{0:C}", amount);
+            return ToString(GetDefaultFormatProvider());
+        }
+
+        public string ToString(IFormatProvider provider)
+        {
+            return ToString(DefaultCurrencyFormat, provider);
+        }
+
+        public string ToString(string format)
+        {
+            return ToString(DefaultCurrencyFormat, GetDefaultFormatProvider());
+        }
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            IFormatProvider provider = formatProvider ?? GetDefaultFormatProvider();
+            format = format ?? DefaultCurrencyFormat;
+
+            return String.Format(provider, format, amount);
+        }
+
+        private static IFormatProvider GetDefaultFormatProvider()
+        {
+            DefaultFormatProviderSettings formatProviderSettings = new DefaultFormatProviderSettings();
+            return formatProviderSettings.NumberFormat;
         }
     }
 }

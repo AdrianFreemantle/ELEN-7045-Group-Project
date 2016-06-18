@@ -8,7 +8,7 @@ namespace Aps.Domain.Customer.Tests
     [Label("CCV Number")]
     [FeatureDescription(@"A CCV number should be valid for payment purposes")]
 
-    public partial class CcvNumber : FeatureFixture
+    public partial class Ccv_Number : FeatureFixture
     {
         [TestMethod]
         public void TestMethod2()

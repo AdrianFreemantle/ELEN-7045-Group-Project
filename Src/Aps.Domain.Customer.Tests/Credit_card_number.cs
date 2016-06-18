@@ -8,6 +8,9 @@ namespace Aps.Domain.Customer.Tests
     [FeatureDescription(@"A credit card number should be valid for payment purposes")]
     public partial class Credit_card_number : FeatureFixture
     {
+
+      
+
         [TestMethod]
         public void TestMethod1()
         {
