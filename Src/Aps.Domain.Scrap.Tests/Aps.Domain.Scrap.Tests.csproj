@@ -69,6 +69,8 @@
   <ItemGroup>
     <Compile Include="Fixtures\ScrapeSessionResultCode_identity.Fixture.cs" />
     <Compile Include="Fixtures\Scrape_Request_factory.Fixture.cs" />
+    <Compile Include="Fixtures\ScrapeDataAudit_Identity.Fixture.cs" />
+    <Compile Include="ScrapeDataAudit_Identity.cs" />
     <Compile Include="Scrape_Request_Factory.cs" />
     <Compile Include="DomainTypes\AccountIdStub.cs" />
     <Compile Include="DomainTypes\IScrapRequestRepository.cs" />
@@ -83,7 +85,6 @@
     <Compile Include="DomainTypes\Scraper.cs" />
     <Compile Include="DomainTypes\ScraperScript.cs" />
     <Compile Include="DomainTypes\IScraperScriptParser.cs" />
-    <Compile Include="ScrapeResultCodeTest.cs" />
     <Compile Include="ScrapResultDataPair_Data_Collection.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
     <Compile Include="Stubs\ScrapeSessionResultCode_identity.cs" />
