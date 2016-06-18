@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aps.Domain.Company.Tests.DomainTypes
 {
@@ -19,7 +15,7 @@ namespace Aps.Domain.Company.Tests.DomainTypes
 
         public bool Equals(ScraperScript other)
         {
-            throw new NotImplementedException();
+            return _script.Equals(other._script);
         }
 
         public override string ToString()
