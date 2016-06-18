@@ -2,7 +2,7 @@
 using Aps.Domain.Scrap;
 using Aps.Domain.Common;
 using Aps.Domain.Scrap.Tests.DomainTypes;
-
+using Aps.Domain.Scraping;
 using LightBDD;
 using Shouldly;
 using AccountIdStub = Aps.Domain.AccountStatements.Tests.Stubs.AccountIdStub;
