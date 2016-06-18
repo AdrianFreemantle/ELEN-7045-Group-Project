@@ -67,18 +67,26 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\Company.cs" />
+    <Compile Include="DomainTypes\CompanyFactory.cs" />
     <Compile Include="DomainTypes\CompanyName.cs" />
-    <Compile Include="Fixtures\Company_Identity.Fixture.cs" />
+    <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
+    <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
+    <Compile Include="Fixtures\Company_name.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CompanyName_Identity.cs" />
     <Compile Include="Company_Identity.cs" />
+    <Compile Include="Company_factory.cs" />
+    <Compile Include="Company_name.cs" />
+    <Compile Include="Stubs\BillingCycleStub.cs" />
+    <Compile Include="Stubs\CompanyTypeStub.cs" />
+    <Compile Include="Stubs\ScraperScriptStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Stubs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

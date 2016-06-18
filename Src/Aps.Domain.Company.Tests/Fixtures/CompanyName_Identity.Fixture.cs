@@ -4,7 +4,7 @@ using Shouldly;
 
 namespace Aps.Domain.Company.Tests
 {
-    public partial class Company_Identity : FeatureFixture
+    public partial class CompanyName_Identity : FeatureFixture
     {
         private CompanyName companyName1;
         private CompanyName companyName2;
