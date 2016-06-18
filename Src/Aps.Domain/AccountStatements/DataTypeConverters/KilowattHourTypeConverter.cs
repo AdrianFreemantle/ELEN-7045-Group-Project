@@ -10,7 +10,7 @@ namespace Aps.Domain.AccountStatements.DataTypeConverters
         public IFormattable ConvertToFormattableValue(ScrapeResultDataPair dataPair)
         {
             NumericValue value = NumericValue.Parse(dataPair.FieldValue);
-            return KilowattHour.FromAmount(value.ToUInt32());
+            return null;//KilowattHour.FromAmount(value.ToUInt32());
         }
     }
 }

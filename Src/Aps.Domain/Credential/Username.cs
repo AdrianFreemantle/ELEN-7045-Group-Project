@@ -1,3 +1,5 @@
+using System;
+
 namespace Aps.Domain.Credential
 {
     public struct UserName : IIdentificationField
@@ -8,7 +10,11 @@ namespace Aps.Domain.Credential
         {
             Guard.ThatParameterNotNullOrEmpty(userName, "User Name");
 
-            if (Validator.CredentialIsValid(userName))
+
+
+            Console.WriteLine("Username  : "  + userName);
+
+            if (!Validator.CredentialIsValid(userName))
             {
                 throw new DomainException("User Name Credential", "Invalid User Name passed");
             }            
