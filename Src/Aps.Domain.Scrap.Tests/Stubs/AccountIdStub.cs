@@ -1,9 +1,11 @@
+using Aps.Domain.Company.Tests.DomainTypes;
+
 namespace Aps.Domain.AccountStatements.Tests.Stubs
 {
     public struct AccountIdStub : IAccountId
     {
 
-        public AccountIdStub(string accountId, ICompanyName companyName) : this()
+        public AccountIdStub(string accountId, CompanyName companyName) : this()
         {
             AccountId = accountId;
             AccountNumber = null;
@@ -18,6 +20,6 @@ namespace Aps.Domain.AccountStatements.Tests.Stubs
 
         public string AccountId { get; set; }
         public IAccountNumber AccountNumber { get; set; }
-        public ICompanyName CompanyName { get; set; }
+        public CompanyName CompanyName { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Aps.Domain.Scrap;
 using Aps.Domain.Common;
+using Aps.Domain.Company.Tests.DomainTypes;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scraping;
 using LightBDD;
@@ -25,7 +26,7 @@ namespace Aps.Domain.Scrap.Tests
 
         private void account_id()
         {
-            accountId = new AccountIdStub("112345", Edgars);
+            accountId = new AccountIdStub("112345", new CompanyName("Edgars"));
         }
 
         private void an_scrape_request_factory()

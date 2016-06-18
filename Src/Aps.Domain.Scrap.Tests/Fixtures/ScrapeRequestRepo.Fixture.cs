@@ -4,6 +4,7 @@ using System.Linq;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.Scrap.Tests.Stubs;
 using Aps.Domain.Common;
+using Aps.Domain.Company.Tests.DomainTypes;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scraping;
 using LightBDD;
@@ -17,14 +18,12 @@ namespace Aps.Domain.Scrap.Tests
     {
 
         private AccountIdStub accountId;
-        private ScrapeResultStub scrapeSessionResult;
-        private ScrapeRequestFactory scrapeRequestFactory;
+        private ScrapeRequestFactory scrapeRequestFactory = new ScrapeRequestFactory();
         private ScrapeRequest scrapeRequest;
         private ScrapeRequestId scrapeRequestId;
         private Exception error;
 
         private ScrapRequestRepositoryStub repository;
-        public ICompanyName Edgars { get; private set; }
 
 
         private void a_valid_scrape_request()
@@ -59,12 +58,12 @@ namespace Aps.Domain.Scrap.Tests
         private void account_id()
         {
 
-            accountId = new AccountIdStub("112345", Edgars);
+            accountId = new AccountIdStub("112345", new CompanyName("Edgars"));
         }
 
-        private ScrapRequestRepositoryStub an_scrap_request_repository()
+        private void an_scrap_request_repository()
         {
-            return repository = new ScrapRequestRepositoryStub();
+            repository = new ScrapRequestRepositoryStub();
         }
     }
 }
