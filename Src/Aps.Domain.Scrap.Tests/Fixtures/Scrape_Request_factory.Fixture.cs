@@ -12,9 +12,8 @@ namespace Aps.Domain.Scrap.Tests
 {
     public partial class Scrape_Request_Factory : FeatureFixture
     {
-
         private AccountIdStub accountId;
-        private ScrapeResultStub scrapeSessionResult;
+        private ScrapeSessionResult scrapeSessionResult;
         private ScrapeRequestFactory scrapeRequestFactory;
         private ScrapeRequest scrapeRequest;
         private ScrapeRequestId scrapeRequestId;

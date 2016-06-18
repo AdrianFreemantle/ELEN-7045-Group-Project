@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.AccountStatements;
 using Aps.Domain.Common;
@@ -35,8 +36,8 @@ namespace Aps.Domain.AccountStatements.Tests
             var id1 = AccountStatementId.Create(accountId1, callCalendarMonth1);
             var id2 = AccountStatementId.Create(accountId2, callCalendarMonth2);
 
-            statement1 = new AccountStatement(id1);
-            statement2 = new AccountStatement(id2);
+            statement1 = new AccountStatement(id1, new List<AccountStatmentEntry>());
+            statement2 = new AccountStatement(id2, new List<AccountStatmentEntry>());
         }
 
         private void two_account_statements_for_calendar_month(DateTime runTime)

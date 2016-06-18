@@ -4,7 +4,6 @@ namespace Aps.Domain.Scraping
 {
     public interface IScraperScriptParser
     {
-        IScrapeSessionResult parse(String XML, IAccountId accountId);
-
+        ScrapeSessionResult parse(String XML, IAccountId accountId);
     }
 }
