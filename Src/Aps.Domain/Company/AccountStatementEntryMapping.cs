@@ -7,7 +7,7 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.Company.Tests.DomainTypes
 {
-    public struct AccountStatmentEntryMapping
+    public struct AccountStatmentEntryMapping : IEquatable<AccountStatmentEntryMapping>
     {
         public AccountStatmentEntryType AccountStatmentEntryType { get; private set; }
         public string FieldName { get; private set; }
@@ -16,6 +16,11 @@ namespace Aps.Domain.Company.Tests.DomainTypes
         {
             AccountStatmentEntryType = accountStatmentEntryType;
             FieldName = fieldName;
+        }
+
+        public bool Equals(AccountStatmentEntryMapping other)
+        {
+            return AccountStatmentEntryType.Equals(other.AccountStatmentEntryType) && FieldName.Equals(other.FieldName);
         }
     }
 }
