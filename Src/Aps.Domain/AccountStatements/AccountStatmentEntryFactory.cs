@@ -21,6 +21,7 @@ namespace Aps.Domain.AccountStatements
                 new PercentageTypeConverter(), 
                 new DurationTypeConverter(), 
                 new DateDataTypeConverter(), 
+                new MonthDataTypeConverter(), 
             };
         }
 

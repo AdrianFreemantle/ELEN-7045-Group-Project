@@ -49,7 +49,7 @@ namespace Aps.Domain.Common
         {
             if (month < MinMonth || month > MaxMonth)
             {
-                throw new ArgumentException(String.Format("The year {0} is outside of the allowed range of {1}-{2}", month, MinMonth, MaxMonth));
+                throw new ArgumentException(String.Format("The moth {0} is outside of the allowed range of {1}-{2}", month, MinMonth, MaxMonth));
             }
         }
 

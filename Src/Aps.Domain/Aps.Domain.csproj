@@ -59,12 +59,14 @@
     <Compile Include="AccountStatements\DataTypeConverters\DateDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\DurationTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\KilowattHourTypeConverter.cs" />
+    <Compile Include="AccountStatements\DataTypeConverters\MonthDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\PercentageTypeConverter.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\TextDataTypeConverter.cs" />
     <Compile Include="Common\CalendarMonth.cs" />
     <Compile Include="Common\Duration.cs" />
     <Compile Include="Common\KilowattHour.cs" />
+    <Compile Include="Common\Month.cs" />
     <Compile Include="Common\Percentage.cs" />
     <Compile Include="Common\TextValue.cs" />
     <Compile Include="Common\Balance.cs" />
