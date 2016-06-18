@@ -16,7 +16,7 @@ namespace Aps.Domain.Common
 
         public CalendarMonth(int year, int month)
         {
-            Validate(year, month);
+            Validate(month, year);
 
             this.year = year;
             this.month = month;
@@ -24,13 +24,13 @@ namespace Aps.Domain.Common
 
         public CalendarMonth(DateTime dateTime)
         {
-            Validate(dateTime.Year, dateTime.Month);
+            Validate(dateTime.Month, dateTime.Year);
 
             month = dateTime.Month;
             year = dateTime.Year;
         }
 
-        private static void Validate(int year, int month)
+        private static void Validate(int month, int year)
         {
             ValidateYear(year);
             ValidateMonth(month);
