@@ -8,7 +8,7 @@ namespace Aps.Domain.Company.Tests.DomainTypes
         private readonly CompanyName _companyName;
         private readonly ICompanyType _companyType;
         private readonly IScraperScript _scraperScript;
-        private IBillingCycle _billingCycle;
+        private readonly IBillingCycle _billingCycle;
 
         protected Company()
         {
