@@ -2,7 +2,7 @@ using System;
 
 namespace Aps.Domain.Common
 {
-    public struct CalendarMonth 
+    public struct CalendarMonth : IFormattable
     {
         private const int MinMonth = 1;
         private const int MaxMonth = 12;
@@ -40,7 +40,7 @@ namespace Aps.Domain.Common
         {
             if (month < MinMonth || month > MaxMonth)
             {
-                throw new ArgumentException(String.Format("The year {0} is outside of the allowed range of {1}-{2}", month, MinMonth, MaxMonth));
+                throw new ArgumentException(String.Format("The month {0} is outside of the allowed range of {1}-{2}", month, MinMonth, MaxMonth));
             }
         }
 
