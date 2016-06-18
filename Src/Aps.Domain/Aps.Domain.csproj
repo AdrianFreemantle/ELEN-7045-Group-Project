@@ -56,12 +56,15 @@
     <Compile Include="AccountStatements\AccountStatmentEntry.cs" />
     <Compile Include="AccountStatements\AccountStatmentEntryFactory.cs" />
     <Compile Include="AccountStatements\AccountStatmentEntryId.cs" />
+    <Compile Include="AccountStatements\DataIntegrityCheckFailedException.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\BalanceDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\DateDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\DurationTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\KilowattHourTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\MonthDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\PercentageTypeConverter.cs" />
+    <Compile Include="AccountStatements\IDataIntegrityCheck.cs" />
+    <Compile Include="Company\IDataIntegrityCheckOverride.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\TextDataTypeConverter.cs" />
     <Compile Include="Common\CalendarMonth.cs" />
@@ -125,6 +128,7 @@
     <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AccountStatements\DataIntegrityChecks\" />
     <Folder Include="Account\" />
   </ItemGroup>
   <ItemGroup>

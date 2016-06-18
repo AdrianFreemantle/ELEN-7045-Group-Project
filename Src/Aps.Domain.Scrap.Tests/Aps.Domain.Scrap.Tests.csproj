@@ -67,6 +67,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Fixtures\ScrapeRequestRepo.Fixture.cs" />
+    <Compile Include="ScrapeRequestRepo.cs" />
     <Compile Include="ScrapeSessionResultCode_identity.cs" />
     <Compile Include="Fixtures\ScrapeSessionResultCode_identity.Fixture.cs" />
     <Compile Include="Fixtures\Scrape_Request_factory.Fixture.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Fixtures\ScrapSessionID_Identity.Fixture.cs" />
     <Compile Include="ScrapResultDataPair_Data_Collection.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
+    <Compile Include="Stubs\ScrapRequestRepositoryStub.cs" />
     <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Stubs\ScrapSessionIdStub.cs" />
     <Compile Include="ScrapeRequestID_Identity.cs" />
