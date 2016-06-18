@@ -44,7 +44,8 @@ namespace Aps.Domain.AccountStatements
         {
             IFormattable formattableValue = converter.ConvertToFormattableValue(dataPair);
             int id = NumericValue.Parse(dataPair.Id).ToInt32();
-            return new AccountStatmentEntry(id, entryType, formattableValue);
+            AccountStatmentEntryId entryId = new AccountStatmentEntryId(id);
+            return new AccountStatmentEntry(entryId, entryType, formattableValue);
         }
 
         private IDataTypeConverter GetDataTypeConverter(AccountStatmentEntryType entryType)

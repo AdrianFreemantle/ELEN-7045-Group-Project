@@ -12,12 +12,7 @@ namespace Aps.Domain.AccountStatements.Tests
         [TestMethod]
         public void Test()
         {
-            Runner.RunScenario(NotImplemented);
-        }
-
-        private static void NotImplemented()
-        {
-            throw new NotImplementedException();
+            Assert.Inconclusive("Not Implemented");
         }
     }
 }

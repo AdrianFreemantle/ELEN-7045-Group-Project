@@ -17,7 +17,7 @@ namespace Aps.Domain.Scraping
             Guard.ThatValueTypeNotDefaut(resultCode, "resultCode");
             Guard.ThatValueTypeNotDefaut(accountId, "accountId");
             Guard.ThatValueTypeNotDefaut(runDateTime, "runDateTime");
-            Guard.ThatParameterNotNullOrEmpty(textValuePairs, "textValuePairs");
+            Guard.ThatParameterNotNull(textValuePairs, "textValuePairs");
 
             ResultCode = resultCode;
             AccountId = accountId;

@@ -61,12 +61,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Ccv_Number.cs" />
     <Compile Include="Credit_card_number.cs" />
-    <Compile Include="CustomerRegistrationAPS2.cs" />
-    <Compile Include="CustomerRegistrationAPS1.cs" />
+    <Compile Include="CustomerRegistrationAPS.cs" />
     <Compile Include="Fixtures\Ccv_Number.Fixture.cs" />
     <Compile Include="Fixtures\Credit_card_number.Fixture.cs" />
+    <Compile Include="Fixtures\CustomerRegistrationAPS.Fixture.cs" />
+    <Compile Include="Fixtures\TelephoneNumber.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelephoneNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
