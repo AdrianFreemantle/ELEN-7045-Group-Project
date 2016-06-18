@@ -1,3 +1,5 @@
+using Aps.Domain.Company.Tests.DomainTypes;
+
 namespace Aps.Domain.AccountStatements.Tests.Stubs
 {
     public struct AccountIdStub : IAccountId
@@ -6,9 +8,6 @@ namespace Aps.Domain.AccountStatements.Tests.Stubs
         public AccountIdStub(string accountId) : this()
         {
             AccountId = accountId;
-            AccountNumber = null;
-            CompanyName = null;
-
         }
 
         public override string ToString()
@@ -18,6 +17,6 @@ namespace Aps.Domain.AccountStatements.Tests.Stubs
 
         public string AccountId { get; set; }
         public IAccountNumber AccountNumber { get; set; }
-        public ICompanyName CompanyName { get; set; }
+        public CompanyName CompanyName { get; set; }
     }
 }

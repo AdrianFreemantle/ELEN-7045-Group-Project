@@ -67,8 +67,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\BillingCycle.cs" />
     <Compile Include="DomainTypes\Company.cs" />
     <Compile Include="DomainTypes\CompanyFactory.cs" />
+    <Compile Include="DomainTypes\CompanyType.cs" />
+    <Compile Include="DomainTypes\ScraperScript.cs" />
     <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_Identity.Fixture.cs" />
