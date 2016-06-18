@@ -26,12 +26,12 @@ namespace Aps.Domain.Scrap.Tests
             areEqual = status1.Equals(status2);
         }
 
-        private void another_ScrapeSessionResultCode_status(ScrapeSessionResultCode status)
+        private void another_Scrape_Session_Result_Code(ScrapeSessionResultCode status)
         {
             status2 = status;
         }
 
-        private void ScrapeSessionResultCode_status(ScrapeSessionResultCode status)
+        private void Scrape_Session_Result_Code(ScrapeSessionResultCode status)
         {
             status1 = status;
         }
