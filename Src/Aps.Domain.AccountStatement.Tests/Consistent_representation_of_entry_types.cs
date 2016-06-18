@@ -16,13 +16,26 @@ namespace Aps.Domain.AccountStatements.Tests
         public void A_scrape_result_data_pair_for_a_total_due_statement_field_is_converted_and_presented_correctly()
         {
             Runner.RunScenario(
-            given => given_an_account_statement_entry_factory(),
-            and => and_given_account_statment_entry_type(AccountStatmentEntryType.TotalDue),
-            and => and_given_scrape_result_data_pair_with_id_and_description_and_value("001", "Total Amount Due", "1500"),
-            when => when_building_an_account_statment_entry(),
-            and => and_when_getting_the_account_statement_entry_display_value(),
-            then => Then_the_description_should_be_expected("Total Due"),
-            and => and_the_value_should_be_expected("R1,500.00"));
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.TotalDue),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Total Amount Due", "1500"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Total Due"), 
+            and => the_value_should_be_expected("R1,500.00"));
+        }
+
+        [TestMethod]
+        public void A_scrape_result_data_pair_for_an_account_statement_number_statement_field_is_converted_and_presented_correctly()
+        {
+            Runner.RunScenario(
+            given => an_account_statement_entry_factory(),
+            and => an_account_statment_entry_type(AccountStatmentEntryType.StatementNumber),
+            and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Stat. No", "1601-34567890"),
+            when => building_an_account_statment_entry(),
+            and => getting_the_account_statement_entry_display_value(),
+            then => the_description_should_be_expected("Statement Number"),
+            and => the_value_should_be_expected("1601-34567890"));
         }
     }
 }

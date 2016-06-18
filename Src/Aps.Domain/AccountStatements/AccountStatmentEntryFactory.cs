@@ -1,33 +1,57 @@
 using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Aps.Domain.AccountStatements.DataTypeConverters;
 using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
     public class AccountStatmentEntryFactory
     {
+        private readonly ICollection<IDataTypeConverter> dataTypeConverters;
+
+        public AccountStatmentEntryFactory()
+        {
+            dataTypeConverters = new IDataTypeConverter[]
+            {
+                new BalanceDataTypeConverter(),
+                new TextDataTypeConverter(), 
+            };
+        }
+
+        public AccountStatmentEntryFactory(ICollection<IDataTypeConverter> dataTypeConverters)
+        {
+            Guard.ThatParameterNotNullOrEmpty(dataTypeConverters, "dataTypeConverters");
+        }
+
         public AccountStatmentEntry Build(AccountStatmentEntryType entryType, ScrapeResultDataPair dataPair)
         {
             Guard.ThatValueTypeNotDefaut(dataPair, "dataPair");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
 
-            DataType type = entryType.GetDataType();
+            IDataTypeConverter converter = GetDataTypeConverter(entryType);
 
-            switch (type)
-            {
-                    case DataType.Balance:
-                    return BuildBlanceEntry(entryType, dataPair);
-
-                default:
-                    throw new Exception(); //todo change the exception type
-            }
+            return BuildAccountStatmentEntry(entryType, dataPair, converter);
         }
 
-        private AccountStatmentEntry BuildBlanceEntry(AccountStatmentEntryType entryType, ScrapeResultDataPair dataPair)
+        private static AccountStatmentEntry BuildAccountStatmentEntry(AccountStatmentEntryType entryType, ScrapeResultDataPair dataPair, IDataTypeConverter converter)
         {
-            NumericValue value = NumericValue.Parse(dataPair.FieldValue);
+            IFormattable formattableValue = converter.ConvertToFormattableValue(dataPair);
             int id = NumericValue.Parse(dataPair.Id).ToInt32();
-            var balance = Balance.FromAmount(value.ToDecimal());
-            return new AccountStatmentEntry(id, entryType, balance);
+            return new AccountStatmentEntry(id, entryType, formattableValue);
+        }
+
+        private IDataTypeConverter GetDataTypeConverter(AccountStatmentEntryType entryType)
+        {
+            DataType type = entryType.GetDataType();
+
+            IDataTypeConverter converter = dataTypeConverters.SingleOrDefault(c => c.DataType == type);
+
+            if (converter == null)
+                throw new Exception(); //todo change the exception type
+
+            return converter;
         }
     }
 }

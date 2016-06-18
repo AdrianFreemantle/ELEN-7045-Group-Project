@@ -14,7 +14,7 @@ namespace Aps.Domain.AccountStatements
         {
         }
 
-        internal AccountStatmentEntry(int id, AccountStatmentEntryType entryType, dynamic value)
+        internal AccountStatmentEntry(int id, AccountStatmentEntryType entryType, IFormattable value)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");

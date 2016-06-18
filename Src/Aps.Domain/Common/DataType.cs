@@ -1,6 +1,6 @@
 ﻿namespace Aps.Domain.Common
 {
-    internal enum DataType
+    public enum DataType
     {
         Unkown,
         Date,
