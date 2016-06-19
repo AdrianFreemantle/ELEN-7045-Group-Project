@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aps.Domain.Customer.Tests</RootNamespace>
     <AssemblyName>Aps.Domain.Customer.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -18,6 +18,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,9 +44,6 @@
     <Reference Include="LightBDD.MsTest">
       <HintPath>..\packages\LightBDD.MsTest.1.7.0.0\lib\net40\LightBDD.MsTest.dll</HintPath>
     </Reference>
-    <Reference Include="Shouldly">
-      <HintPath>..\packages\Shouldly.2.7.0\lib\net40\Shouldly.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -63,16 +61,26 @@
   <ItemGroup>
     <Compile Include="Ccv_Number.cs" />
     <Compile Include="Credit_card_number.cs" />
+    <Compile Include="Customer_Registration_Service.cs" />
     <Compile Include="CustomerRegistrationAPS.cs" />
+    <Compile Include="DomainTypes\Customer.cs" />
+    <Compile Include="DomainTypes\CustomerFactory.cs" />
+    <Compile Include="DomainTypes\CustomerID.cs" />
+    <Compile Include="DomainTypes\CustomerName.cs" />
+    <Compile Include="DomainTypes\CustomerRegService.cs" />
+    <Compile Include="DomainTypes\ICustomerRepository.cs" />
     <Compile Include="Fixtures\Ccv_Number.Fixture.cs" />
     <Compile Include="Fixtures\Credit_card_number.Fixture.cs" />
     <Compile Include="Fixtures\CustomerRegistrationAPS.Fixture.cs" />
     <Compile Include="Fixtures\TelephoneNumber.Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stubs\CustomerDoesNotExistRepositoryStub.cs" />
+    <Compile Include="Stubs\CustomerExistsRepositoryStub.cs" />
     <Compile Include="TelephoneNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Fixtures\CustomerRegistration.Fixture.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

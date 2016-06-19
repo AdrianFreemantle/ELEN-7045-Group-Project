@@ -10,8 +10,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Aps.Domain.Customer.Tests
 {
-    public partial class CustomerRegistration
+    public partial class Customer_Registration_Service
     {
-
+    
     }
 }
