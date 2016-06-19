@@ -30,7 +30,6 @@ namespace Aps.Domain.Customer.Tests
             {
                 thrownError = ex;
             }
-
         }
 
         private void Success()
