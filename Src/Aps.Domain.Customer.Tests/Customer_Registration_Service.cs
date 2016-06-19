@@ -19,35 +19,22 @@ namespace Aps.Domain.Customer.Tests
         [TestMethod]
         public void Registering_Duplicate_Username_not_allowed()
         {
-            // Arrange  -   Given
-            ICustomerRepository repo = new CustomerExistsRepositoryStub();
-            CustomerRegService custregistrationService = new CustomerRegService(repo);
-            IIdentificationField identificationField = new TelePhoneNumber("0113334444");
-            string name = "Leslie";
-            string surname = "dob";
-            string email = "bill@bob.com";
-            Exception expectedError = null;
-            // Act      -   When
-            try
-            {
-                custregistrationService.RegisterNewCustomer(identificationField, name, surname, email);
-            }
-            catch (Exception ex)
-            {
-                expectedError = ex;
-            }
-
-            // Asert    -   Then 
-
-            Assert.IsNotNull(expectedError);
-
+            Runner.RunScenario(
+                Given_the_CustomerExistsRepositoryStub,
+                And_a_customer_registration_service,
+                And_an_identification_field,
+                And_a_customer_name,
+                And_a_customer_surname,
+                And_a_customer_email_address,
+                When_registering_a_customer_with_an_exiting_username,
+                Then_error);
         }
 
         [TestMethod]
         public void Registering_With_unique_Username_allowed()
         {
             // Arrange  -   Given
-            CustomerDoesNotExistRepositoryStub repo = new  CustomerDoesNotExistRepositoryStub();
+            CustomerDoesNotExistRepositoryStub repo = new CustomerDoesNotExistRepositoryStub();
             CustomerRegService custregistrationService = new CustomerRegService(repo);
             IIdentificationField identificationField = new TelePhoneNumber("0113334444");
             string name = "Leslie";
@@ -55,10 +42,10 @@ namespace Aps.Domain.Customer.Tests
             string email = "bill@bob.com";
             Exception expectedError = null;
             // Act      -   When
- 
-                custregistrationService.RegisterNewCustomer(identificationField, name, surname, email);
 
-               
+            custregistrationService.RegisterNewCustomer(identificationField, name, surname, email);
+
+
 
             // Asert    -   Then 
 
@@ -67,6 +54,14 @@ namespace Aps.Domain.Customer.Tests
             Assert.IsTrue(result);
         }
 
+        [TestMethod]
+        public void Registering_a_customer()
+        {
+            IIdentificationField identificationEmail = new EmailAddress("bob@marley.com");
 
+            Console.WriteLine("Here :" + identificationEmail.ToString());
+
+
+        }
     }
 }

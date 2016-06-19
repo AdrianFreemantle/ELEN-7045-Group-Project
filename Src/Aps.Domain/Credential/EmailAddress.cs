@@ -1,3 +1,5 @@
+using System;
+
 namespace Aps.Domain.Credential
 {
     public struct EmailAddress : IIdentificationField
@@ -17,7 +19,10 @@ namespace Aps.Domain.Credential
 
         public override string ToString()
         {
+
+            Console.WriteLine("Inside Email struct");
             return _address;
+            
         }
     }
 }
