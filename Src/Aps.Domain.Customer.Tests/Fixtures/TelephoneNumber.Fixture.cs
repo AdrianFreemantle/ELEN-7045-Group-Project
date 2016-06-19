@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aps.Domain.Common;
 using Aps.Domain.Credential;
 
 namespace Aps.Domain.Customer.Tests
@@ -24,7 +25,7 @@ namespace Aps.Domain.Customer.Tests
         {
             try
             {
-                var pn = new TelePhoneNumber(phoneNumber);
+                var pn = new Aps.Domain.Credential.TelephoneNumber(phoneNumber);
             }
             catch (Exception ex)
             {

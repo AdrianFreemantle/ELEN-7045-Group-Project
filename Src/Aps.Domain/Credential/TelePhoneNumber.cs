@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Aps.Domain.Credential
 {
-    public struct TelePhoneNumber : IIdentificationField
+    public struct TelephoneNumber : IIdentificationField
     {
         private readonly string _telephonenumber;
 
-        public TelePhoneNumber(string telephonenumber)
+        public TelephoneNumber(string telephonenumber)
         {
             Guard.ThatParameterNotNullOrEmpty(telephonenumber, "Telephone Number");
             if (!Validator.PhoneIsValid(telephonenumber))
@@ -19,9 +19,7 @@ namespace Aps.Domain.Credential
             }
 
             this._telephonenumber = telephonenumber;
-
         }
-
 
         public override string ToString()
         {
