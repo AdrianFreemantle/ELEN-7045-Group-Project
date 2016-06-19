@@ -11,6 +11,7 @@ namespace Aps.Domain.AccountStatements.Tests
         [TestMethod]
         public void Creates_a_valid_account_statement_from_a_scrape_result()
         {
+            Assert.Inconclusive();
             Runner.RunScenario(
                 given => account_id(),
                 and => a_scrape_session_result(),

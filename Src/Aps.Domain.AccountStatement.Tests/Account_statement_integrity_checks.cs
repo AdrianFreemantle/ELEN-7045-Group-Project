@@ -31,7 +31,7 @@ namespace Aps.Domain.AccountStatements.Tests
                 and => a_scrape_result_data_pair_with_id_and_description_and_value("002", "Payment Received", "R 500.00"),
                 and => a_scrape_result_data_pair_with_id_and_description_and_value("003", "New Charges", "R 200.00"),
                 and => a_scrape_result_data_pair_with_id_and_description_and_value("004", "Discount", "R 20.00"),
-                and => a_scrape_result_data_pair_with_id_and_description_and_value("005", "Deductions", "R 2.00"),
+                and => a_scrape_result_data_pair_with_id_and_description_and_value("005", "Deductions", "R 20.00"),
                 and => a_scrape_result_data_pair_with_id_and_description_and_value("006", "Total Due", "R 160.00"),
                 when => creating_an_account_statment(),
                 then => Integrity_check_passed());
