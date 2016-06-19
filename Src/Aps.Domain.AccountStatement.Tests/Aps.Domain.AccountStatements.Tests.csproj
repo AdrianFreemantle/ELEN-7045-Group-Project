@@ -63,8 +63,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Fixtures\Account_statement_equality.Fixture.cs" />
-    <Compile Include="Fixtures\Account_statement_factory.Fixture.cs" />
-    <Compile Include="Account_statement_factory.cs" />
     <Compile Include="Account_statement_equality.cs" />
     <Compile Include="Account_statement_identity.cs" />
     <Compile Include="Fixtures\Account_statement_identity_equality.Fixture.cs" />
