@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aps.Domain.Common;
 using Aps.Domain.Credential;
 using Aps.Domain.Customer.Tests.DomainTypes;
 using Aps.Domain.Customer.Tests.Stubs;
@@ -61,7 +62,7 @@ namespace Aps.Domain.Customer.Tests
 
         private void And_an_identification_field()
         {
-            identificationField = new TelePhoneNumber("0113334444");
+            identificationField = new Aps.Domain.Credential.TelephoneNumber("0113334444");
         }
 
         private void And_a_customer_registration_service()

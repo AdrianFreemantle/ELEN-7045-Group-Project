@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aps.Domain.Common;
 using Aps.Domain.Credential;
 using Aps.Domain.Customer.Tests.DomainTypes;
 using Aps.Domain.Customer.Tests.Stubs;
@@ -36,7 +37,8 @@ namespace Aps.Domain.Customer.Tests
             // Arrange  -   Given
             CustomerDoesNotExistRepositoryStub repo = new CustomerDoesNotExistRepositoryStub();
             CustomerRegService custregistrationService = new CustomerRegService(repo);
-            IIdentificationField identificationField = new TelePhoneNumber("0113334444");
+
+            IIdentificationField identificationField = new Aps.Domain.Credential.TelephoneNumber("0113334444");
             string name = "Leslie";
             string surname = "dob";
             string email = "bill@bob.com";
