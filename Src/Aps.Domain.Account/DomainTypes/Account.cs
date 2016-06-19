@@ -15,7 +15,6 @@ namespace Aps.Domain.Account.Tests.DomainTypes
             this.accountId = accountId;
             this.customerId = customerId;
             this.accountStatus = new AccountStatus();
-
         }
 
         public static Account Create<TCustomerId>(TCustomerId customerId, AccountId accountId) where TCustomerId : struct, ICustomerId

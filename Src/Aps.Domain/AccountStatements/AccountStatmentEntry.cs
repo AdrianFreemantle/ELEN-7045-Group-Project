@@ -18,7 +18,7 @@ namespace Aps.Domain.AccountStatements
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
-            Guard.ThatValueTypeNotDefaut(value, "value");
+            Guard.ThatParameterIsValueType(value, "value");
 
             this.id = id;
             this.value = value;
@@ -30,12 +30,34 @@ namespace Aps.Domain.AccountStatements
             return new AccountStatementEntryDisplayValue(entryType.ToString(), value.ToString());
         }
 
+        public string GetValue()
+        {
+            return value.ToString();
+        }
+
+        public bool TryGetBalanceValue(out Balance balance)
+        {
+            balance = new Balance();
+
+            if (entryType.GetDataType() != DataType.Balance)
+                return false;
+
+            balance = (Balance)value;
+
+            return true;
+        }
+
         public bool Equals(AccountStatmentEntry other)
         {
             if (other == null)
                 return false;
 
             return other.id.Equals(id);
+        }
+
+        public bool EntryTypeEquals(AccountStatmentEntryType other)
+        {
+            return entryType.Equals(other);
         }
 
         public override string ToString()

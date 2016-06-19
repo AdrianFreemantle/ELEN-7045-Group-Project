@@ -35,9 +35,19 @@ namespace Aps.Domain.AccountStatements
             return Equals(other.id);
         }
 
+        public CalendarMonth StatementMonth()
+        {
+            return id.CalendarMonth;
+        }
+
+        public IAccountId AccountId()
+        {
+            return id.AccountId;
+        }
+
         public bool IsForMonth(CalendarMonth month)
         {
-            return id.Month.Equals(month);
+            return id.CalendarMonth.Equals(month);
         }
 
         public bool IsForAccount(IAccountId accountId)

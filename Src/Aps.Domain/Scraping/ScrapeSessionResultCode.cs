@@ -16,7 +16,6 @@ namespace Aps.Domain.Scraping
 
         private readonly ScrapeSessionResultCodeType scrapeSessionResultCode;
 
-        public static ScrapeSessionResultCode Idiot { get { return new ScrapeSessionResultCode(ScrapeSessionResultCodeType.Unknown); } }
         public static ScrapeSessionResultCode Pending { get { return new ScrapeSessionResultCode(ScrapeSessionResultCodeType.pending); } }
         public static ScrapeSessionResultCode Failed { get { return new ScrapeSessionResultCode(ScrapeSessionResultCodeType.failed); } }
         public static ScrapeSessionResultCode Complete { get { return new ScrapeSessionResultCode(ScrapeSessionResultCodeType.complete); } }

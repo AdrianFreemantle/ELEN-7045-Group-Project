@@ -31,7 +31,8 @@ namespace Aps.Domain.AccountStatements.Tests
 
         private void an_account_statement_factory()
         {
-            accountStatementFactory = new AccountStatementFactory();
+            accountStatementFactory = null;
+                //new AccountStatementFactory(new AccountStatmentEntryFactory(new List<IDataTypeConverter>()));
         }
 
         private void a_scrape_session_result()

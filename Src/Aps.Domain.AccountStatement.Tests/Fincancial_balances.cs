@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using Aps.Domain.Common;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -44,6 +45,5 @@ namespace Aps.Domain.AccountStatements.Tests
                 when => debiting_the_balance_with_an_amount_of(Money.FromAmount(100)),
                 then => the_balance_is(Balance.FromAmount(-200)));
         }
-        
     }
 }

@@ -8,7 +8,7 @@ namespace Aps.Domain.AccountStatements
         private readonly CalendarMonth calendarMonth;
         private readonly IAccountId accountId;
 
-        internal CalendarMonth Month
+        internal CalendarMonth CalendarMonth
         {
             get { return calendarMonth; }
         }

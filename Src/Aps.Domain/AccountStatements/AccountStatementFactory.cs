@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Aps.Domain.AccountStatements.DataIntegrityChecks;
 using Aps.Domain.Common;
 using Aps.Domain.Company;
 using Aps.Domain.Scraping;
@@ -9,25 +10,30 @@ namespace Aps.Domain.AccountStatements
 {
     public class AccountStatementFactory
     {
-        readonly AccountStatmentEntryFactory accountStatmentEntryFactory = new AccountStatmentEntryFactory();
+        private readonly AccountStatmentEntryFactory accountStatmentEntryFactory;
+        private readonly ICollection<AccountStatmentEntryMapping> mappings;
         private readonly ICollection<IDataIntegrityCheck> integrityChecks;
         private readonly ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides;
 
-        public AccountStatementFactory()
-            : this(new IDataIntegrityCheck[0], new IDataIntegrityCheckOverride[0])
+        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory, ICollection<AccountStatmentEntryMapping> mappings)
+            : this(accountStatmentEntryFactory, mappings, new IDataIntegrityCheck[0], new IDataIntegrityCheckOverride[0])
         {
         }
 
-        public AccountStatementFactory(ICollection<IDataIntegrityCheck> integrityChecks)
-            :this(integrityChecks, new IDataIntegrityCheckOverride[0])
+        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks)
+            :this(accountStatmentEntryFactory, mappings, integrityChecks, new IDataIntegrityCheckOverride[0])
         {
         }
 
-        public AccountStatementFactory(ICollection<IDataIntegrityCheck> integrityChecks, ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides)
+        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks, ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides)
         {
             Guard.ThatParameterNotNull(integrityChecks, "integrityChecks");
             Guard.ThatParameterNotNull(integrityCheckOverrides, "integrityCheckOverrides");
+            Guard.ThatParameterNotNull(accountStatmentEntryFactory, "accountStatmentEntryFactory");
+            Guard.ThatParameterNotNull(mappings, "mappings");
 
+            this.accountStatmentEntryFactory = accountStatmentEntryFactory;
+            this.mappings = mappings;
             this.integrityChecks = integrityChecks;
             this.integrityCheckOverrides = integrityCheckOverrides;
         }
@@ -36,7 +42,7 @@ namespace Aps.Domain.AccountStatements
         {
             var entries = BuildAccountStatmentEntries(scrapeSessionResult);
 
-            foreach (var integrityCheck in integrityChecks.Where(i => !integrityCheckOverrides.Any(o => o.Override(i))))
+            foreach (var integrityCheck in integrityChecks.Where(i => !integrityCheckOverrides.Any(o => o.Override(i)))) 
             {
                 if (!integrityCheck.IsValid(entries))
                 {
@@ -53,15 +59,18 @@ namespace Aps.Domain.AccountStatements
             return new AccountStatement(accountStatementId, entries);
         }
 
-        private List<AccountStatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult)
+        private ICollection<AccountStatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult)
         {
             List<AccountStatmentEntry> entries = new List<AccountStatmentEntry>();
 
-            foreach (var scrapeResultDataPair in scrapeSessionResult.TextValuePairs)
+            foreach (ScrapeResultDataPair scrapeResultDataPair in scrapeSessionResult.TextValuePairs)
             {
-                var a = AccountStatmentEntryType.DueDate;
-                accountStatmentEntryFactory.Build(a, scrapeResultDataPair);
+                AccountStatmentEntryMapping mapping = mappings.SingleOrDefault(m => m.FieldId.Equals(scrapeResultDataPair.Id)); //todo: throw appropriate error
+
+                AccountStatmentEntry entry = accountStatmentEntryFactory.Build(mapping.EntryType, scrapeResultDataPair); 
+                entries.Add(entry);
             }
+
             return entries;
         }
     }

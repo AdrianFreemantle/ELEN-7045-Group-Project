@@ -37,9 +37,9 @@ namespace Aps.Domain.AccountStatements.Tests
             repository.Save(statement);
         }
 
-        private AccountStatmentRepositoryStub an_account_statement_repository()
+        private void an_account_statement_repository()
         {
-            return repository = new AccountStatmentRepositoryStub();
+            repository = new AccountStatmentRepositoryStub();
         }
     }
 }

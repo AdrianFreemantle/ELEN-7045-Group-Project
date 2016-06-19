@@ -71,6 +71,12 @@ namespace Aps.Domain
             }
         }
 
+        public static void ThatParameterIsValueType<T>(T value, string paramName)
+        {
+            if (value == null || !value.GetType().IsValueType)
+                throw new ArgumentException(String.Format("Parameter {0} is not a value type", paramName), paramName);
+        }
+
         /// <summary>
         /// Mandates that the specified sequence is not null and has at least one element.
         /// </summary>

@@ -13,7 +13,6 @@ namespace Aps.Domain.Scraping
 
         public ScrapeSessionResult(ScrapeSessionResultCode resultCode, IAccountId accountId, DateTime runDateTime, ICollection<ScrapeResultDataPair> textValuePairs) :this()
         {
-
             Guard.ThatValueTypeNotDefaut(resultCode, "resultCode");
             Guard.ThatValueTypeNotDefaut(accountId, "accountId");
             Guard.ThatValueTypeNotDefaut(runDateTime, "runDateTime");
