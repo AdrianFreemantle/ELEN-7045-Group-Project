@@ -1,4 +1,4 @@
-namespace APS.Domain.Services.Orchestration.Tests
+namespace Aps.Domain
 {
     public interface IAccountStatementCreationService
     {

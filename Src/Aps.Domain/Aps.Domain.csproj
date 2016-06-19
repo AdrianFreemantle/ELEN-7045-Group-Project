@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountStatements\AccountStatement.cs" />
+    <Compile Include="AccountStatements\AccountStatementEntryDisplayValue.cs" />
     <Compile Include="AccountStatements\AccountStatementFactory.cs" />
     <Compile Include="AccountStatements\AccountStatementId.cs" />
     <Compile Include="AccountStatements\AccountStatmentEntry.cs" />
@@ -78,7 +79,7 @@
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
     <Compile Include="Common\AccountStatmentEntryType.cs" />
     <Compile Include="Common\DataType.cs" />
-    <Compile Include="Company\AccountStatementEntryMapping.cs" />
+    <Compile Include="Company\AccountStatmentEntryMapping.cs" />
     <Compile Include="Company\CompanyName.cs" />
     <Compile Include="Credential\CcvNumber.cs" />
     <Compile Include="Credential\NameVO.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Scraping\ScraperScript.cs" />
     <Compile Include="Scraping\ScrapeSessionResult.cs" />
     <Compile Include="Scraping\ScrapeSessionResultCode.cs" />
+    <Compile Include="Scraping\StatusNotificationRuleAttribute.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="Validator.cs" />
   </ItemGroup>

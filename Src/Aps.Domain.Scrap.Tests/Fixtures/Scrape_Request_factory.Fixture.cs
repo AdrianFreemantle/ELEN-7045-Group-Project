@@ -1,7 +1,7 @@
 ﻿using System;
 using Aps.Domain.Scrap;
 using Aps.Domain.Common;
-using Aps.Domain.Company.Tests.DomainTypes;
+using Aps.Domain.Company;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scraping;
 using LightBDD;

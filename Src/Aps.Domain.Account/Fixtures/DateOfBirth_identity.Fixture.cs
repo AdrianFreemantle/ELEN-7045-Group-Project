@@ -1,4 +1,5 @@
 ﻿using Aps.Domain.Common;
+using Aps.Domain.Credential;
 using LightBDD;
 using Shouldly;
 

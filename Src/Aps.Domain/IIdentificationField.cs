@@ -1,4 +1,4 @@
-﻿namespace Aps.Domain.Credential
+﻿namespace Aps.Domain
 {
     public interface IIdentificationField
     {

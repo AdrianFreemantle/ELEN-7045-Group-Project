@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Aps.Domain.Company.Tests.DomainTypes;
+using Aps.Domain.Company;
 
 namespace Aps.Domain
 {

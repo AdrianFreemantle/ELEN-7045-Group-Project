@@ -1,7 +1,6 @@
 using System;
-using Aps.Domain.Credential;
 
-namespace Aps.Domain.Common
+namespace Aps.Domain.Credential
 {
     public struct DateOfBirth : IIdentificationField
     {

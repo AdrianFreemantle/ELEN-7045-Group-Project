@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aps.Domain.Company.Tests.DomainTypes
+namespace Aps.Domain.Company
 {
     public struct CompanyName : IEquatable<CompanyName>
     {
