@@ -1,4 +1,5 @@
-﻿using Aps.Domain.Credential;
+﻿using Aps.Domain.Common;
+using Aps.Domain.Credential;
 using LightBDD;
 using Shouldly;
 
@@ -19,7 +20,8 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = code1.Equals(code2);
+            IDecryptionService service = new Encryption();
+            areEqual = code1.GetDetails(service).Equals(code2.GetDetails(service));
         }
 
         private void another_SecurityCode(SecurityCode code)
@@ -27,7 +29,7 @@ namespace Aps.Domain.Account.Tests
             code2 = code;
         }
 
-        private void SecurityCode(SecurityCode code)
+        private void securityCode(SecurityCode code)
         {
             code1 = code;
         }

@@ -1,4 +1,5 @@
-﻿using Aps.Domain.Credential;
+﻿using Aps.Domain.Common;
+using Aps.Domain.Credential;
 using LightBDD;
 using Shouldly;
 
@@ -18,7 +19,8 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = number1.Equals(number2);
+            IDecryptionService service = new Encryption();
+            areEqual = number1.GetDetails(service).Equals(number2.GetDetails(service));
         }
 
         private void another_CreditCardNumber(CreditCardNumber number)

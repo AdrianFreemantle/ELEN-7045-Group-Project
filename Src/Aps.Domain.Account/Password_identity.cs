@@ -10,7 +10,7 @@ namespace Aps.Domain.Account.Tests
     public partial class Password_identity
     {
         [TestMethod]
-        public void Two_Passwords_credentials_with_the_same_values_are_equal()
+        public void Two_Passwords_credentials_with_the_same_value_are_equal()
         {
             IEncryptionService encryptionService = new Encryption();
             var first = new Password("12345", "12345", encryptionService);

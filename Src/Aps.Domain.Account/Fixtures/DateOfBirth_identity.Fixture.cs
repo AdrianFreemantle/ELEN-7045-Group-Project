@@ -20,7 +20,8 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = date1.Equals(date2);
+            IDecryptionService service = new Encryption();
+            areEqual = date1.GetDateTime(service).Equals(date2.GetDateTime(service));
         }
 
         private void another_dateofBirth(DateOfBirth date)

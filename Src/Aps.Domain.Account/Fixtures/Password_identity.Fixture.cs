@@ -21,7 +21,6 @@ namespace Aps.Domain.Account.Tests
         private void performing_an_equality_comparison()
         {
             IDecryptionService service = new Encryption();
-
             areEqual = password1.GetDetails(service).Equals(password2.GetDetails(service));
         }
 

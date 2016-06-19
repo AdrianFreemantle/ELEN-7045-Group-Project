@@ -22,12 +22,12 @@ namespace Aps.Domain.Account.Tests
             areEqual = username1.Equals(username2);
         }
 
-        private void another_Username(UserName username)
+        private void another_UserName(UserName username)
         {
             username2 = username;
         }
 
-        private void Username(UserName username)
+        private void userName(UserName username)
         {
             username1 = username;
         }
