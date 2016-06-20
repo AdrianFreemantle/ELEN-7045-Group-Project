@@ -1,26 +1,31 @@
+using System.Linq;
+
 namespace Aps.Domain.Credential
 {
     public struct CreditCardNumber  : IIdentificationField
     {
-        private readonly string _creditcardnumber;
+        private readonly byte[] encryptedData;
 
-        public CreditCardNumber(string creditcardnumber)
+        public CreditCardNumber(string creditcardnumber, IEncryptionService encryptionService)
         {
             Guard.ThatParameterNotNullOrEmpty(creditcardnumber, "Credit Card Number");
-            if (!Validator.CreditCardIsValid(creditcardnumber))
+
+            if (creditcardnumber.Length != 16)
+            {
+                throw new DomainException("Credit Card Credential", "Invalid Credit Card Number passed");
+            }
+            if (!creditcardnumber.All(c => c >= '0' && c <= '9'))
             {
                 throw new DomainException("Credit Card Credential", "Invalid Credit Card Number passed");
             }
 
-            this._creditcardnumber = creditcardnumber;
 
+            encryptedData = encryptionService.Encrypt(creditcardnumber);
         }
 
-        public override string ToString()
+        public string GetDetails(IDecryptionService decryptionService)
         {
-            return _creditcardnumber;
+            return decryptionService.Decrypt(encryptedData);
         }
-
-        //To-Do Add encryption 
     }
 }

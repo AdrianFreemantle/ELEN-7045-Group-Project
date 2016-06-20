@@ -14,8 +14,9 @@ namespace Aps.Domain.Account.Tests
         [TestMethod]
         public void Two_DateOfBirth_credentials_with_the_same_Dates_are_equal()
         {
-            var first = new DateOfBirth(new DateTime(1980, 6, 16));
-            var second = new DateOfBirth(new DateTime(1980, 6, 16));
+            IEncryptionService encryptionService = new Encryption();
+            var first = new DateOfBirth(new DateTime(1980, 6, 16), encryptionService);
+            var second = new DateOfBirth(new DateTime(1980, 6, 16), encryptionService);
 
             Runner.RunScenario(
             given => dateofBirth(first),
@@ -25,10 +26,11 @@ namespace Aps.Domain.Account.Tests
         }
 
         [TestMethod]
-        public void Two_account_status_identities_with_different_statuses_are_not_equal()
+        public void Two_DateOfBirth_credentials_with_different_Dates_are_not_equal()
         {
-            var first = new DateOfBirth(new DateTime(1980, 6, 16));
-            var second = new DateOfBirth(new DateTime(1980, 7, 16));
+            IEncryptionService encryptionService = new Encryption();
+            var first = new DateOfBirth(new DateTime(1980, 6, 16), encryptionService);
+            var second = new DateOfBirth(new DateTime(1980, 7, 16), encryptionService);
 
             Runner.RunScenario(
             given => dateofBirth(first),

@@ -1,4 +1,4 @@
-namespace Aps.Domain.Account.Tests.DomainTypes
+namespace Aps.Domain.Credential
 {
     public struct AccountNumber
     {

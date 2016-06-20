@@ -20,8 +20,8 @@ namespace Aps.Domain.Common
         public override string ToString()
         {
             return ToString(GetDefaultFormatProvider());
-        }        
-
+        }     
+           
         public string ToString(IFormatProvider provider)
         {
             return ToString(DefaultFormat, provider);

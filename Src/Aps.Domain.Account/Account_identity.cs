@@ -1,6 +1,6 @@
-﻿using Aps.Domain.Account;
-using Aps.Domain.Account.Tests.DomainTypes;
+﻿using Aps.Domain.Account.Tests.DomainTypes;
 using Aps.Domain.Account.Tests.Stubs;
+using Aps.Domain.Credential;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

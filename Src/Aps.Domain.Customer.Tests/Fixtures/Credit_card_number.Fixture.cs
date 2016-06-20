@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aps.Domain.Common;
 
 namespace Aps.Domain.Customer.Tests
 {
@@ -24,7 +25,8 @@ namespace Aps.Domain.Customer.Tests
         {
             try
             {
-                var cc = new CreditCardNumber(cardNumber);
+                IEncryptionService service = new Encryption();
+                var cc = new CreditCardNumber(cardNumber, service);
                 
             }
             catch (Exception ex)
