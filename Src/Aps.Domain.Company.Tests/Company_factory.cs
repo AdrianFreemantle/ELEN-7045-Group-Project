@@ -18,6 +18,7 @@ namespace Aps.Domain.Company.Tests
                 and => a_company_type(new CompanyTypeStub()),
                 and => a_scraper_script(new ScraperScriptStub()),
                 and => a_billing_cycle(new BillingCycleStub()),
+                and => a_base_url(new BaseUrlStub()),
                 and => a_company_factory(),
                 when => creating_a_new_company(),
                 then => a_valid_company_is_created()

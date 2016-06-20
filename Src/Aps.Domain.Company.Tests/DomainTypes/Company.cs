@@ -9,17 +9,19 @@ namespace Aps.Domain.Company.Tests.DomainTypes
         private readonly ICompanyType _companyType;
         private readonly IScraperScript _scraperScript;
         private readonly IBillingCycle _billingCycle;
+        private readonly IBaseUrl _baseUrl;
 
         protected Company()
         {
         }
 
-        internal Company(CompanyName companyName, ICompanyType companyType, IScraperScript scraperScript, IBillingCycle billingCycle)
+        internal Company(CompanyName companyName, ICompanyType companyType, IScraperScript scraperScript, IBillingCycle billingCycle, IBaseUrl baseUrl)
         {
             _companyName = companyName;
             _companyType = companyType;
             _scraperScript = scraperScript;
             _billingCycle = billingCycle;
+            _baseUrl = baseUrl;
         }
 
         public bool Equals(Company other)

@@ -71,6 +71,9 @@
     <Compile Include="DomainTypes\Company.cs" />
     <Compile Include="DomainTypes\CompanyFactory.cs" />
     <Compile Include="DomainTypes\CompanyType.cs" />
+    <Compile Include="DomainTypes\LeadTime.cs" />
+    <Compile Include="DomainTypes\NumberOfDaysPerCycle.cs" />
+    <Compile Include="DomainTypes\RetryInterval.cs" />
     <Compile Include="DomainTypes\ScraperScript.cs" />
     <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
@@ -84,6 +87,7 @@
     <Compile Include="Company_Identity.cs" />
     <Compile Include="Company_factory.cs" />
     <Compile Include="Company_name.cs" />
+    <Compile Include="Stubs\BaseUrlStub.cs" />
     <Compile Include="Stubs\BillingCycleStub.cs" />
     <Compile Include="Stubs\CompanyTypeStub.cs" />
     <Compile Include="Stubs\ScraperScriptStub.cs" />
@@ -101,7 +105,9 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataIntegrityChecks\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

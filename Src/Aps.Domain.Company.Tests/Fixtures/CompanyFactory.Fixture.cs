@@ -14,6 +14,7 @@ namespace Aps.Domain.Company.Tests
         private CompanyTypeStub _companyTypeStub;
         private ScraperScriptStub _scraperScriptStub;
         private BillingCycleStub _billingCycleStub;
+        private BaseUrlStub _baseUrlStub;
         private Exception error;
 
         private void a_company_name(CompanyName companyName)
@@ -45,7 +46,7 @@ namespace Aps.Domain.Company.Tests
         {
             try
             {
-                _company = _companyFactory.CreateCompany(_companyName, _companyTypeStub, _scraperScriptStub, _billingCycleStub);
+                _company = _companyFactory.CreateCompany(_companyName, _companyTypeStub, _scraperScriptStub, _billingCycleStub, _baseUrlStub);
             }
             catch (Exception exception)
             {
@@ -56,6 +57,11 @@ namespace Aps.Domain.Company.Tests
         private void a_valid_company_is_created()
         {
             Assert.IsNull(error);
+        }
+
+        private void a_base_url(BaseUrlStub baseUrlStub)
+        {
+            _baseUrlStub = baseUrlStub;
         }
     }
 }

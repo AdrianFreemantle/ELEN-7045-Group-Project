@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Aps.Domain.Company.Tests.DomainTypes
 {
-    public struct BillingCycle
+    public class BillingCycle
     {
+        private LeadTime _leadTime;
+        private NumberOfDaysPerCycle _numberOfDaysPerCycle;
+        private RetryInterval _retryInterval;
+
+        public BillingCycle(LeadTime leadTime, NumberOfDaysPerCycle numberOfDaysPerCycle, RetryInterval retryInterval)
+        {
+            _leadTime = leadTime;
+            _numberOfDaysPerCycle = numberOfDaysPerCycle;
+            _retryInterval = retryInterval;
+        }
     }
 }

@@ -22,7 +22,8 @@ namespace Aps.Domain.Company.Tests
             var companyTypeStub = new CompanyTypeStub();
             var scraperScriptStub = new ScraperScriptStub();
             var billingCycleStub = new BillingCycleStub();
-            _company1 = _companyFactory.CreateCompany(new CompanyName(company1Name), companyTypeStub, scraperScriptStub, billingCycleStub);
+            var baseUrlStub = new BaseUrlStub();
+            _company1 = _companyFactory.CreateCompany(new CompanyName(company1Name), companyTypeStub, scraperScriptStub, billingCycleStub, baseUrlStub);
         }
 
         private void another_company(string company2Name)
@@ -30,7 +31,8 @@ namespace Aps.Domain.Company.Tests
             var companyTypeStub = new CompanyTypeStub();
             var scraperScriptStub = new ScraperScriptStub();
             var billingCycleStub = new BillingCycleStub();
-            _company2 = _companyFactory.CreateCompany(new CompanyName(company2Name), companyTypeStub, scraperScriptStub, billingCycleStub);
+            var baseUrlStub = new BaseUrlStub();
+            _company2 = _companyFactory.CreateCompany(new CompanyName(company2Name), companyTypeStub, scraperScriptStub, billingCycleStub, baseUrlStub);
         }
 
         private void performing_an_equality_comparison()
