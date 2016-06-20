@@ -8,7 +8,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Telephone Number")]
-    public partial class TelephoneNumber_identity
+    public partial class TelephoneNumber_equality
     {
         [TestMethod]
         public void Two_TelephoneNumber_credentials_with_the_same_value_are_equal()

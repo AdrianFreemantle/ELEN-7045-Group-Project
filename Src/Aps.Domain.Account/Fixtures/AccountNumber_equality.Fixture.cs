@@ -5,10 +5,10 @@ using Shouldly;
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class EmailAddress_identity : FeatureFixture
+    public partial class AccountNumber_equality : FeatureFixture
     {
-        private EmailAddress address1;
-        private EmailAddress address2;
+        private AccountNumber username1;
+        private AccountNumber username2;
         private bool areEqual;
 
 
@@ -19,17 +19,17 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = address1.Equals(address2);
+            areEqual = username1.Equals(username2);
         }
 
-        private void another_Email(EmailAddress address)
+        private void another_AccountNumber(AccountNumber username)
         {
-            address2 = address;
+            username2 = username;
         }
 
-        private void email(EmailAddress address)
+        private void accountNumber(AccountNumber username)
         {
-            address1 = address;
+            username1 = username;
         }
 
         private void the_two_are_not_equal()

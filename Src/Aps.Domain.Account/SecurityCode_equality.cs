@@ -7,7 +7,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Security Code")]
-    public partial class SecurityCode_identity
+    public partial class SecurityCode_equality
     {
         [TestMethod]
         public void Two_Security_Codes_credentials_with_the_same_value_are_equal()

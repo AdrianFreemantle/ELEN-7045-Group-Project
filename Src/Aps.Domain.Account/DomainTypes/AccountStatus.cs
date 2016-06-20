@@ -9,24 +9,33 @@ namespace Aps.Domain.Account.Tests.DomainTypes
 
     public struct AccountStatus
     {
-        private enum AccountStatusType
+        public enum AccountStatusType
         {
             [System.ComponentModel.Description("Unknown Account Status")]
             Unknown,
+            Register,
+            Rejected,
             [StatusNotificationRule(ShouldNotifyCustomer = true)]
             Active,
             Inactive,
-            ThisIsComplex
+            Trying,
+            UpdateCredentials,
+            NotSignedUpForEBilling,
+            ActionRequired,
         }
 
         private readonly AccountStatusType accountStatus;
 
-        public static AccountStatus Idiot { get { return new AccountStatus(AccountStatusType.Unknown); } }
+        public static AccountStatus Unknown { get { return new AccountStatus(AccountStatusType.Unknown); } }
+        public static AccountStatus Register { get { return new AccountStatus(AccountStatusType.Register); } }
         public static AccountStatus Active { get { return new AccountStatus(AccountStatusType.Active); } }
         public static AccountStatus Inactive { get { return new AccountStatus(AccountStatusType.Inactive); } }
-        public static AccountStatus ThisIsComplex { get { return new AccountStatus(AccountStatusType.ThisIsComplex); } }
+        public static AccountStatus Trying { get { return new AccountStatus(AccountStatusType.Trying); } }
+        public static AccountStatus UpdateCredentials { get { return new AccountStatus(AccountStatusType.UpdateCredentials); } }
+        public static AccountStatus NotSignedUpForEBilling { get { return new AccountStatus(AccountStatusType.NotSignedUpForEBilling); } }
+        public static AccountStatus ActionRequired { get { return new AccountStatus(AccountStatusType.ActionRequired); } }
 
-        private AccountStatus(AccountStatusType accountStatus)
+        public AccountStatus(AccountStatusType accountStatus)
         {
             this.accountStatus = accountStatus;
         }

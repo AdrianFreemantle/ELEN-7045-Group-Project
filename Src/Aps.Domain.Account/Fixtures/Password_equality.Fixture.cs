@@ -6,11 +6,12 @@ using Shouldly;
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class CreditCardNumber_identity : FeatureFixture
+    public partial class Password_equality : FeatureFixture
     {
-        private CreditCardNumber number1;
-        private CreditCardNumber number2;
+        private Password password1;
+        private Password password2;
         private bool areEqual;
+
 
         private void the_two_are_equal()
         {
@@ -20,17 +21,17 @@ namespace Aps.Domain.Account.Tests
         private void performing_an_equality_comparison()
         {
             IDecryptionService service = new Encryption();
-            areEqual = number1.GetDetails(service).Equals(number2.GetDetails(service));
+            areEqual = password1.GetDetails(service).Equals(password2.GetDetails(service));
         }
 
-        private void another_CreditCardNumber(CreditCardNumber number)
+        private void another_Password(Password password)
         {
-            number2 = number;
+            password2 = password;
         }
 
-        private void creditCardNumber(CreditCardNumber number)
+        private void password(Password password)
         {
-            number1 = number;
+            password1 = password;
         }
 
         private void the_two_are_not_equal()

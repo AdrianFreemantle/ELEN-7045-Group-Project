@@ -10,7 +10,7 @@ using Shouldly;
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class AccountStatus_identity : FeatureFixture
+    public partial class AccountStatus_equality : FeatureFixture
     {
         private AccountStatus status1;
         private AccountStatus status2;

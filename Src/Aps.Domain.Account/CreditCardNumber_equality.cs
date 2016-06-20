@@ -8,7 +8,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Credit Card Number")]
-    public partial class CreditCardNumber_identity
+    public partial class CreditCardNumber_equality
     {
         [TestMethod]
         public void Two_CreditCardNumber_credentials_with_the_same_numbers_are_equal()
