@@ -23,6 +23,16 @@ namespace Aps.Domain.Account.Tests.DomainTypes
             return new AccountId(companyName, accountNumber);
         }
 
+        public AccountNumber GetAccountNumber()
+        {
+            return accountNumber;
+        }
+
+        public ICompanyName GetCompanyName()
+        {
+            return companyName;
+        }
+
         public override string ToString()
         {
             return String.Format("{0} {1}", companyName, accountNumber);

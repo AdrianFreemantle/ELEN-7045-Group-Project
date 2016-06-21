@@ -6,7 +6,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Account Number")]
-    public partial class AccountNumber_identity
+    public partial class AccountNumber_equality
     {
         [TestMethod]
         public void Two_UserName_credentials_with_the_same_value_are_equal()

@@ -11,5 +11,10 @@ namespace Aps.Domain.Credential
 
             this.accountnumber = accountnumber;
         }
+
+        public override string ToString()
+        {
+            return accountnumber;
+        }
     }
 }

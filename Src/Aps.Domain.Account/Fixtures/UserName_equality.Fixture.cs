@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aps.Domain.Account.Tests.DomainTypes;
+﻿using Aps.Domain.Credential;
 using LightBDD;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class Account_identity : FeatureFixture
+    public partial class UserName_equality : FeatureFixture
     {
-        private AccountId id1;
-        private AccountId id2;
+        private UserName username1;
+        private UserName username2;
         private bool areEqual;
 
 
@@ -24,17 +19,17 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = id1.Equals(id2);
+            areEqual = username1.Equals(username2);
         }
 
-        private void another_account_id(AccountId id)
+        private void another_UserName(UserName username)
         {
-            id2 = id;
+            username2 = username;
         }
 
-        private void account_id(AccountId id)
+        private void userName(UserName username)
         {
-            id1 = id;
+            username1 = username;
         }
 
         private void the_two_are_not_equal()

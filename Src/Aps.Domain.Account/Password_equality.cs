@@ -7,7 +7,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Password")]
-    public partial class Password_identity
+    public partial class Password_equality
     {
         [TestMethod]
         public void Two_Passwords_credentials_with_the_same_value_are_equal()

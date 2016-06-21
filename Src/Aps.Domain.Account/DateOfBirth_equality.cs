@@ -9,7 +9,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Date Of Birth")]
-    public partial class DateOfBirth_identity
+    public partial class DateOfBirth_equality
     {
         [TestMethod]
         public void Two_DateOfBirth_credentials_with_the_same_Dates_are_equal()

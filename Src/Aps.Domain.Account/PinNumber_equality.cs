@@ -7,7 +7,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Pin Number")]
-    public partial class PinNumber_identity
+    public partial class PinNumber_equality
     {
         [TestMethod]
         public void Two_Pin_Numbers_credentials_with_the_same_value_are_equal()

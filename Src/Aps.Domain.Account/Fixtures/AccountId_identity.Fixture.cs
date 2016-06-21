@@ -1,15 +1,19 @@
-﻿using Aps.Domain.Common;
-using Aps.Domain.Credential;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Aps.Domain.Account.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class PinNumber_identity : FeatureFixture
+    public partial class AccountId_identity : FeatureFixture
     {
-        private PinNumber pin1;
-        private PinNumber pin2;
+        private AccountId id1;
+        private AccountId id2;
         private bool areEqual;
 
 
@@ -20,18 +24,17 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            IDecryptionService service = new Encryption();
-            areEqual = pin1.GetDetails(service).Equals(pin2.GetDetails(service));
+            areEqual = id1.Equals(id2);
         }
 
-        private void another_PinNumber(PinNumber pin)
+        private void another_account_id(AccountId id)
         {
-            pin2 = pin;
+            id2 = id;
         }
 
-        private void pinNumber(PinNumber pin)
+        private void account_id(AccountId id)
         {
-            pin1 = pin;
+            id1 = id;
         }
 
         private void the_two_are_not_equal()

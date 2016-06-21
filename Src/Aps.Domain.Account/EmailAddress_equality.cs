@@ -8,7 +8,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Email Address")]
-    public partial class EmailAddress_identity
+    public partial class EmailAddress_equality
     {
         [TestMethod]
         public void Two_Email_Address_credentials_with_the_same_address_are_equal()
