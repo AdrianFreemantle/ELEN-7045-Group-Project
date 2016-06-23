@@ -67,6 +67,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\BaseUrl.cs" />
     <Compile Include="DomainTypes\BillingCycle.cs" />
     <Compile Include="DomainTypes\Company.cs" />
     <Compile Include="DomainTypes\CompanyFactory.cs" />

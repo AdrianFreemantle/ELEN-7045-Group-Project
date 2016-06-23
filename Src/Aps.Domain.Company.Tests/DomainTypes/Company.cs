@@ -6,16 +6,16 @@ namespace Aps.Domain.Company.Tests.DomainTypes
     public class Company : IEquatable<Company>
     {
         private readonly CompanyName _companyName;
-        private readonly ICompanyType _companyType;
-        private readonly IScraperScript _scraperScript;
-        private readonly IBillingCycle _billingCycle;
-        private readonly IBaseUrl _baseUrl;
+        private readonly CompanyType _companyType;
+        private readonly ScraperScript _scraperScript;
+        private readonly BillingCycle _billingCycle;
+        private readonly BaseUrl _baseUrl;
 
         protected Company()
         {
         }
 
-        internal Company(CompanyName companyName, ICompanyType companyType, IScraperScript scraperScript, IBillingCycle billingCycle, IBaseUrl baseUrl)
+        internal Company(CompanyName companyName, CompanyType companyType, ScraperScript scraperScript, BillingCycle billingCycle, BaseUrl baseUrl)
         {
             _companyName = companyName;
             _companyType = companyType;
@@ -27,6 +27,11 @@ namespace Aps.Domain.Company.Tests.DomainTypes
         public bool Equals(Company other)
         {
             return _companyName.Equals(other._companyName);
+        }
+
+        public CompanyType GetType()
+        {
+            return _companyType;
         }
     }
 }
