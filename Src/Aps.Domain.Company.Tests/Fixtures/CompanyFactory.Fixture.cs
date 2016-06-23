@@ -1,6 +1,5 @@
 ﻿using System;
 using Aps.Domain.Company.Tests.DomainTypes;
-using Aps.Domain.Company.Tests.Stubs;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -11,10 +10,10 @@ namespace Aps.Domain.Company.Tests
         private CompanyName _companyName;
         private CompanyFactory _companyFactory;
         private DomainTypes.Company _company;
-        private CompanyTypeStub _companyTypeStub;
-        private ScraperScriptStub _scraperScriptStub;
-        private BillingCycleStub _billingCycleStub;
-        private BaseUrlStub _baseUrlStub;
+        private CompanyType _companyType;
+        private ScraperScript _scraperScript;
+        private BillingCycle _billingCycle;
+        private BaseUrl _baseUrl;
         private Exception error;
 
         private void a_company_name(CompanyName companyName)
@@ -27,26 +26,26 @@ namespace Aps.Domain.Company.Tests
             _companyFactory = new CompanyFactory();
         }
 
-        private void a_company_type(CompanyTypeStub companyTypeStub)
+        private void a_company_type(CompanyType companyType)
         {
-            _companyTypeStub = companyTypeStub;
+            _companyType = companyType;
         }
 
-        private void a_scraper_script(ScraperScriptStub scraperScriptStub)
+        private void a_scraper_script(ScraperScript scraperScript)
         {
-            _scraperScriptStub = scraperScriptStub;
+            _scraperScript = scraperScript;
         }
 
-        private void a_billing_cycle(BillingCycleStub billingCycleStub)
+        private void a_billing_cycle(BillingCycle billingCycle)
         {
-            _billingCycleStub = billingCycleStub;
+            _billingCycle = billingCycle;
         }
 
         private void creating_a_new_company()
         {
             try
             {
-                _company = _companyFactory.CreateCompany(_companyName, _companyTypeStub, _scraperScriptStub, _billingCycleStub, _baseUrlStub);
+                _company = _companyFactory.CreateCompany(_companyName, _companyType, _scraperScript, _billingCycle, _baseUrl);
             }
             catch (Exception exception)
             {
@@ -59,9 +58,9 @@ namespace Aps.Domain.Company.Tests
             Assert.IsNull(error);
         }
 
-        private void a_base_url(BaseUrlStub baseUrlStub)
+        private void a_base_url(BaseUrl baseUrl)
         {
-            _baseUrlStub = baseUrlStub;
+            _baseUrl = baseUrl;
         }
     }
 }
