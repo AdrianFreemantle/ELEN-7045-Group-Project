@@ -1,12 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aps.Domain.Company.Tests.DomainTypes
 {
     public struct BaseUrl
     {
+        private readonly Uri _baseUri;
+
+        public BaseUrl(string baseUrl)
+        {
+            _baseUri = new Uri(baseUrl);
+        }
+
+        public override string ToString()
+        {
+            return _baseUri.AbsoluteUri;
+        }
     }
 }
