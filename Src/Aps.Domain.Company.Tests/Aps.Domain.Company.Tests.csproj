@@ -76,6 +76,8 @@
     <Compile Include="DomainTypes\NumberOfDaysPerCycle.cs" />
     <Compile Include="DomainTypes\RetryInterval.cs" />
     <Compile Include="DomainTypes\ScraperScript.cs" />
+    <Compile Include="Fixtures\BaseUrl_create.Fixture.cs" />
+    <Compile Include="Fixtures\BaseUrl_Identity.Fixture.cs" />
     <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_Identity.Fixture.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="Company_type_identity.cs" />
     <Compile Include="Scraper_script_create.cs" />
     <Compile Include="Scraper_script_identity.cs" />
+    <Compile Include="BaseUrl_Identity.cs" />
+    <Compile Include="BaseUrl_create.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
