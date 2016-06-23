@@ -6,7 +6,7 @@ using Shouldly;
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class DateOfBirth_identity : FeatureFixture
+    public partial class DateOfBirth_equality : FeatureFixture
     {
         private DateOfBirth date1;
         private DateOfBirth date2;
@@ -20,7 +20,8 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = date1.Equals(date2);
+            IDecryptionService service = new Encryption();
+            areEqual = date1.GetDateTime(service).Equals(date2.GetDateTime(service));
         }
 
         private void another_dateofBirth(DateOfBirth date)

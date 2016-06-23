@@ -1,33 +1,64 @@
 using System;
-using System.Collections.Generic;
 
 namespace Aps.Domain.Account.Tests.DomainTypes
 {
-    public struct Account
+    public class Account : IEquatable<Account>
     {
-        private readonly AccountId accountId;
         private readonly ICustomerId customerId;
+        private readonly AccountId accountId;
+        private readonly Credentials credentials;
+        private readonly DateTime dateAdded;
         private readonly AccountStatus accountStatus;
-       
 
-        private Account(ICustomerId customerId, AccountId accountId)
-        {
-            this.accountId = accountId;
-            this.customerId = customerId;
-            this.accountStatus = new AccountStatus();
+        protected Account()
+        {            
         }
 
-        public static Account Create<TCustomerId>(TCustomerId customerId, AccountId accountId) where TCustomerId : struct, ICustomerId
+        internal Account(ICustomerId customerId, AccountId accountId, Credentials credentials)
         {
-            Guard.ThatValueTypeNotDefaut(customerId, "CustomerId");
-            Guard.ThatValueTypeNotDefaut(accountId, "AccountId");
+            this.customerId = customerId;
+            this.accountId = accountId;
+            this.credentials = credentials;
+            dateAdded = DateTime.Now;
+            this.accountStatus = new AccountStatus(AccountStatus.AccountStatusType.Register);
+        }
 
-            return new Account(customerId, accountId);
+        public bool Equals(AccountId other)
+        {
+            return accountId.Equals(other);
+        }
+
+        public bool Equals(Account other)
+        {
+            if (other == null)
+                return false;
+
+            return Equals(other.accountId);
         }
 
         public override string ToString()
         {
             return String.Format("{0} {1}", accountId, customerId);
+        }
+
+        public ICustomerId GetCustomerId()
+        {
+            return customerId;
+        }
+
+        public AccountId GetAccountId()
+        {
+            return accountId;
+        }
+
+        public Credentials GetCredentials()
+        {
+            return credentials;
+        }
+
+        public AccountStatus GetAccountStatus()
+        {
+            return accountStatus;
         }
     }
 }

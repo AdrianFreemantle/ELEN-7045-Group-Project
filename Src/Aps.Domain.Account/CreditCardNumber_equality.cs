@@ -8,13 +8,14 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Credit Card Number")]
-    public partial class CreditCardNumber_identity
+    public partial class CreditCardNumber_equality
     {
         [TestMethod]
         public void Two_CreditCardNumber_credentials_with_the_same_numbers_are_equal()
         {
-            var first = new CreditCardNumber("1234567890123456");
-            var second = new CreditCardNumber("1234567890123456");
+            IEncryptionService encryptionService = new Encryption();
+            var first = new CreditCardNumber("1234567890123456", encryptionService);
+            var second = new CreditCardNumber("1234567890123456", encryptionService);
 
             Runner.RunScenario(
             given => creditCardNumber(first),
@@ -24,10 +25,11 @@ namespace Aps.Domain.Account.Tests
         }
 
         [TestMethod]
-        public void Two_account_status_identities_with_different_statuses_are_not_equal()
+        public void Two_CreditCardNumber_credential_with_different_numbers_are_not_equal()
         {
-            var first = new CreditCardNumber("1234567890123456");
-            var second = new CreditCardNumber("9234567890123457");
+            IEncryptionService encryptionService = new Encryption();
+            var first = new CreditCardNumber("1234567890123456", encryptionService);
+            var second = new CreditCardNumber("9234567890123457", encryptionService);
 
             Runner.RunScenario(
             given => creditCardNumber(first),

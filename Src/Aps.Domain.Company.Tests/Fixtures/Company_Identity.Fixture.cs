@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aps.Domain.Company.Tests.DomainTypes;
-using Aps.Domain.Company.Tests.Stubs;
+﻿using Aps.Domain.Company.Tests.DomainTypes;
 using LightBDD;
 using Shouldly;
 
@@ -19,18 +13,20 @@ namespace Aps.Domain.Company.Tests
 
         private void a_company(string company1Name)
         {
-            var companyTypeStub = new CompanyTypeStub();
-            var scraperScriptStub = new ScraperScriptStub();
-            var billingCycleStub = new BillingCycleStub();
-            _company1 = _companyFactory.CreateCompany(new CompanyName(company1Name), companyTypeStub, scraperScriptStub, billingCycleStub);
+            var companyType = new CompanyType();
+            var scraperScript = new ScraperScript();
+            var billingCycle = new BillingCycle(new LeadTime(), new NumberOfDaysPerCycle(), new RetryInterval());
+            var baseUrl = new BaseUrl();
+            _company1 = _companyFactory.CreateCompany(new CompanyName(company1Name), companyType, scraperScript, billingCycle, baseUrl);
         }
 
         private void another_company(string company2Name)
         {
-            var companyTypeStub = new CompanyTypeStub();
-            var scraperScriptStub = new ScraperScriptStub();
-            var billingCycleStub = new BillingCycleStub();
-            _company2 = _companyFactory.CreateCompany(new CompanyName(company2Name), companyTypeStub, scraperScriptStub, billingCycleStub);
+            var companyType = new CompanyType();
+            var scraperScript = new ScraperScript();
+            var billingCycle = new BillingCycle(new LeadTime(), new NumberOfDaysPerCycle(), new RetryInterval());
+            var baseUrl = new BaseUrl();
+            _company2 = _companyFactory.CreateCompany(new CompanyName(company2Name), companyType, scraperScript, billingCycle, baseUrl);
         }
 
         private void performing_an_equality_comparison()

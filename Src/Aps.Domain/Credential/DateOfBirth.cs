@@ -4,9 +4,9 @@ namespace Aps.Domain.Credential
 {
     public struct DateOfBirth : IIdentificationField
     {
-        private readonly DateTime _dateofbirth;
+        private readonly byte[] encryptedData;
 
-        public DateOfBirth(DateTime dateofbirth)
+        public DateOfBirth(DateTime dateofbirth, IEncryptionService encryptionService)
         {
             Guard.ThatValueTypeNotDefaut(dateofbirth, "Date Of Birth");
 
@@ -15,8 +15,12 @@ namespace Aps.Domain.Credential
                 throw new DomainException("Date Of Birth Credential", "Invalid Date Of Birth Passed");
             }
 
-            this._dateofbirth = dateofbirth;
+            encryptedData = encryptionService.Encrypt(dateofbirth.Ticks.ToString());
         }
-        //To-Do Add encryption 
+
+        public DateTime GetDateTime(IDecryptionService decryptionService)
+        {
+            return new DateTime(long.Parse(decryptionService.Decrypt(encryptedData)));
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Account Status")]
-    public partial class AccountStatus_identity
+    public partial class AccountStatus_equality
     {
         [TestMethod]
         public void Two_account_status_identities_with_the_same_status_are_equal()

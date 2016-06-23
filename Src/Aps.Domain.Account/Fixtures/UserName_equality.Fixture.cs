@@ -5,10 +5,10 @@ using Shouldly;
 // ReSharper disable once CheckNamespace
 namespace Aps.Domain.Account.Tests
 {
-    public partial class SecurityCode_identity : FeatureFixture
+    public partial class UserName_equality : FeatureFixture
     {
-        private SecurityCode code1;
-        private SecurityCode code2;
+        private UserName username1;
+        private UserName username2;
         private bool areEqual;
 
 
@@ -19,17 +19,17 @@ namespace Aps.Domain.Account.Tests
 
         private void performing_an_equality_comparison()
         {
-            areEqual = code1.Equals(code2);
+            areEqual = username1.Equals(username2);
         }
 
-        private void another_SecurityCode(SecurityCode code)
+        private void another_UserName(UserName username)
         {
-            code2 = code;
+            username2 = username;
         }
 
-        private void SecurityCode(SecurityCode code)
+        private void userName(UserName username)
         {
-            code1 = code;
+            username1 = username;
         }
 
         private void the_two_are_not_equal()

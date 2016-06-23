@@ -67,11 +67,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTypes\BaseUrl.cs" />
     <Compile Include="DomainTypes\BillingCycle.cs" />
     <Compile Include="DomainTypes\Company.cs" />
     <Compile Include="DomainTypes\CompanyFactory.cs" />
     <Compile Include="DomainTypes\CompanyType.cs" />
+    <Compile Include="DomainTypes\LeadTime.cs" />
+    <Compile Include="DomainTypes\NumberOfDaysPerCycle.cs" />
+    <Compile Include="DomainTypes\RetryInterval.cs" />
     <Compile Include="DomainTypes\ScraperScript.cs" />
+    <Compile Include="Fixtures\BaseUrl_create.Fixture.cs" />
+    <Compile Include="Fixtures\BaseUrl_Identity.Fixture.cs" />
+    <Compile Include="Fixtures\Billing_cycle_create.Fixture.cs" />
     <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_Identity.Fixture.cs" />
@@ -84,12 +91,13 @@
     <Compile Include="Company_Identity.cs" />
     <Compile Include="Company_factory.cs" />
     <Compile Include="Company_name.cs" />
-    <Compile Include="Stubs\BillingCycleStub.cs" />
-    <Compile Include="Stubs\CompanyTypeStub.cs" />
-    <Compile Include="Stubs\ScraperScriptStub.cs" />
     <Compile Include="Company_type_identity.cs" />
     <Compile Include="Scraper_script_create.cs" />
     <Compile Include="Scraper_script_identity.cs" />
+    <Compile Include="BaseUrl_Identity.cs" />
+    <Compile Include="BaseUrl_create.cs" />
+    <Compile Include="Billing_cycle_create.cs" />
+    <Compile Include="Billing_cycle_identity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -101,7 +109,10 @@
       <Name>Aps.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataIntegrityChecks\" />
+    <Folder Include="Stubs\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

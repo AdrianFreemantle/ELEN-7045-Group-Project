@@ -1,6 +1,5 @@
 ﻿using System;
 using Aps.Domain.Company.Tests.DomainTypes;
-using Aps.Domain.Company.Tests.Stubs;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,9 +14,10 @@ namespace Aps.Domain.Company.Tests
         {
             Runner.RunScenario(
                 given => a_company_name(new CompanyName("Company1")),
-                and => a_company_type(new CompanyTypeStub()),
-                and => a_scraper_script(new ScraperScriptStub()),
-                and => a_billing_cycle(new BillingCycleStub()),
+                and => a_company_type(new CompanyType()),
+                and => a_scraper_script(new ScraperScript()),
+                and => a_billing_cycle(new BillingCycle(new LeadTime(), new NumberOfDaysPerCycle(), new RetryInterval())),
+                and => a_base_url(new BaseUrl()),
                 and => a_company_factory(),
                 when => creating_a_new_company(),
                 then => a_valid_company_is_created()

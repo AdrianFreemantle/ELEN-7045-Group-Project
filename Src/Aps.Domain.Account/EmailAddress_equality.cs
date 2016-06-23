@@ -8,10 +8,10 @@ namespace Aps.Domain.Account.Tests
 {
     [TestClass]
     [FeatureDescription(@"Equality checks and In-equality checks for Email Address")]
-    public partial class EmailAddress_identity
+    public partial class EmailAddress_equality
     {
         [TestMethod]
-        public void Two_CreditCardNumber_credentials_with_the_same_numbers_are_equal()
+        public void Two_Email_Address_credentials_with_the_same_address_are_equal()
         {
             var first = new EmailAddress("chrisv@live.co.za");
             var second = new EmailAddress("chrisv@live.co.za");
@@ -24,7 +24,7 @@ namespace Aps.Domain.Account.Tests
         }
 
         [TestMethod]
-        public void Two_account_status_identities_with_different_statuses_are_not_equal()
+        public void Two_Email_Address_credentials_with_different_addresses_are_not_equal()
         {
             var first = new EmailAddress("chrisv@live.co.za");
             var second = new EmailAddress("chrisv@hotmail.co.za");

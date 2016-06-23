@@ -1,4 +1,4 @@
-namespace Aps.Domain.Account.Tests.DomainTypes
+namespace Aps.Domain.Credential
 {
     public struct AccountNumber
     {
@@ -10,6 +10,11 @@ namespace Aps.Domain.Account.Tests.DomainTypes
         {
 
             this.accountnumber = accountnumber;
+        }
+
+        public override string ToString()
+        {
+            return accountnumber;
         }
     }
 }

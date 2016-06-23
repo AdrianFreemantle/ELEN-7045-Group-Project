@@ -1,5 +1,6 @@
 using System;
 using Aps.Domain.Account;
+using Aps.Domain.Credential;
 
 namespace Aps.Domain.Account.Tests.DomainTypes
 {
@@ -20,6 +21,16 @@ namespace Aps.Domain.Account.Tests.DomainTypes
             Guard.ThatValueTypeNotDefaut(accountNumber, "accountNumber");
 
             return new AccountId(companyName, accountNumber);
+        }
+
+        public AccountNumber GetAccountNumber()
+        {
+            return accountNumber;
+        }
+
+        public ICompanyName GetCompanyName()
+        {
+            return companyName;
         }
 
         public override string ToString()
