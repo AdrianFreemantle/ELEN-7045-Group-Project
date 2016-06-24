@@ -42,7 +42,7 @@ namespace Aps.Domain.AccountStatements
             if (entryType.GetDataType() != DataType.Balance)
                 return false;
 
-            balance = (Balance)(dynamic)value;
+            balance = (Balance)value;
 
             return true;
         }
