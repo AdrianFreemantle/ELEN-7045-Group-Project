@@ -13,19 +13,19 @@ namespace Aps.Domain.Company.Tests
 
         private void a_company(string company1Name)
         {
-            var companyType = new CompanyType();
-            var scraperScript = new ScraperScript();
+            var companyType = CompanyType.CreditCardProvider;
+            var scraperScript = new ScraperScript("my custom script");
             var billingCycle = new BillingCycle(new LeadTime(2), new NumberOfDaysPerCycle(CycleMethod.Monthly), new RetryInterval(3));
-            var baseUrl = new BaseUrl();
+            var baseUrl = new BaseUrl("http://www.validuri.com");
             _company1 = _companyFactory.CreateCompany(new CompanyName(company1Name), companyType, scraperScript, billingCycle, baseUrl);
         }
 
         private void another_company(string company2Name)
         {
-            var companyType = new CompanyType();
-            var scraperScript = new ScraperScript();
+            var companyType = CompanyType.CreditCardProvider;
+            var scraperScript = new ScraperScript("my custom script");
             var billingCycle = new BillingCycle(new LeadTime(2), new NumberOfDaysPerCycle(CycleMethod.Monthly), new RetryInterval(3));
-            var baseUrl = new BaseUrl();
+            var baseUrl = new BaseUrl("http://www.validuri.com");
             _company2 = _companyFactory.CreateCompany(new CompanyName(company2Name), companyType, scraperScript, billingCycle, baseUrl);
         }
 
