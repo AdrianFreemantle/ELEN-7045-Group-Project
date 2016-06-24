@@ -27,5 +27,15 @@ namespace Aps.Domain.Company.Tests
                 then => the_base_url_is_invalid()
                 );
         }
+
+        [TestMethod]
+        public void given_a_null_uri_when_creating_a_base_url_then_the_base_url_is_invalid()
+        {
+            Runner.RunScenario(
+                given => a_uri_string(null),
+                when => creating_a_base_url(),
+                then => the_base_url_is_invalid()
+                );
+        }
     }
 }

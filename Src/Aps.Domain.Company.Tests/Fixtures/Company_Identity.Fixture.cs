@@ -15,7 +15,7 @@ namespace Aps.Domain.Company.Tests
         {
             var companyType = new CompanyType();
             var scraperScript = new ScraperScript();
-            var billingCycle = new BillingCycle(new LeadTime(), new NumberOfDaysPerCycle(), new RetryInterval());
+            var billingCycle = new BillingCycle(new LeadTime(2), new NumberOfDaysPerCycle(CycleMethod.Monthly), new RetryInterval(3));
             var baseUrl = new BaseUrl();
             _company1 = _companyFactory.CreateCompany(new CompanyName(company1Name), companyType, scraperScript, billingCycle, baseUrl);
         }
@@ -24,7 +24,7 @@ namespace Aps.Domain.Company.Tests
         {
             var companyType = new CompanyType();
             var scraperScript = new ScraperScript();
-            var billingCycle = new BillingCycle(new LeadTime(), new NumberOfDaysPerCycle(), new RetryInterval());
+            var billingCycle = new BillingCycle(new LeadTime(2), new NumberOfDaysPerCycle(CycleMethod.Monthly), new RetryInterval(3));
             var baseUrl = new BaseUrl();
             _company2 = _companyFactory.CreateCompany(new CompanyName(company2Name), companyType, scraperScript, billingCycle, baseUrl);
         }

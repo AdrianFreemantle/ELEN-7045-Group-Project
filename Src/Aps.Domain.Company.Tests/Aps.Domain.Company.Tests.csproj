@@ -70,6 +70,7 @@
     <Compile Include="Fixtures\BaseUrl_create.Fixture.cs" />
     <Compile Include="Fixtures\BaseUrl_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Billing_cycle_create.Fixture.cs" />
+    <Compile Include="Fixtures\Billing_cycle_identity.Fixture.cs" />
     <Compile Include="Fixtures\CompanyFactory.Fixture.cs" />
     <Compile Include="Fixtures\CompanyName_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Company_Identity.Fixture.cs" />

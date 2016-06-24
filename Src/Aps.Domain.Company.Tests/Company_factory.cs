@@ -14,10 +14,10 @@ namespace Aps.Domain.Company.Tests
         {
             Runner.RunScenario(
                 given => a_company_name(new CompanyName("Company1")),
-                and => a_company_type(new CompanyType()),
-                and => a_scraper_script(new ScraperScript()),
-                and => a_billing_cycle(new BillingCycle(new LeadTime(), new NumberOfDaysPerCycle(), new RetryInterval())),
-                and => a_base_url(new BaseUrl()),
+                and => a_company_type(CompanyType.TelcoServiceProvider),
+                and => a_scraper_script(new ScraperScript("my custom script")),
+                and => a_billing_cycle(new BillingCycle(new LeadTime(2), new NumberOfDaysPerCycle(CycleMethod.Monthly), new RetryInterval(3))),
+                and => a_base_url(new BaseUrl("http://www.validuri.com")),
                 and => a_company_factory(),
                 when => creating_a_new_company(),
                 then => a_valid_company_is_created()

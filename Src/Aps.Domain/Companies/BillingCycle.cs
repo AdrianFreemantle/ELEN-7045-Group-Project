@@ -15,5 +15,12 @@
             _numberOfDaysPerCycle = numberOfDaysPerCycle;
             _retryInterval = retryInterval;
         }
+
+        public bool Equals(BillingCycle other)
+        {
+            return _leadTime.Equals(other._leadTime)
+                   && _numberOfDaysPerCycle.Equals(other._numberOfDaysPerCycle)
+                   && _retryInterval.Equals(other._retryInterval);
+        }
     }
 }
