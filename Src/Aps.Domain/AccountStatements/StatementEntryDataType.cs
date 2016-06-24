@@ -1,6 +1,6 @@
-﻿namespace Aps.Domain.Common
+﻿namespace Aps.Domain.AccountStatements
 {
-    public enum DataType
+    public enum StatementEntryDataType
     {
         Unkown,
         Date,  

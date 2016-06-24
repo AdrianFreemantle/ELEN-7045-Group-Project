@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Aps.Domain.AccountStatements.DataTypeConverters;
+using Aps.Domain.AccountStatements.StatementEntryDataConverters;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
-    public class AccountStatmentEntryFactory
+    public class StatmentEntryFactory
     {
         private readonly ICollection<IDataTypeConverter> dataTypeConverters;
 
-        public AccountStatmentEntryFactory()
+        public StatmentEntryFactory()
         {
             dataTypeConverters = new IDataTypeConverter[]
             {
@@ -24,12 +25,12 @@ namespace Aps.Domain.AccountStatements
             };
         }
 
-        public AccountStatmentEntryFactory(ICollection<IDataTypeConverter> dataTypeConverters)
+        public StatmentEntryFactory(ICollection<IDataTypeConverter> dataTypeConverters)
         {
             Guard.ThatParameterNotNullOrEmpty(dataTypeConverters, "dataTypeConverters");
         }
 
-        public AccountStatmentEntry Build(AccountStatmentEntryType entryType, ScrapeResultDataPair dataPair)
+        public StatmentEntry Build(StatmentEntryType entryType, ScrapeResultDataPair dataPair)
         {
             Guard.ThatValueTypeNotDefaut(dataPair, "dataPair");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
@@ -39,19 +40,19 @@ namespace Aps.Domain.AccountStatements
             return BuildAccountStatmentEntry(entryType, dataPair, converter);
         }
 
-        private static AccountStatmentEntry BuildAccountStatmentEntry(AccountStatmentEntryType entryType, ScrapeResultDataPair dataPair, IDataTypeConverter converter)
+        private static StatmentEntry BuildAccountStatmentEntry(StatmentEntryType entryType, ScrapeResultDataPair dataPair, IDataTypeConverter converter)
         {
             IAccountStatementEntryData accountStatementEntryData = converter.ConvertToStatementEntryDataType(dataPair);
             int id = NumericValue.Parse(dataPair.Id).ToInt32();
-            AccountStatmentEntryId entryId = new AccountStatmentEntryId(id);
-            return new AccountStatmentEntry(entryId, entryType, accountStatementEntryData);
+            StatmentEntryId entryId = new StatmentEntryId(id);
+            return new StatmentEntry(entryId, entryType, accountStatementEntryData);
         }
 
-        private IDataTypeConverter GetDataTypeConverter(AccountStatmentEntryType entryType)
+        private IDataTypeConverter GetDataTypeConverter(StatmentEntryType entryType)
         {
-            DataType type = entryType.GetDataType();
+            StatementEntryDataType type = entryType.GetDataType();
 
-            IDataTypeConverter converter = dataTypeConverters.SingleOrDefault(c => c.DataType == type);
+            IDataTypeConverter converter = dataTypeConverters.SingleOrDefault(c => c.StatementEntryDataType == type);
 
             if (converter == null)
                 throw new Exception(); //todo change the exception type

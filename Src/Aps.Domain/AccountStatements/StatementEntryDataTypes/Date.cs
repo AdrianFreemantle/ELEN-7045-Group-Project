@@ -1,7 +1,6 @@
 using System;
-using Aps.Domain.AccountStatements;
 
-namespace Aps.Domain.Common
+namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
 {
     public struct Date : IAccountStatementEntryData
     {

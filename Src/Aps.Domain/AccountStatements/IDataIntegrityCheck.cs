@@ -4,6 +4,6 @@ namespace Aps.Domain.AccountStatements
 {
     public interface IDataIntegrityCheck
     {
-        bool IsValid(ICollection<AccountStatmentEntry> statmentEntries);
+        bool IsValid(ICollection<StatmentEntry> statmentEntries);
     }
 }

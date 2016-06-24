@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements.Tests.Stubs

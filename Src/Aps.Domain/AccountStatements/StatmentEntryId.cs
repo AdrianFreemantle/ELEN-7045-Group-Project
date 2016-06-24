@@ -2,11 +2,11 @@ using System;
 
 namespace Aps.Domain.AccountStatements
 {
-    public struct AccountStatmentEntryId
+    public struct StatmentEntryId
     {
         private readonly int id;
 
-        public AccountStatmentEntryId(int id)
+        public StatmentEntryId(int id)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
 

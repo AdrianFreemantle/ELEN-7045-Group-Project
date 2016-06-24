@@ -5,7 +5,7 @@ namespace Aps.Domain.AccountStatements
 {
     public interface IDataTypeConverter
     {
-        DataType DataType { get; }
+        StatementEntryDataType StatementEntryDataType { get; }
         IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair);
     }
 }

@@ -1,6 +1,6 @@
 namespace Aps.Domain.AccountStatements
 {
-    public struct AccountStatementEntryDisplayValue
+    public struct StatementEntryDisplayValue
     {
         private readonly string description;
         private readonly string value;
@@ -8,7 +8,7 @@ namespace Aps.Domain.AccountStatements
         public string Description { get { return description; }}
         public string Value { get { return value; } }
 
-        internal AccountStatementEntryDisplayValue(string description, string value)
+        internal StatementEntryDisplayValue(string description, string value)
         {
             Guard.ThatParameterNotNullOrEmpty(description, "description");
             Guard.ThatParameterNotNullOrEmpty(value, "value");

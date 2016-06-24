@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using Aps.Domain.Common;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 
-namespace Aps.Domain.AccountStatements.DataIntegrityChecks
+namespace Aps.Domain.AccountStatements.AccountStatementIntegrityChecks
 {
     public abstract class DataIntegrityCheckBase
     {
-        protected Balance GetBalanceValue(ICollection<AccountStatmentEntry> statmentEntries, AccountStatmentEntryType entryType)
+        protected Balance GetBalanceValue(ICollection<StatmentEntry> statmentEntries, StatmentEntryType entryType)
         {
             Guard.ThatParameterNotNullOrEmpty(statmentEntries, "statmentEntries");
             Guard.ThatValueTypeNotDefaut(entryType, "type");

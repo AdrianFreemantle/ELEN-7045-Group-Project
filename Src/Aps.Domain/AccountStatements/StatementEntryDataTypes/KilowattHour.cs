@@ -1,24 +1,27 @@
 using System;
-using Aps.Domain.AccountStatements;
 
-namespace Aps.Domain.Common
+namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
 {
-    public struct Duration : IAccountStatementEntryData
+    public struct KilowattHour : IAccountStatementEntryData
     {
-        private const string DefaultFormat = "{0:hh\\:mm\\:ss}";
-        private readonly TimeSpan duration;
+        private const string DefaultFormat = "{0:D} kWh";
+        private readonly uint amount;
 
-        public Duration(string duration)
+        public KilowattHour(uint amount)
         {
-            Guard.ThatParameterNotNullOrEmpty(duration, "duration");
-            this.duration = TimeSpan.Parse(duration);
+            this.amount = amount;
+        }
+
+        public static KilowattHour FromAmount(uint amount)
+        {
+            return new KilowattHour(amount);
         }
 
         public override string ToString()
         {
             return ToString(GetDefaultFormatProvider());
-        }
-
+        }     
+           
         public string ToString(IFormatProvider provider)
         {
             return ToString(DefaultFormat, provider);
@@ -33,14 +36,14 @@ namespace Aps.Domain.Common
         {
             IFormatProvider provider = formatProvider ?? GetDefaultFormatProvider();
             format = format ?? DefaultFormat;
-
-            return String.Format(provider, format, duration);
+            
+            return String.Format(provider, format, amount);
         }
 
         private static IFormatProvider GetDefaultFormatProvider()
         {
             DefaultFormatProviderSettings formatProviderSettings = new DefaultFormatProviderSettings();
-            return formatProviderSettings.DateFormat;
+            return formatProviderSettings.NumberFormat;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.TotalDue),
+            and => an_account_statment_entry_type(StatmentEntryType.TotalDue),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Total Amount Due", "1500"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),
@@ -30,7 +30,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.StatementNumber),
+            and => an_account_statment_entry_type(StatmentEntryType.StatementNumber),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Stat. No", "1601-34567890"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),
@@ -43,7 +43,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.ElectricityUsed),
+            and => an_account_statment_entry_type(StatmentEntryType.ElectricityUsed),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Elec. Use", "567kwh"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),
@@ -56,7 +56,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.InterestRate),
+            and => an_account_statment_entry_type(StatmentEntryType.InterestRate),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Interest Rt.", "12"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),
@@ -69,7 +69,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.TotalCallDuration),
+            and => an_account_statment_entry_type(StatmentEntryType.TotalCallDuration),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Call Length", "00:12:25"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),
@@ -82,7 +82,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.DueDate),
+            and => an_account_statment_entry_type(StatmentEntryType.DueDate),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Due by", "2016-01-31"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),
@@ -95,7 +95,7 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(AccountStatmentEntryType.StatementMonth),
+            and => an_account_statment_entry_type(StatmentEntryType.StatementMonth),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Month", "03"),
             when => building_an_account_statment_entry(),
             and => getting_the_account_statement_entry_display_value(),

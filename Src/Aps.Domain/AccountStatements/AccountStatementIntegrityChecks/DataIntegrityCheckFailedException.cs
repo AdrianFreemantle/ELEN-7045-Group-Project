@@ -1,6 +1,6 @@
 using System;
 
-namespace Aps.Domain.AccountStatements.DataIntegrityChecks
+namespace Aps.Domain.AccountStatements.AccountStatementIntegrityChecks
 {
     [Serializable]
     public class DataIntegrityCheckFailedException : Exception

@@ -1,4 +1,5 @@
-﻿using Aps.Domain.Common;
+﻿using Aps.Domain.AccountStatements.StatementEntryDataTypes;
+using Aps.Domain.Common;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

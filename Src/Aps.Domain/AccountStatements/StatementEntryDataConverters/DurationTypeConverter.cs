@@ -1,11 +1,11 @@
-using System;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatements.DataTypeConverters
+namespace Aps.Domain.AccountStatements.StatementEntryDataConverters
 {
     public class DurationTypeConverter : IDataTypeConverter
     {
-        public DataType DataType { get { return DataType.Duration; } }
+        public StatementEntryDataType StatementEntryDataType { get { return StatementEntryDataType.Duration; } }
 
         public IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair)
         {

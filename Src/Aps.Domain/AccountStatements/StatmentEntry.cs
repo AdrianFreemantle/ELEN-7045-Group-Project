@@ -1,20 +1,21 @@
 using System;
 using System.Collections.Generic;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
-    public class AccountStatmentEntry : IEquatable<AccountStatmentEntry>
+    public class StatmentEntry : IEquatable<StatmentEntry>
     {
-        private readonly AccountStatmentEntryId id;
+        private readonly StatmentEntryId id;
         private readonly IAccountStatementEntryData value;
-        private readonly AccountStatmentEntryType entryType;
+        private readonly StatmentEntryType entryType;
 
-        protected AccountStatmentEntry()
+        protected StatmentEntry()
         {
         }
 
-        internal AccountStatmentEntry(AccountStatmentEntryId id, AccountStatmentEntryType entryType, IAccountStatementEntryData value)
+        internal StatmentEntry(StatmentEntryId id, StatmentEntryType entryType, IAccountStatementEntryData value)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
@@ -25,9 +26,9 @@ namespace Aps.Domain.AccountStatements
             this.entryType = entryType;
         }
 
-        public AccountStatementEntryDisplayValue GetDisplayValue()
+        public StatementEntryDisplayValue GetDisplayValue()
         {
-            return new AccountStatementEntryDisplayValue(entryType.ToString(), value.ToString());
+            return new StatementEntryDisplayValue(entryType.ToString(), value.ToString());
         }
 
         public string GetValue()
@@ -39,7 +40,7 @@ namespace Aps.Domain.AccountStatements
         {
             balance = new Balance();
 
-            if (entryType.GetDataType() != DataType.Balance)
+            if (entryType.GetDataType() != StatementEntryDataType.Balance)
                 return false;
 
             balance = (Balance)value;
@@ -47,7 +48,7 @@ namespace Aps.Domain.AccountStatements
             return true;
         }
 
-        public bool Equals(AccountStatmentEntry other)
+        public bool Equals(StatmentEntry other)
         {
             if (other == null)
                 return false;
@@ -55,7 +56,7 @@ namespace Aps.Domain.AccountStatements
             return other.id.Equals(id);
         }
 
-        public bool EntryTypeEquals(AccountStatmentEntryType other)
+        public bool EntryTypeEquals(StatmentEntryType other)
         {
             return entryType.Equals(other);
         }

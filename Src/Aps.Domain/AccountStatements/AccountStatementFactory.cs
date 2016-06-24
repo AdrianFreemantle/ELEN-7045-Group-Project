@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Aps.Domain.AccountStatements.DataIntegrityChecks;
+using Aps.Domain.AccountStatements.AccountStatementIntegrityChecks;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 using Aps.Domain.Company;
 using Aps.Domain.Scraping;
@@ -10,13 +11,13 @@ namespace Aps.Domain.AccountStatements
 {
     public class AccountStatementFactory
     {
-        private readonly AccountStatmentEntryFactory accountStatmentEntryFactory;
+        private readonly StatmentEntryFactory statmentEntryFactory;
 
-        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory)
+        public AccountStatementFactory(StatmentEntryFactory statmentEntryFactory)
         {
-            Guard.ThatParameterNotNull(accountStatmentEntryFactory, "accountStatmentEntryFactory");
+            Guard.ThatParameterNotNull(statmentEntryFactory, "accountStatmentEntryFactory");
 
-            this.accountStatmentEntryFactory = accountStatmentEntryFactory;
+            this.statmentEntryFactory = statmentEntryFactory;
         }
 
         public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
@@ -35,7 +36,7 @@ namespace Aps.Domain.AccountStatements
             Guard.ThatParameterNotNull(mappings, "mappings");
             Guard.ThatParameterNotNull(integrityChecks, "integrityChecks");
             Guard.ThatParameterNotNull(integrityCheckOverrides, "integrityCheckOverrides");
-            Guard.ThatParameterNotNull(accountStatmentEntryFactory, "accountStatmentEntryFactory");
+            Guard.ThatParameterNotNull(statmentEntryFactory, "accountStatmentEntryFactory");
 
             var entries = BuildAccountStatmentEntries(scrapeSessionResult, mappings);
 
@@ -56,15 +57,15 @@ namespace Aps.Domain.AccountStatements
             return new AccountStatement(accountStatementId, entries);
         }
 
-        private ICollection<AccountStatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
+        private ICollection<StatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
         {
-            List<AccountStatmentEntry> entries = new List<AccountStatmentEntry>();
+            List<StatmentEntry> entries = new List<StatmentEntry>();
 
             foreach (ScrapeResultDataPair scrapeResultDataPair in scrapeSessionResult.TextValuePairs)
             {
                 AccountStatmentEntryMapping mapping = mappings.SingleOrDefault(m => m.FieldId.Equals(scrapeResultDataPair.Id)); //todo: throw appropriate error
 
-                AccountStatmentEntry entry = accountStatmentEntryFactory.Build(mapping.EntryType, scrapeResultDataPair); 
+                StatmentEntry entry = statmentEntryFactory.Build(mapping.EntryType, scrapeResultDataPair); 
                 entries.Add(entry);
             }
 

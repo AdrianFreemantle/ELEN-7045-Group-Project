@@ -24,7 +24,7 @@ namespace Aps.Domain.Services.AccountStatementServices
 
         public void CreateAccountStatementFromScrapeResult(ScrapeSessionResult scrapeSessionResult)
         {
-            var accountStatmentEntryFactory = new AccountStatmentEntryFactory();
+            var accountStatmentEntryFactory = new StatmentEntryFactory();
             var accountStatementFactory = new AccountStatementFactory(accountStatmentEntryFactory);
             var accountStatment = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, integrityChecks, integrityCheckOverrides);
             accountStatementRepository.Save(accountStatment);

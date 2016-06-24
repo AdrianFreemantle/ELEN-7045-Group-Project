@@ -1,4 +1,5 @@
 using Aps.Domain.AccountStatements;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
 namespace Aps.Domain.Services.AccountStatementServices

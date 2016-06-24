@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.Common;
 using LightBDD;
@@ -33,7 +34,7 @@ namespace Aps.Domain.AccountStatements.Tests
             month = new CalendarMonth(DateTime.Now);
             accountId = new AccountIdStub(accountNumber);
             accountStatementId = AccountStatementId.Create(accountId, month);
-            statement = new AccountStatement(accountStatementId, new List<AccountStatmentEntry>());
+            statement = new AccountStatement(accountStatementId, new List<StatmentEntry>());
             repository.Save(statement);
         }
 

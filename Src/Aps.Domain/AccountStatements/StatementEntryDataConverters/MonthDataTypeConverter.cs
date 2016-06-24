@@ -1,11 +1,11 @@
-using System;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatements.DataTypeConverters
+namespace Aps.Domain.AccountStatements.StatementEntryDataConverters
 {
     public class MonthDataTypeConverter : IDataTypeConverter
     {
-        public DataType DataType { get { return DataType.Month; } }
+        public StatementEntryDataType StatementEntryDataType { get { return StatementEntryDataType.Month; } }
 
         public IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair)
         {

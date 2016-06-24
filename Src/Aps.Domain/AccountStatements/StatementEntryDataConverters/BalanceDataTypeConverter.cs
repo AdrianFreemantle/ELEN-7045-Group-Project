@@ -1,11 +1,11 @@
-using System;
+using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
 
-namespace Aps.Domain.AccountStatements.DataTypeConverters
+namespace Aps.Domain.AccountStatements.StatementEntryDataConverters
 {
     public class BalanceDataTypeConverter : IDataTypeConverter
     {
-        public DataType DataType { get { return DataType.Balance;} }
+        public StatementEntryDataType StatementEntryDataType { get { return StatementEntryDataType.Balance;} }
 
         public IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair)
         {

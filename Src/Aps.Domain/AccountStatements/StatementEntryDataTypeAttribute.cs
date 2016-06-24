@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Aps.Domain.Common
+namespace Aps.Domain.AccountStatements
 {
     internal class StatementEntryDataTypeAttribute : Attribute
     {
-        public DataType Type { get; set; }
+        public StatementEntryDataType Type { get; set; }
     }
 }

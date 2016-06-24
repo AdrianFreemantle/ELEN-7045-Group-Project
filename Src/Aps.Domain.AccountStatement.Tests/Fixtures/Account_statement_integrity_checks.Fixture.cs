@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Aps.Domain.AccountStatements.DataIntegrityChecks;
+using Aps.Domain.AccountStatements.AccountStatementIntegrityChecks;
 using Aps.Domain.Common;
 using Aps.Domain.Company;
 using Aps.Domain.Scraping;
@@ -17,7 +17,7 @@ namespace Aps.Domain.AccountStatements.Tests
         private List<ScrapeResultDataPair> textValuePairs;
 
         private AccountStatementFactory accountStatementFactory;
-        private AccountStatmentEntryFactory accountStatmentEntryFactory;
+        private StatmentEntryFactory statmentEntryFactory;
         private ScrapeSessionResult scrapeSessionResult;
         private ScrapeSessionResultCode resultCode;
         private AccountStatement accountStatment;
@@ -32,7 +32,7 @@ namespace Aps.Domain.AccountStatements.Tests
             textValuePairs = new List<ScrapeResultDataPair>();
         }
 
-        private void a_mapping_code_id_for_entryType(string id, AccountStatmentEntryType entryType)
+        private void a_mapping_code_id_for_entryType(string id, StatmentEntryType entryType)
         {
             var mapping = AccountStatmentEntryMapping.MapNumericValue(entryType, id);
             mappings.Add(mapping);
@@ -57,8 +57,8 @@ namespace Aps.Domain.AccountStatements.Tests
                 scrapeSessionResult = new ScrapeSessionResult(resultCode, accountId, DateTime.Now, textValuePairs);
                 IDataIntegrityCheck check = new AdditionIntegrityCheck();
                 dataIntegrityChecks.Add(check);
-                accountStatmentEntryFactory = new AccountStatmentEntryFactory();
-                accountStatementFactory = new AccountStatementFactory(accountStatmentEntryFactory);
+                statmentEntryFactory = new StatmentEntryFactory();
+                accountStatementFactory = new AccountStatementFactory(statmentEntryFactory);
                 accountStatment = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, dataIntegrityChecks);
             }
             catch (DataIntegrityCheckFailedException ex)

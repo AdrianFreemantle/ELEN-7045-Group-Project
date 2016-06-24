@@ -1,8 +1,6 @@
 using System;
-using Aps.Domain.AccountStatements;
-using Aps.Domain.Credential;
 
-namespace Aps.Domain.Common
+namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
 {
     public struct Month : IAccountStatementEntryData
     {
