@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using Aps.Domain.Scraping;
+using Aps.Domain.Services.AccountStatementServices;
+using Aps.Domain.Services.ScrapeSessionResultPipeline;
 
 namespace Aps.Domain.Services
 {
-    //[DebuggerStepThrough]
     public class PipelineFactory<T>
     {
         protected readonly List<IPipelineModule<T>> ModuleChain = new List<IPipelineModule<T>>();

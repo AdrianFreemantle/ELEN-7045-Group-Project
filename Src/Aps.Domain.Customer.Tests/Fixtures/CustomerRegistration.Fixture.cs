@@ -11,7 +11,6 @@ using Aps.Domain.Services.CustomerServices;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace Aps.Domain.Customer.Tests
 {
     public partial class Customer_Registration_Service

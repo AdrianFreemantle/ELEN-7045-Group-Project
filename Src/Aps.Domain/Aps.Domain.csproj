@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountStatements\AccountStatement.cs" />
+    <Compile Include="AccountStatements\IAccountStatmentCreationService.cs" />
     <Compile Include="AccountStatements\StatementEntryDisplayValue.cs" />
     <Compile Include="AccountStatements\AccountStatementFactory.cs" />
     <Compile Include="AccountStatements\AccountStatementId.cs" />

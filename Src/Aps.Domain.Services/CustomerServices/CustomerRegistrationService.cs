@@ -19,7 +19,6 @@ namespace Aps.Domain.Services.CustomerServices
         {
             CustomerId customerId = new CustomerId(identificationField);
 
-
             if (custRepo.custExists(customerId))
             {
                 throw new Exception("Customer username already exists");
