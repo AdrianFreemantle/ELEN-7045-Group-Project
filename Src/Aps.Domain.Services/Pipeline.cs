@@ -2,7 +2,6 @@ using System.Collections.Generic;
 
 namespace Aps.Domain.Services
 {
-    //[DebuggerStepThrough]
     public class Pipeline<T>
     {
         private readonly Queue<IPipelineModule<T>> chain;

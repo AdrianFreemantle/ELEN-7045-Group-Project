@@ -6,7 +6,7 @@ using Aps.Domain.Scraping;
 
 namespace Aps.Domain.Services.AccountStatementServices
 {
-    public class AccountStatmentCreationService
+    public class AccountStatmentCreationService : IAccountStatmentCreationService
     {
         private readonly ICompanyRepository companyRepository;
         private readonly IAccountStatementRepository accountStatementRepository;

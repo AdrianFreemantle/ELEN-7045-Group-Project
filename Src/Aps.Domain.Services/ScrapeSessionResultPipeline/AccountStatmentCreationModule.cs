@@ -1,13 +1,13 @@
+using Aps.Domain.AccountStatements;
 using Aps.Domain.Scraping;
-using Aps.Domain.Services.AccountStatementServices;
 
 namespace Aps.Domain.Services.ScrapeSessionResultPipeline
 {
     public class AccountStatmentCreationModule : IPipelineModule<ScrapeSessionResult>
     {
-        private readonly AccountStatmentCreationService accountStatmentCreationService;
+        private readonly IAccountStatmentCreationService accountStatmentCreationService;
 
-        public AccountStatmentCreationModule(AccountStatmentCreationService accountStatmentCreationService)
+        public AccountStatmentCreationModule(IAccountStatmentCreationService accountStatmentCreationService)
         {
             Guard.ThatParameterNotNull(accountStatmentCreationService, "accountStatmentCreationService");
             this.accountStatmentCreationService = accountStatmentCreationService;
