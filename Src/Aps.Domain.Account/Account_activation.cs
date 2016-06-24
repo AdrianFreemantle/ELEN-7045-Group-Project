@@ -1,7 +1,7 @@
-﻿using Aps.Domain.Account.Tests.DomainTypes;
-using Aps.Domain.Account.Tests.Stubs;
-using Aps.Domain.Common;
+﻿using Aps.Domain.Common;
+using Aps.Domain.Companies;
 using Aps.Domain.Credential;
+using Aps.Domain.Customers;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,9 +15,9 @@ namespace Aps.Domain.Account.Tests
         [ExpectedException(typeof(DomainException), "Account already exist.")]
         public void Customer_cannot_add_a_duplicate_account()
         {
-            var customerid = new CustomerIdStub("Piet van Zyl");
-            var first = AccountId.Create(new CompanyNameStub("Acme Ltd"), new AccountNumber("1234567890"));
-            var second = AccountId.Create(new CompanyNameStub("Acme Ltd"), new AccountNumber("1234567890"));
+            var customerid = new CustomerId(new EmailAddress("chrisv@live.co.za"));
+            var first = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
+            var second = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
 
             IEncryptionService encryptionService = new Encryption();
             var credentials = Credentials.Create(new EmailAddress("chrisv@live.co.za"), new Password("123", "123", encryptionService));
@@ -38,9 +38,9 @@ namespace Aps.Domain.Account.Tests
         [TestMethod]
         public void Customer_can_add_multiple_different_accounts()
         {
-            var customerid = new CustomerIdStub("Piet van Zyl");
-            var first = AccountId.Create(new CompanyNameStub("Acme Ltd"), new AccountNumber("123"));
-            var second = AccountId.Create(new CompanyNameStub("Acme Ltd"), new AccountNumber("456"));
+            var customerid = new CustomerId(new EmailAddress("chrisv@live.co.za"));
+            var first = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("123"));
+            var second = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("456"));
 
             IEncryptionService encryptionService = new Encryption();
             var credentials = Credentials.Create(new EmailAddress("chrisv@live.co.za"), new Password("123", "123", encryptionService));
@@ -63,8 +63,8 @@ namespace Aps.Domain.Account.Tests
         [TestMethod]
         public void Customer_registered_account_with_invalid_accountnumber()
         {
-            var customerid = new CustomerIdStub("Piet van Zyl");
-            var first = AccountId.Create(new CompanyNameStub("Acme Ltd"), new AccountNumber("XYZ"));
+            var customerid = new CustomerId(new EmailAddress("chrisv@live.co.za"));
+            var first = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("XYZ"));
 
             IEncryptionService encryptionService = new Encryption();
             var credentials = Credentials.Create(new EmailAddress("chrisv@live.co.za"), new Password("123", "123", encryptionService));

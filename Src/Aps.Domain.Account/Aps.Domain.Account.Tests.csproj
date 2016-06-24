@@ -63,11 +63,6 @@
   <ItemGroup>
     <Compile Include="Account_activation.cs" />
     <Compile Include="AccountNumber_equality.cs" />
-    <Compile Include="DomainTypes\Credentials.cs" />
-    <Compile Include="DomainTypes\AccountRepository.cs" />
-    <Compile Include="DomainTypes\AccountFactory.cs" />
-    <Compile Include="DomainTypes\IAccount.cs" />
-    <Compile Include="DomainTypes\ICredentials.cs" />
     <Compile Include="DomainTypes\myScraper.cs" />
     <Compile Include="Fixtures\Account_activation.Fixture.cs" />
     <Compile Include="Fixtures\AccountNumber_equality.Fixture.cs" />
@@ -91,11 +86,6 @@
     <Compile Include="Fixtures\DateOfBirth_equality.Fixture.cs" />
     <Compile Include="Fixtures\AccountStatus_equality.Fixture.cs" />
     <Compile Include="Fixtures\AccountId_identity.Fixture.cs" />
-    <Compile Include="DomainTypes\Account.cs" />
-    <Compile Include="DomainTypes\AccountId.cs" />
-    <Compile Include="DomainTypes\AccountStatus.cs" />
-    <Compile Include="Stubs\CustomerIdStub.cs" />
-    <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +97,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Stubs\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

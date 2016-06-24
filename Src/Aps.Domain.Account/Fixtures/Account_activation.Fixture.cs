@@ -1,5 +1,5 @@
 ﻿using Aps.Domain.Account.Tests.DomainTypes;
-using Aps.Domain.Account.Tests.Stubs;
+using Aps.Domain.Customers;
 using LightBDD;
 using Shouldly;
 
@@ -8,12 +8,12 @@ namespace Aps.Domain.Account.Tests
 {
     public partial class Account_activation : FeatureFixture
     {
-        private CustomerIdStub _customerId;
+        private CustomerId _customerId;
         private AccountId _accountid1;
         private AccountId _accountid2;
         private Credentials _credentials;
-        private DomainTypes.Account firstAccount;
-        private DomainTypes.Account secondAccount;
+        private Account firstAccount;
+        private Account secondAccount;
         private bool _scapervalidation1 = false;
         private bool _scapervalidation2 = false;
         AccountRepository accountRepository = new AccountRepository();
@@ -31,7 +31,7 @@ namespace Aps.Domain.Account.Tests
             _accountid1 = id;
         }
 
-        private void customer(CustomerIdStub customerid)
+        private void customer(CustomerId customerid)
         {
             _customerId = customerid;
         }

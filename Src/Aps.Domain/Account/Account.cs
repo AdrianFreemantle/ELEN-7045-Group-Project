@@ -1,10 +1,11 @@
 using System;
+using Aps.Domain.Customers;
 
-namespace Aps.Domain.Account.Tests.DomainTypes
+namespace Aps.Domain.Account
 {
     public class Account : IEquatable<Account>
     {
-        private readonly ICustomerId customerId;
+        private readonly CustomerId customerId;
         private readonly AccountId accountId;
         private readonly Credentials credentials;
         private readonly DateTime dateAdded;
@@ -14,7 +15,7 @@ namespace Aps.Domain.Account.Tests.DomainTypes
         {            
         }
 
-        internal Account(ICustomerId customerId, AccountId accountId, Credentials credentials)
+        internal Account(CustomerId customerId, AccountId accountId, Credentials credentials)
         {
             this.customerId = customerId;
             this.accountId = accountId;
@@ -41,7 +42,7 @@ namespace Aps.Domain.Account.Tests.DomainTypes
             return String.Format("{0} {1}", accountId, customerId);
         }
 
-        public ICustomerId GetCustomerId()
+        public CustomerId GetCustomerId()
         {
             return customerId;
         }

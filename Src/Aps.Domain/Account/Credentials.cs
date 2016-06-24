@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aps.Domain.Account.Tests.DomainTypes
+namespace Aps.Domain.Account
 {
     public struct Credentials
     {

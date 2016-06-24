@@ -86,6 +86,12 @@
     <Compile Include="AccountStatements\IDataIntegrityCheck.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\StatementEntryDataTypeAttribute.cs" />
+    <Compile Include="Account\Account.cs" />
+    <Compile Include="Account\AccountFactory.cs" />
+    <Compile Include="Account\AccountId.cs" />
+    <Compile Include="Account\AccountRepository.cs" />
+    <Compile Include="Account\AccountStatus.cs" />
+    <Compile Include="Account\Credentials.cs" />
     <Compile Include="Companies\BaseUrl.cs" />
     <Compile Include="Companies\BillingCycle.cs" />
     <Compile Include="Companies\Company.cs" />
@@ -151,9 +157,7 @@
     <Compile Include="StringExtensions.cs" />
     <Compile Include="Validator.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Account\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

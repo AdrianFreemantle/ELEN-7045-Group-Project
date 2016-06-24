@@ -1,4 +1,5 @@
 ﻿using Aps.Domain.Credential;
+using Aps.Domain.Customers;
 
 namespace Aps.Domain.Account.Tests.DomainTypes
 {
@@ -9,7 +10,7 @@ namespace Aps.Domain.Account.Tests.DomainTypes
             
         }
 
-        public bool ValidateAccount(ICustomerId customerId, Account account, Credentials credentials)
+        public bool ValidateAccount(CustomerId customerId, Account account, Credentials credentials)
         {
             AccountId accountid = account.GetAccountId();
 

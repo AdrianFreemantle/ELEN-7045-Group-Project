@@ -1,8 +1,7 @@
 using System;
-using Aps.Domain.Account;
 using Aps.Domain.Credential;
 
-namespace Aps.Domain.Account.Tests.DomainTypes
+namespace Aps.Domain.Account
 {
     public struct AccountId
     {

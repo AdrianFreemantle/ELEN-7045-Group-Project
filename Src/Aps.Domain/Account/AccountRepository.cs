@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Aps.Domain.Account.Tests.DomainTypes
+namespace Aps.Domain.Account
 {
     public interface IAccountRepository
     {

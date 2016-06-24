@@ -1,6 +1,6 @@
 namespace Aps.Domain.Customers
 {
-    public interface ICustomerRepository
+    public interface  ICustomerRepository
     {
         Customer fetchByID(CustomerId custID);
         bool custExists(CustomerId custID);
