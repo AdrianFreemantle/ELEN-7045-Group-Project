@@ -5,7 +5,7 @@ namespace Aps.Domain.Company.Tests.DomainTypes
     public struct NumberOfDaysPerCycle
     {
         private readonly int _numberOfDaysPerCycle;
-        private CycleMethod _cycleMethod;
+        private readonly CycleMethod _cycleMethod;
 
         public NumberOfDaysPerCycle(int numberOfDaysPerCycle, CycleMethod cycleMethod)
         {
