@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.AccountStatements;
 
 namespace Aps.Domain.Common
 {
-    public struct CalendarMonth : IFormattable
+    public struct CalendarMonth : IAccountStatementEntryData
     {
         private const int MinMonth = 1;
         private const int MaxMonth = 12;

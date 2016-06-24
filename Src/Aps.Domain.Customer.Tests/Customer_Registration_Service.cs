@@ -52,7 +52,7 @@ namespace Aps.Domain.Customer.Tests
             // Asert    -   Then 
 
 
-            bool result = repo.SavedCustomer.Id.Equals(new CustomerID(identificationField));
+            bool result = repo.SavedCustomer.Id.Equals(new CustomerId(identificationField));
             Assert.IsTrue(result);
         }
 

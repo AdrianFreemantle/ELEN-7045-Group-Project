@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.AccountStatements;
 
 namespace Aps.Domain.Common
 {
-    public struct Percentage : IFormattable
+    public struct Percentage : IAccountStatementEntryData
     {
         private const string DefaultFormat = "{0:P1}";
         private readonly decimal percentage;

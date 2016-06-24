@@ -16,7 +16,7 @@ namespace Aps.Domain.Customer.Tests.DomainTypes
 
         public void RegisterNewCustomer(IIdentificationField identificationField, string name , string surname , string email)
         {
-            CustomerID customerId = new CustomerID(identificationField);
+            CustomerId customerId = new CustomerId(identificationField);
 
 
             if (custRepo.custExists(customerId))

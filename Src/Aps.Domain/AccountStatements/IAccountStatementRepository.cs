@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
@@ -6,5 +7,6 @@ namespace Aps.Domain.AccountStatements
     {
         void Save(AccountStatement accountStatement);
         ICollection<AccountStatement> FetchAllForAccount(IAccountId accountId);
+        AccountStatement FetchForAccountAndMonth(IAccountId accountId, CalendarMonth month);
     }
 }

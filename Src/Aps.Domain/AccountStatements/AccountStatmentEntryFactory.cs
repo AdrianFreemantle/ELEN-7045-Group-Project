@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using Aps.Domain.AccountStatements.DataTypeConverters;
 using Aps.Domain.Common;
@@ -42,10 +41,10 @@ namespace Aps.Domain.AccountStatements
 
         private static AccountStatmentEntry BuildAccountStatmentEntry(AccountStatmentEntryType entryType, ScrapeResultDataPair dataPair, IDataTypeConverter converter)
         {
-            IFormattable formattableValue = converter.ConvertToFormattableValue(dataPair);
+            IAccountStatementEntryData accountStatementEntryData = converter.ConvertToStatementEntryDataType(dataPair);
             int id = NumericValue.Parse(dataPair.Id).ToInt32();
             AccountStatmentEntryId entryId = new AccountStatmentEntryId(id);
-            return new AccountStatmentEntry(entryId, entryType, formattableValue);
+            return new AccountStatmentEntry(entryId, entryType, accountStatementEntryData);
         }
 
         private IDataTypeConverter GetDataTypeConverter(AccountStatmentEntryType entryType)

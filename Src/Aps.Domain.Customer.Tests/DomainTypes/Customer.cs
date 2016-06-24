@@ -10,11 +10,11 @@ namespace Aps.Domain.Customer.Tests.DomainTypes
 {
     public class Customer
     {
-        private readonly CustomerID id;
+        private readonly CustomerId id;
         private EmailAddress emailAddress;
         private CustomerName custName;
 
-        public CustomerID Id
+        public CustomerId Id
         {
             get { return id; }
         }
@@ -24,7 +24,7 @@ namespace Aps.Domain.Customer.Tests.DomainTypes
             
         }
 
-        internal Customer(CustomerID id, EmailAddress emailAddress, CustomerName custName)
+        internal Customer(CustomerId id, EmailAddress emailAddress, CustomerName custName)
         {
             this.id = id;
             this.emailAddress = emailAddress;

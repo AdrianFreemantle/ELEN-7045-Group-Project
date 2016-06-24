@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.AccountStatements;
 
 namespace Aps.Domain.Common
 {
-    public struct Balance : IFormattable
+    public struct Balance : IAccountStatementEntryData
     {
         private const string DefaultCurrencyFormat = "{0:C}";
         private readonly decimal balance;

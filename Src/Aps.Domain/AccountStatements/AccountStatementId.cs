@@ -18,6 +18,16 @@ namespace Aps.Domain.AccountStatements
             get { return accountId; }
         }
 
+        internal IAccountNumber AccountNumber
+        {
+            get { return accountId.AccountNumber; }
+        }
+
+        internal ICompanyName CompanyName
+        {
+            get { return accountId.CompanyName; }
+        }
+
         private AccountStatementId(IAccountId accountId, CalendarMonth calendarMonth)
         {
             this.accountId = accountId;

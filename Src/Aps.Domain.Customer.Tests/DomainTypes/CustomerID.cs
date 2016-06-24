@@ -1,18 +1,18 @@
 namespace Aps.Domain.Customer.Tests.DomainTypes
 {
-    public struct CustomerID
+    public struct CustomerId
     {
-        private readonly IIdentificationField ID;
+        private readonly IIdentificationField id;
 
-        public CustomerID(IIdentificationField id)
+        public CustomerId(IIdentificationField id)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
-            ID = id;
+            this.id = id;
         }
 
         public override string ToString()
         {
-            return ID.ToString();
+            return id.ToString();
         }
     }
 }

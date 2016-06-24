@@ -7,14 +7,14 @@ namespace Aps.Domain.AccountStatements
     public class AccountStatmentEntry : IEquatable<AccountStatmentEntry>
     {
         private readonly AccountStatmentEntryId id;
-        private readonly dynamic value;
+        private readonly IAccountStatementEntryData value;
         private readonly AccountStatmentEntryType entryType;
 
         protected AccountStatmentEntry()
         {
         }
 
-        internal AccountStatmentEntry(AccountStatmentEntryId id, AccountStatmentEntryType entryType, IFormattable value)
+        internal AccountStatmentEntry(AccountStatmentEntryId id, AccountStatmentEntryType entryType, IAccountStatementEntryData value)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
@@ -42,7 +42,7 @@ namespace Aps.Domain.AccountStatements
             if (entryType.GetDataType() != DataType.Balance)
                 return false;
 
-            balance = (Balance)value;
+            balance = (Balance)(dynamic)value;
 
             return true;
         }
