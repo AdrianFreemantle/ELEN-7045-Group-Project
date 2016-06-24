@@ -123,7 +123,7 @@
     <Compile Include="Scraping\IScraperScriptParser.cs" />
     <Compile Include="Scraping\IScrapRequestRepository.cs" />
     <Compile Include="Scraping\ScrapeDataAudit.cs" />
-    <Compile Include="Scraping\Scraper.cs" />
+    <Compile Include="Scraping\IScraper.cs" />
     <Compile Include="Scraping\ScrapeRequest.cs" />
     <Compile Include="Scraping\ScrapeRequestFactory.cs" />
     <Compile Include="Scraping\ScrapeRequestId.cs" />
