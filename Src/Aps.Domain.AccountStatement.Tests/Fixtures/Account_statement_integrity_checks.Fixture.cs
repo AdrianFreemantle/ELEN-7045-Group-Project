@@ -58,8 +58,8 @@ namespace Aps.Domain.AccountStatements.Tests
                 IDataIntegrityCheck check = new AdditionIntegrityCheck();
                 dataIntegrityChecks.Add(check);
                 accountStatmentEntryFactory = new AccountStatmentEntryFactory();
-                accountStatementFactory = new AccountStatementFactory(accountStatmentEntryFactory, mappings, dataIntegrityChecks);
-                accountStatment = accountStatementFactory.CreateAccountStatement(scrapeSessionResult); accountStatementFactory.CreateAccountStatement(scrapeSessionResult);
+                accountStatementFactory = new AccountStatementFactory(accountStatmentEntryFactory);
+                accountStatment = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, dataIntegrityChecks);
             }
             catch (DataIntegrityCheckFailedException ex)
             {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements.Tests.Stubs
 {
@@ -20,6 +21,11 @@ namespace Aps.Domain.AccountStatements.Tests.Stubs
             return savedAccountStatements
                 .Where(a => a.IsForAccount(accountId))
                 .ToArray();
+        }
+
+        public AccountStatement FetchForAccountAndMonth(IAccountId accountId, CalendarMonth month)
+        {
+            throw new NotImplementedException();
         }
     }
 }

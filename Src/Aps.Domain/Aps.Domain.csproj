@@ -66,7 +66,9 @@
     <Compile Include="AccountStatements\DataTypeConverters\PercentageTypeConverter.cs" />
     <Compile Include="AccountStatements\DataIntegrityChecks\AdditionIntegrityCheck.cs" />
     <Compile Include="AccountStatements\DataIntegrityChecks\DataIntegrityCheckBase.cs" />
+    <Compile Include="AccountStatements\IAccountStatmentDisplayAdapter.cs" />
     <Compile Include="AccountStatements\IDataIntegrityCheck.cs" />
+    <Compile Include="AccountStatements\IAccountStatementEntryData.cs" />
     <Compile Include="Company\IDataIntegrityCheckOverride.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\DataTypeConverters\TextDataTypeConverter.cs" />
@@ -134,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\" />
+    <Folder Include="Customers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

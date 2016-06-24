@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.AccountStatements;
 
 namespace Aps.Domain.Common
 {
-    public struct Duration : IFormattable
+    public struct Duration : IAccountStatementEntryData
     {
         private const string DefaultFormat = "{0:hh\\:mm\\:ss}";
         private readonly TimeSpan duration;

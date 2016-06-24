@@ -7,7 +7,7 @@ namespace Aps.Domain.AccountStatements.DataTypeConverters
     {
         public DataType DataType { get { return DataType.Duration; } }
 
-        public IFormattable ConvertToFormattableValue(ScrapeResultDataPair dataPair)
+        public IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair)
         {
             return new Duration(dataPair.FieldValue);
         }

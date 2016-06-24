@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.AccountStatements;
 
 namespace Aps.Domain.Common
 {
-    public struct KilowattHour : IFormattable
+    public struct KilowattHour : IAccountStatementEntryData
     {
         private const string DefaultFormat = "{0:D} kWh";
         private readonly uint amount;

@@ -1,8 +1,9 @@
 using System;
+using Aps.Domain.AccountStatements;
 
 namespace Aps.Domain.Common
 {
-    public struct NumericValue : IFormattable
+    public struct NumericValue : IAccountStatementEntryData
     {
         private const string DefaultNumberFormat = "{0:0}";
         private readonly decimal value;

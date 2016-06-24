@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using Aps.Domain.Common;
+using Aps.Domain.Company;
+using Aps.Domain.Credential;
 
 namespace Aps.Domain.AccountStatements
 {
@@ -20,6 +23,12 @@ namespace Aps.Domain.AccountStatements
 
             this.id = id;
             this.accountStatmentEntries = new List<AccountStatmentEntry>(entries); //we create a new list so as to not be affected by changes to the collection passed in
+        }
+
+        public void Display(IAccountStatmentDisplayAdapter displayAdapter)
+        {
+            IEnumerable<AccountStatementEntryDisplayValue> displayValues = accountStatmentEntries.Select(e => e.GetDisplayValue());
+            displayAdapter.Display(id.AccountNumber, id.CompanyName, id.CalendarMonth, displayValues);
         }
 
         public bool Equals(AccountStatementId other)

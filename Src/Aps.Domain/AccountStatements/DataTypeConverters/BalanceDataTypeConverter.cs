@@ -7,7 +7,7 @@ namespace Aps.Domain.AccountStatements.DataTypeConverters
     {
         public DataType DataType { get { return DataType.Balance;} }
 
-        public IFormattable ConvertToFormattableValue(ScrapeResultDataPair dataPair)
+        public IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair)
         {
             NumericValue value = NumericValue.Parse(dataPair.FieldValue);
             return Balance.FromAmount(value.ToDecimal());

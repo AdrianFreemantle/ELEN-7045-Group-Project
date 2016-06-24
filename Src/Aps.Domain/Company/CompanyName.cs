@@ -2,7 +2,7 @@
 
 namespace Aps.Domain.Company
 {
-    public struct CompanyName : IEquatable<CompanyName>
+    public struct CompanyName : IEquatable<CompanyName>, ICompanyName
     {
         private readonly string companyName;
 

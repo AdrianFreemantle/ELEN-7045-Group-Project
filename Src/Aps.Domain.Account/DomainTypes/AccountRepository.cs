@@ -2,7 +2,13 @@
 
 namespace Aps.Domain.Account.Tests.DomainTypes
 {
-    public class AccountRepository
+    public interface IAccountRepository
+    {
+        bool SaveAccount(Account newaccount);
+        int Count();
+    }
+
+    public class AccountRepository : IAccountRepository
     {
         private readonly List<Account> repo = new List<Account>(); 
 

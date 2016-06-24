@@ -1,9 +1,10 @@
 using System;
+using Aps.Domain.AccountStatements;
 using Aps.Domain.Credential;
 
 namespace Aps.Domain.Common
 {
-    public struct Month : IFormattable
+    public struct Month : IAccountStatementEntryData
     {
         private const int MinMonth = 1;
         private const int MaxMonth = 12;

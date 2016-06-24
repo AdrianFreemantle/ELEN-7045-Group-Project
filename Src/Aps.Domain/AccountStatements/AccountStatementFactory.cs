@@ -11,36 +11,33 @@ namespace Aps.Domain.AccountStatements
     public class AccountStatementFactory
     {
         private readonly AccountStatmentEntryFactory accountStatmentEntryFactory;
-        private readonly ICollection<AccountStatmentEntryMapping> mappings;
-        private readonly ICollection<IDataIntegrityCheck> integrityChecks;
-        private readonly ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides;
 
-        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory, ICollection<AccountStatmentEntryMapping> mappings)
-            : this(accountStatmentEntryFactory, mappings, new IDataIntegrityCheck[0], new IDataIntegrityCheckOverride[0])
+        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory)
         {
+            Guard.ThatParameterNotNull(accountStatmentEntryFactory, "accountStatmentEntryFactory");
+
+            this.accountStatmentEntryFactory = accountStatmentEntryFactory;
         }
 
-        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks)
-            :this(accountStatmentEntryFactory, mappings, integrityChecks, new IDataIntegrityCheckOverride[0])
+        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
         {
+            return CreateAccountStatement(scrapeSessionResult, mappings, new IDataIntegrityCheck[0], new IDataIntegrityCheckOverride[0]);
         }
 
-        public AccountStatementFactory(AccountStatmentEntryFactory accountStatmentEntryFactory, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks, ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides)
+        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks)
         {
+            return CreateAccountStatement(scrapeSessionResult, mappings, integrityChecks, new IDataIntegrityCheckOverride[0]);
+        }
+
+        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks, ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides)
+        {
+            Guard.ThatValueTypeNotDefaut(scrapeSessionResult, "scrapeSessionResult");
+            Guard.ThatParameterNotNull(mappings, "mappings");
             Guard.ThatParameterNotNull(integrityChecks, "integrityChecks");
             Guard.ThatParameterNotNull(integrityCheckOverrides, "integrityCheckOverrides");
             Guard.ThatParameterNotNull(accountStatmentEntryFactory, "accountStatmentEntryFactory");
-            Guard.ThatParameterNotNull(mappings, "mappings");
 
-            this.accountStatmentEntryFactory = accountStatmentEntryFactory;
-            this.mappings = mappings;
-            this.integrityChecks = integrityChecks;
-            this.integrityCheckOverrides = integrityCheckOverrides;
-        }
-
-        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult)
-        {
-            var entries = BuildAccountStatmentEntries(scrapeSessionResult);
+            var entries = BuildAccountStatmentEntries(scrapeSessionResult, mappings);
 
             foreach (var integrityCheck in integrityChecks.Where(i => !integrityCheckOverrides.Any(o => o.Override(i)))) 
             {
@@ -59,7 +56,7 @@ namespace Aps.Domain.AccountStatements
             return new AccountStatement(accountStatementId, entries);
         }
 
-        private ICollection<AccountStatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult)
+        private ICollection<AccountStatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
         {
             List<AccountStatmentEntry> entries = new List<AccountStatmentEntry>();
 

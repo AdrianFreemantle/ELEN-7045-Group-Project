@@ -6,7 +6,6 @@ namespace Aps.Domain.AccountStatements
     public interface IDataTypeConverter
     {
         DataType DataType { get; }
-
-        IFormattable ConvertToFormattableValue(ScrapeResultDataPair dataPair);
+        IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair);
     }
 }

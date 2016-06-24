@@ -17,8 +17,7 @@ namespace Aps.Domain.Scrap.Tests
         private ScrapeRequestFactory scrapeRequestFactory;
         private ScrapeRequest scrapeRequest;
         private ScrapeRequestId scrapeRequestId;
-        public ICompanyName Edgars { get; private set; }
-
+       
         private void ScrapeRequest_Id()
         {
            scrapeRequestId = new ScrapeRequestId(Guid.NewGuid());

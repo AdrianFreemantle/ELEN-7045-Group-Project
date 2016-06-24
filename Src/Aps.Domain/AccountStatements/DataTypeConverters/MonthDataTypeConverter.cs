@@ -7,7 +7,7 @@ namespace Aps.Domain.AccountStatements.DataTypeConverters
     {
         public DataType DataType { get { return DataType.Month; } }
 
-        public IFormattable ConvertToFormattableValue(ScrapeResultDataPair dataPair)
+        public IAccountStatementEntryData ConvertToStatementEntryDataType(ScrapeResultDataPair dataPair)
         {
             return new Month(dataPair.FieldValue);
         }

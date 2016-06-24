@@ -5,7 +5,7 @@ namespace Aps.Domain.Customer.Tests.DomainTypes
     public class CustomerFactory
     {
 
-        public Customer Create(CustomerID id, EmailAddress emailAddress, CustomerName custName)
+        public Customer Create(CustomerId id, EmailAddress emailAddress, CustomerName custName)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(emailAddress, "emailAddress");
