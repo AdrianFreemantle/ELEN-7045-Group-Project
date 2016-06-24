@@ -12,13 +12,12 @@ using Moq;
 // ReSharper disable once CheckNamespace
 namespace APS.Domain.Services.Tests
 {
-    public partial class Scrape_result_pipeline : FeatureFixture
+    public partial class Account_statment_creation_pipeline_module : FeatureFixture
     {
         private readonly PipelineFactory<ScrapeSessionResult> scrapeSessionResultPipelineFactory = new PipelineFactory<ScrapeSessionResult>();
         private Mock<IAccountStatmentCreationService> mock;
         private ScrapeSessionResult scrapeSessionResult;
         private Pipeline<ScrapeSessionResult> pipeline;
-
 
         private void Then_the_account_statment_creation_service_creates_an_account_statement()
         {

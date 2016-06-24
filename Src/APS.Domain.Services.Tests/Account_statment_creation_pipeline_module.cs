@@ -5,8 +5,8 @@ namespace APS.Domain.Services.Tests
 {
     [TestClass]
     [ScenarioCategory("Process Scrape Result")]
-    [FeatureDescription(@"A pipeline can be used to process a scrape result")]
-    public partial class Scrape_result_pipeline 
+    [FeatureDescription(@"An Account Statment Creation pipeline module can be used to process a scrape result")]
+    public partial class Account_statment_creation_pipeline_module 
     {
         [TestMethod]
         public void Account_statment_creation_service_is_called_by_pipeline()

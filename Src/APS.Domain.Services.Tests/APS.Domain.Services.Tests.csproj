@@ -71,7 +71,7 @@
   <ItemGroup>
     <Compile Include="Fixitures\Pipeline_modules.Fixture.cs" />
     <Compile Include="Fixitures\Scrape_result_pipeline.Fixture.cs" />
-    <Compile Include="Scrape_result_pipeline.cs" />
+    <Compile Include="Account_statment_creation_pipeline_module.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
     <Compile Include="Stubs\TestPipelineModule1.cs" />
     <Compile Include="Stubs\TestPipelineModule2.cs" />

@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Aps.Domain.AccountStatements;
-using Aps.Domain.Common;
-using Aps.Domain.Scraping;
-using Aps.Domain.Services;
-using Aps.Domain.Services.ScrapeSessionResultPipeline;
-using APS.Domain.Services.Tests.Stubs;
-using LightBDD;
+﻿using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 
 namespace APS.Domain.Services.Tests
 {
