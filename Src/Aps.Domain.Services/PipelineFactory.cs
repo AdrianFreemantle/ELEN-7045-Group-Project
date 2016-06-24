@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace APS.Domain.Services.Tests.DomainTypes
+namespace Aps.Domain.Services
 {
     //[DebuggerStepThrough]
     public class PipelineFactory<T>

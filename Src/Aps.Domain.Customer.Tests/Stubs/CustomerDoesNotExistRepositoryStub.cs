@@ -1,16 +1,16 @@
 using Aps.Domain.Credential;
-using Aps.Domain.Customer.Tests.DomainTypes;
+using Aps.Domain.Customers;
 
 namespace Aps.Domain.Customer.Tests.Stubs
 {
     public class CustomerDoesNotExistRepositoryStub : ICustomerRepository
     {
 
-        public DomainTypes.Customer SavedCustomer;
+        public Customers.Customer SavedCustomer;
 
-        public DomainTypes.Customer fetchByID(CustomerId custID)
+        public Customers.Customer fetchByID(CustomerId custID)
         {
-            return new DomainTypes.Customer(custID, new EmailAddress("man@moon.com"), new CustomerName("bob", "Marley"));
+            return new Customers.Customer(custID, new EmailAddress("man@moon.com"), new CustomerName("bob", "Marley"));
         }
 
         public bool custExists(CustomerId custID)
@@ -18,7 +18,7 @@ namespace Aps.Domain.Customer.Tests.Stubs
             return false;
         }
 
-        public void Save(DomainTypes.Customer customer)
+        public void Save(Customers.Customer customer)
         {
             SavedCustomer = customer;
         }

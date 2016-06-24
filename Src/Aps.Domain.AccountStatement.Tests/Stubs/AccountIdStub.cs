@@ -1,4 +1,4 @@
-using Aps.Domain.Company;
+using Aps.Domain.Companies;
 
 namespace Aps.Domain.AccountStatements.Tests.Stubs
 {

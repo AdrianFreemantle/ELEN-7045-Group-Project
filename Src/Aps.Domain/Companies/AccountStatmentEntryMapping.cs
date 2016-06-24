@@ -1,8 +1,7 @@
 ﻿using System;
 using Aps.Domain.AccountStatements;
-using Aps.Domain.Common;
 
-namespace Aps.Domain.Company
+namespace Aps.Domain.Companies
 {
     public struct AccountStatmentEntryMapping : IEquatable<AccountStatmentEntryMapping>
     {

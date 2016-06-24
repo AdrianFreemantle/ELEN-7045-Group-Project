@@ -4,7 +4,7 @@ using System.Linq;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.Scrap.Tests.Stubs;
 using Aps.Domain.Common;
-using Aps.Domain.Company;
+using Aps.Domain.Companies;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scraping;
 using LightBDD;

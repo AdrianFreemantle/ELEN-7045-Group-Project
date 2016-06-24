@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aps.Domain.Company.Tests.DomainTypes
+namespace Aps.Domain.Companies
 {
     public struct NumberOfDaysPerCycle
     {
@@ -38,12 +38,5 @@ namespace Aps.Domain.Company.Tests.DomainTypes
             return string.Format("Cycle method: {0}, Number of days per cycle: {1}", _cycleMethod.GetDescription(),
                 _numberOfDaysPerCycle);
         }
-    }
-
-    public enum CycleMethod
-    {
-        Unknown,
-        Monthly,
-        Annually
     }
 }

@@ -4,8 +4,7 @@ namespace Aps.Domain.Scraping
 {
     public class ScrapeRequest : IEquatable<ScrapeRequest>
     {
-
-        private readonly ScrapeRequestId ID;
+        private readonly ScrapeRequestId id;
         private readonly IAccountId accountId;
         private ScrapeSessionResultCode scrapeSessionResultCode;
         private ScrapeDataAudit dataAudit;
@@ -20,7 +19,7 @@ namespace Aps.Domain.Scraping
             Guard.ThatValueTypeNotDefaut(scrapeRequestId, "scrapeRequestId");
             Guard.ThatValueTypeNotDefaut(accountId, "accountId");
 
-            this.ID = scrapeRequestId;
+            this.id = scrapeRequestId;
             this.accountId = accountId;
             this.scrapeSessionResultCode = ScrapeSessionResultCode.Pending;
         }
@@ -32,13 +31,12 @@ namespace Aps.Domain.Scraping
 
             this.dataAudit = dataAudit;
             this.scrapeSessionResultCode = resultCode;
-
         }
 
 
         public bool Equals(ScrapeRequest other)
         {
-            return this.ID.Equals(other.ID);
+            return this.id.Equals(other.id);
         }
     }
 }

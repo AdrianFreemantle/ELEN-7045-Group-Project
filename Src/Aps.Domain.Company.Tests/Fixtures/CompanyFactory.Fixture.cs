@@ -1,5 +1,5 @@
 ﻿using System;
-using Aps.Domain.Company.Tests.DomainTypes;
+using Aps.Domain.Companies;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -9,7 +9,7 @@ namespace Aps.Domain.Company.Tests
     {
         private CompanyName _companyName;
         private CompanyFactory _companyFactory;
-        private DomainTypes.Company _company;
+        private Companies.Company _company;
         private CompanyType _companyType;
         private ScraperScript _scraperScript;
         private BillingCycle _billingCycle;

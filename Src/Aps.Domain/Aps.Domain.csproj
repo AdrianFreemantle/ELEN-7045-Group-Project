@@ -85,14 +85,30 @@
     <Compile Include="AccountStatements\IDataIntegrityCheck.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\StatementEntryDataTypeAttribute.cs" />
-    <Compile Include="Company\IDataIntegrityCheckOverride.cs" />
-    <Compile Include="Company\AccountStatmentEntryMapping.cs" />
-    <Compile Include="Company\CompanyName.cs" />
+    <Compile Include="Companies\BaseUrl.cs" />
+    <Compile Include="Companies\BillingCycle.cs" />
+    <Compile Include="Companies\Company.cs" />
+    <Compile Include="Companies\CompanyFactory.cs" />
+    <Compile Include="Companies\CompanyType.cs" />
+    <Compile Include="Companies\CycleMethod.cs" />
+    <Compile Include="Companies\ICompanyRepository.cs" />
+    <Compile Include="Companies\IDataIntegrityCheckOverride.cs" />
+    <Compile Include="Companies\AccountStatmentEntryMapping.cs" />
+    <Compile Include="Companies\CompanyName.cs" />
+    <Compile Include="Companies\LeadTime.cs" />
+    <Compile Include="Companies\NumberOfDaysPerCycle.cs" />
+    <Compile Include="Companies\RetryInterval.cs" />
+    <Compile Include="Companies\ScraperScript.cs" />
     <Compile Include="Credential\AccountNumber.cs" />
     <Compile Include="Credential\CcvNumber.cs" />
     <Compile Include="Credential\NameVO.cs" />
     <Compile Include="Credential\SurnameVO.cs" />
     <Compile Include="Credential\TelephoneNumber.cs" />
+    <Compile Include="Customers\Customer.cs" />
+    <Compile Include="Customers\CustomerFactory.cs" />
+    <Compile Include="Customers\CustomerID.cs" />
+    <Compile Include="Customers\CustomerName.cs" />
+    <Compile Include="Customers\ICustomerRepository.cs" />
     <Compile Include="DefaultFormatProviderSettings.cs" />
     <Compile Include="Common\Encryption.cs" />
     <Compile Include="Credential\Password.cs" />
@@ -136,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\" />
-    <Folder Include="Customers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

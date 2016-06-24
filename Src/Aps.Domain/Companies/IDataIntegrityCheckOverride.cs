@@ -1,6 +1,6 @@
 using Aps.Domain.AccountStatements;
 
-namespace Aps.Domain.Company
+namespace Aps.Domain.Companies
 {
     public interface IDataIntegrityCheckOverride
     {

@@ -6,8 +6,8 @@
     <ProjectGuid>{14EC12B6-1C6F-419B-9134-C4CDFC8341DF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Aps.Domain.Scrap.Tests</RootNamespace>
-    <AssemblyName>Aps.Domain.Scrap.Tests</AssemblyName>
+    <RootNamespace>Aps.Domain.Scraping.Tests</RootNamespace>
+    <AssemblyName>Aps.Domain.Scraping.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

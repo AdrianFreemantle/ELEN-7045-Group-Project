@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Aps.Domain.AccountStatements.AccountStatementIntegrityChecks;
 using Aps.Domain.Common;
-using Aps.Domain.Company;
+using Aps.Domain.Companies;
 using Aps.Domain.Scraping;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

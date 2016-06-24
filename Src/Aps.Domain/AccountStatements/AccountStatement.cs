@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
-using Aps.Domain.Company;
 using Aps.Domain.Credential;
 
 namespace Aps.Domain.AccountStatements

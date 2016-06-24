@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aps.Domain.Company.Tests.DomainTypes
+namespace Aps.Domain.Companies
 {
     public struct BaseUrl
     {

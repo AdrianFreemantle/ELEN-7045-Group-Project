@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Aps.Domain.Company.Tests.DomainTypes;
+using Aps.Domain.Companies;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

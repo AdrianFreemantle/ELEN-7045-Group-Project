@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Aps.Domain.Common;
 using Aps.Domain.Credential;
-using Aps.Domain.Customer.Tests.DomainTypes;
 using Aps.Domain.Customer.Tests.Stubs;
+using Aps.Domain.Customers;
+using Aps.Domain.Services.CustomerServices;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -36,7 +37,7 @@ namespace Aps.Domain.Customer.Tests
         {
             // Arrange  -   Given
             CustomerDoesNotExistRepositoryStub repo = new CustomerDoesNotExistRepositoryStub();
-            CustomerRegService custregistrationService = new CustomerRegService(repo);
+            CustomerRegistrationService custregistrationService = new CustomerRegistrationService(repo);
 
             IIdentificationField identificationField = new Aps.Domain.Credential.TelephoneNumber("0113334444");
             string name = "Leslie";

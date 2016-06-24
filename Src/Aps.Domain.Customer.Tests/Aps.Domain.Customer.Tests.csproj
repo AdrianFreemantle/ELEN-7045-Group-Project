@@ -63,12 +63,6 @@
     <Compile Include="Credit_card_number.cs" />
     <Compile Include="Customer_Registration_Service.cs" />
     <Compile Include="CustomerRegistrationAPS.cs" />
-    <Compile Include="DomainTypes\Customer.cs" />
-    <Compile Include="DomainTypes\CustomerFactory.cs" />
-    <Compile Include="DomainTypes\CustomerID.cs" />
-    <Compile Include="DomainTypes\CustomerName.cs" />
-    <Compile Include="DomainTypes\CustomerRegService.cs" />
-    <Compile Include="DomainTypes\ICustomerRepository.cs" />
     <Compile Include="Fixtures\Ccv_Number.Fixture.cs" />
     <Compile Include="Fixtures\Credit_card_number.Fixture.cs" />
     <Compile Include="Fixtures\CustomerRegistrationAPS.Fixture.cs" />
@@ -84,6 +78,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Aps.Domain.Services\Aps.Domain.Services.csproj">
+      <Project>{E07977A9-FE2C-473C-A6DC-E0FD341D1B24}</Project>
+      <Name>Aps.Domain.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
       <Project>{b29b12bb-0520-40b9-b9f4-34a978d517db}</Project>
       <Name>Aps.Domain</Name>

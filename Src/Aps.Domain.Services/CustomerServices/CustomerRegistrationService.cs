@@ -1,14 +1,15 @@
 using System;
 using Aps.Domain.Credential;
+using Aps.Domain.Customers;
 
-namespace Aps.Domain.Customer.Tests.DomainTypes
+namespace Aps.Domain.Services.CustomerServices
 {
-    public class CustomerRegService
+    public class CustomerRegistrationService
     {
         private readonly ICustomerRepository custRepo;
         private readonly CustomerFactory customerFactory;
 
-        public CustomerRegService(ICustomerRepository custRepo)
+        public CustomerRegistrationService(ICustomerRepository custRepo)
         {
             this.custRepo = custRepo;
             customerFactory = new CustomerFactory();

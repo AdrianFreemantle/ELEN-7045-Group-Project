@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Aps.Domain.Common;
 using Aps.Domain.Credential;
-using Aps.Domain.Customer.Tests.DomainTypes;
 using Aps.Domain.Customer.Tests.Stubs;
+using Aps.Domain.Customers;
+using Aps.Domain.Services.CustomerServices;
 using LightBDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -16,7 +17,7 @@ namespace Aps.Domain.Customer.Tests
     public partial class Customer_Registration_Service
     {
         private CustomerExistsRepositoryStub existsRepositoryStub;
-        private CustomerRegService custregistrationService;
+        private CustomerRegistrationService custregistrationService;
         private IIdentificationField identificationField;
         string name;
         string surname;
@@ -67,7 +68,7 @@ namespace Aps.Domain.Customer.Tests
 
         private void And_a_customer_registration_service()
         {
-            custregistrationService = new CustomerRegService(existsRepositoryStub);
+            custregistrationService = new CustomerRegistrationService(existsRepositoryStub);
         }
     }
 }

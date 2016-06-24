@@ -67,15 +67,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DomainTypes\BaseUrl.cs" />
-    <Compile Include="DomainTypes\BillingCycle.cs" />
-    <Compile Include="DomainTypes\Company.cs" />
-    <Compile Include="DomainTypes\CompanyFactory.cs" />
-    <Compile Include="DomainTypes\CompanyType.cs" />
-    <Compile Include="DomainTypes\LeadTime.cs" />
-    <Compile Include="DomainTypes\NumberOfDaysPerCycle.cs" />
-    <Compile Include="DomainTypes\RetryInterval.cs" />
-    <Compile Include="DomainTypes\ScraperScript.cs" />
     <Compile Include="Fixtures\BaseUrl_create.Fixture.cs" />
     <Compile Include="Fixtures\BaseUrl_Identity.Fixture.cs" />
     <Compile Include="Fixtures\Billing_cycle_create.Fixture.cs" />
@@ -110,7 +101,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataIntegrityChecks\" />
     <Folder Include="Stubs\" />
   </ItemGroup>
   <Choose>

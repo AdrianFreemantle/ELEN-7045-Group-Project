@@ -1,4 +1,4 @@
-namespace Aps.Domain.Customer.Tests.DomainTypes
+namespace Aps.Domain.Customers
 {
     public interface ICustomerRepository
     {

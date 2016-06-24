@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aps.Domain.Company
+namespace Aps.Domain.Companies
 {
     public struct CompanyName : IEquatable<CompanyName>, ICompanyName
     {

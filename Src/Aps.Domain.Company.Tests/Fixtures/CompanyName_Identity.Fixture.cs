@@ -1,4 +1,4 @@
-﻿using Aps.Domain.Company.Tests.DomainTypes;
+﻿using Aps.Domain.Companies;
 using LightBDD;
 using Shouldly;
 

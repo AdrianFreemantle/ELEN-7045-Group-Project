@@ -1,4 +1,4 @@
-﻿using Aps.Domain.Company.Tests.DomainTypes;
+﻿using Aps.Domain.Companies;
 using LightBDD;
 using Shouldly;
 
@@ -7,8 +7,8 @@ namespace Aps.Domain.Company.Tests
     public partial class Company_Identity : FeatureFixture
     {
         private readonly CompanyFactory _companyFactory = new CompanyFactory();
-        private DomainTypes.Company _company1;
-        private DomainTypes.Company _company2;
+        private Companies.Company _company1;
+        private Companies.Company _company2;
         private bool areEqual;
 
         private void a_company(string company1Name)

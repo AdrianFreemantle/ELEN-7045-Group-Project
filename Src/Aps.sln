@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Company.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APS.Domain.Services.Tests", "APS.Domain.Services.Tests\APS.Domain.Services.Tests.csproj", "{35299DBC-45BA-4A71-8BBB-CA7DFFC7B75A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Scrap.Tests", "Aps.Domain.Scrap.Tests\Aps.Domain.Scrap.Tests.csproj", "{14EC12B6-1C6F-419B-9134-C4CDFC8341DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.Scraping.Tests", "Aps.Domain.Scrap.Tests\Aps.Domain.Scraping.Tests.csproj", "{14EC12B6-1C6F-419B-9134-C4CDFC8341DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aps.Domain.AccountStatements.Tests", "Aps.Domain.AccountStatement.Tests\Aps.Domain.AccountStatements.Tests.csproj", "{61AC15B2-EEBE-4B4F-940E-BF13F3AF3A25}"
 EndProject

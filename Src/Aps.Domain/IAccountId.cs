@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Aps.Domain.Company;
+using Aps.Domain.Companies;
 
 namespace Aps.Domain
 {

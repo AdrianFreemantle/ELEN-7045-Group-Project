@@ -4,7 +4,7 @@ using System.Linq;
 using Aps.Domain.AccountStatements.AccountStatementIntegrityChecks;
 using Aps.Domain.AccountStatements.StatementEntryDataTypes;
 using Aps.Domain.Common;
-using Aps.Domain.Company;
+using Aps.Domain.Companies;
 using Aps.Domain.Scraping;
 
 namespace Aps.Domain.AccountStatements
