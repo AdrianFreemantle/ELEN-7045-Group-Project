@@ -5,6 +5,8 @@ namespace Aps.Domain.Account
     public interface IAccountRepository
     {
         bool SaveAccount(Account newaccount);
+        Account FetchById(IAccountId accountId);
+        Account FetchById(AccountId accountId);
         int Count();
     }
 
@@ -20,6 +22,16 @@ namespace Aps.Domain.Account
             }
             repo.Add(newaccount);
             return true;
+        }
+
+        public Account FetchById(IAccountId accountId)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Account FetchById(AccountId accountId)
+        {
+            throw new System.NotImplementedException();
         }
 
         public int Count()

@@ -142,13 +142,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\ScrapeResultDataPair.cs" />
     <Compile Include="Scraping\IScraperScriptParser.cs" />
-    <Compile Include="Scraping\IScrapRequestRepository.cs" />
+    <Compile Include="Scraping\IScrapeRequestRepository.cs" />
     <Compile Include="Scraping\ScrapeDataAudit.cs" />
     <Compile Include="Scraping\IScraper.cs" />
     <Compile Include="Scraping\ScrapeRequest.cs" />
     <Compile Include="Scraping\ScrapeRequestFactory.cs" />
     <Compile Include="Scraping\ScrapeRequestId.cs" />
-    <Compile Include="Scraping\ScraperScript.cs" />
     <Compile Include="Scraping\ScrapeSessionResult.cs" />
     <Compile Include="Scraping\ScrapeSessionResultCode.cs" />
     <Compile Include="Scraping\StatusNotificationRuleAttribute.cs" />

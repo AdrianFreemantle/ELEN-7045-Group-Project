@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Aps.Domain.Account;
 using Aps.Domain.AccountStatements.Tests.Stubs;
 using Aps.Domain.Scrap.Tests.Stubs;
 using Aps.Domain.Common;
 using Aps.Domain.Companies;
+using Aps.Domain.Credential;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scraping;
 using LightBDD;
@@ -16,14 +18,13 @@ namespace Aps.Domain.Scrap.Tests
 {
     public partial class ScrapeRequestRepo : FeatureFixture
     {
-
-        private AccountIdStub accountId;
+        private AccountId accountId;
         private ScrapeRequestFactory scrapeRequestFactory = new ScrapeRequestFactory();
         private ScrapeRequest scrapeRequest;
         private ScrapeRequestId scrapeRequestId;
         private Exception error;
 
-        private ScrapRequestRepositoryStub repository;
+        private ScrapeRequestRepositoryStub repository;
 
 
         private void a_valid_scrape_request()
@@ -58,12 +59,12 @@ namespace Aps.Domain.Scrap.Tests
         private void account_id()
         {
 
-            accountId = new AccountIdStub("112345", new CompanyName("Edgars"));
+            accountId = new AccountId(new CompanyName("Edgars"), new AccountNumber("112345"));
         }
 
         private void an_scrap_request_repository()
         {
-            repository = new ScrapRequestRepositoryStub();
+            repository = new ScrapeRequestRepositoryStub();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Aps.Domain.Account
         private readonly AccountNumber accountNumber;
         private readonly ICompanyName companyName;
 
-        private AccountId(ICompanyName companyName, AccountNumber accountNumber)
+        public AccountId(ICompanyName companyName, AccountNumber accountNumber)
         {
             this.companyName = companyName;
             this.accountNumber = accountNumber;

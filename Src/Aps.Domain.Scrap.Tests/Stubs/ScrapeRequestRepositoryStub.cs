@@ -5,7 +5,7 @@ using Aps.Domain.Scraping;
 
 namespace Aps.Domain.Scrap.Tests.Stubs
 {
-    public class ScrapRequestRepositoryStub : IScrapRequestRepository
+    public class ScrapeRequestRepositoryStub : IScrapeRequestRepository
     {
         public bool saved;
 

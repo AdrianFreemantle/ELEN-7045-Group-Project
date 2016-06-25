@@ -79,7 +79,7 @@
     <Compile Include="Fixtures\ScrapSessionID_Identity.Fixture.cs" />
     <Compile Include="ScrapResultDataPair_Data_Collection.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
-    <Compile Include="Stubs\ScrapRequestRepositoryStub.cs" />
+    <Compile Include="Stubs\ScrapeRequestRepositoryStub.cs" />
     <Compile Include="Stubs\CompanyNameStub.cs" />
     <Compile Include="Stubs\ScrapSessionIdStub.cs" />
     <Compile Include="ScrapeRequestID_Identity.cs" />

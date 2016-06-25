@@ -2,6 +2,6 @@
 {
     public interface ICompanyRepository
     {
-        Company FetchByName(CompanyName companyName);
+        Company FetchByName(ICompanyName companyName);
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System;
+using Aps.Domain.Account;
 using Aps.Domain.Scrap;
 using Aps.Domain.Common;
 using Aps.Domain.Companies;
+using Aps.Domain.Credential;
 using Aps.Domain.Scrap.Tests.DomainTypes;
 using Aps.Domain.Scraping;
 using LightBDD;
@@ -13,7 +15,7 @@ namespace Aps.Domain.Scrap.Tests
 {
     public partial class Scrape_Request_Factory : FeatureFixture
     {
-        private AccountIdStub accountId;
+        private AccountId accountId;
         private ScrapeRequestFactory scrapeRequestFactory;
         private ScrapeRequest scrapeRequest;
         private ScrapeRequestId scrapeRequestId;
@@ -25,7 +27,7 @@ namespace Aps.Domain.Scrap.Tests
 
         private void account_id()
         {
-            accountId = new AccountIdStub("112345", new CompanyName("Edgars"));
+            accountId = new AccountId(new CompanyName("Edgars"), new AccountNumber("112345"));
         }
 
         private void an_scrape_request_factory()

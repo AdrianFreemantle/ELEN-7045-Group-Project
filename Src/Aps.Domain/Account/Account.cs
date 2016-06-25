@@ -52,6 +52,11 @@ namespace Aps.Domain.Account
             return accountId;
         }
 
+        public ICompanyName GetCompanyName()
+        {
+            return accountId.GetCompanyName();
+        }
+
         public Credentials GetCredentials()
         {
             return credentials;

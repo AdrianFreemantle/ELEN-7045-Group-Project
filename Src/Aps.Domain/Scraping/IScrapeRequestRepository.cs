@@ -1,6 +1,6 @@
 namespace Aps.Domain.Scraping
 {
-    public interface IScrapRequestRepository
+    public interface IScrapeRequestRepository
     {
         void Save(ScrapeRequest scrapeRequest);
         ScrapeRequest fetchById(ScrapeRequestId Id);

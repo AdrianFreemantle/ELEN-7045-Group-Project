@@ -7,6 +7,16 @@ namespace Aps.Domain.Account
         private readonly IIdentificationField identificationfield;
         private readonly ISecurityField securityfield;
 
+        public IIdentificationField Identificationfield
+        {
+            get { return identificationfield; }
+        }
+
+        public ISecurityField Securityfield
+        {
+            get { return securityfield; }
+        }
+
         private Credentials(IIdentificationField identificationfield, ISecurityField securityfield)
         {
             this.identificationfield = identificationfield;
