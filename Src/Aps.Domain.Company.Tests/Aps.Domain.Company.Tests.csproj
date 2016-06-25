@@ -100,6 +100,10 @@
       <Project>{b29b12bb-0520-40b9-b9f4-34a978d517db}</Project>
       <Name>Aps.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aps\Aps.csproj">
+      <Project>{747320bd-946c-46a1-b803-86bbcb703a17}</Project>
+      <Name>Aps</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Stubs\" />

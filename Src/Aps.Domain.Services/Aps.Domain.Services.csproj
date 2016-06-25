@@ -44,13 +44,9 @@
     <Compile Include="AccountStatementServices\AccountStatmentCreationService.cs" />
     <Compile Include="AccountStatementServices\AccountStatmentDisplayService.cs" />
     <Compile Include="CustomerServices\CustomerRegistrationService.cs" />
-    <Compile Include="IPipelineModule.cs" />
-    <Compile Include="Pipeline.cs" />
-    <Compile Include="PipelineFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScrapeSessionResultPipeline\BrokenScriptModule.cs" />
     <Compile Include="ScrapeSessionResultPipeline\CustomerNotificationModule.cs" />
-    <Compile Include="ScrapeSessionResultPipeline\ScrapeReschedulingModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aps.Domain\Aps.Domain.csproj">
