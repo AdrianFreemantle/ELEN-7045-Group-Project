@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Aps;
 using Aps.Application.Tests.Stubs;
 using Aps.Domain.Account;
 using Aps.Domain.AccountStatements;
