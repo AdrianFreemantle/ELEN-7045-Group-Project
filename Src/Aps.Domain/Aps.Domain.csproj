@@ -138,7 +138,6 @@
     <Compile Include="ICompanyName.cs" />
     <Compile Include="ICustomerId.cs" />
     <Compile Include="IAccountId.cs" />
-    <Compile Include="ICustomerNotificationService.cs" />
     <Compile Include="IScrapeSessionResultCode.cs" />
     <Compile Include="Notifications\INotificationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

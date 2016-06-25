@@ -14,10 +14,15 @@ namespace APS.Domain.Services.Tests
             Runner.RunScenario(
                 Given_a_completed_scrape_session_result,
                 And_an_account_statment_creation_service,
-                And_an_account_statment_creation_module,
-                And_a_scrape_session_result_pipeline_factory,
+                And_a_customer_notification_service,
+                And_an_account_status_update_service,
+                And_a_company_script_service,
+                And_an_scrape_session_result_pipeline,
                 When_the_pipeline_is_invoked,
-                Then_the_account_statment_creation_service_creates_an_account_statement);
+                Then_the_account_statment_creation_service_creates_an_account_statement,
+                And_the_company_script_service_does_not_set_the_script_as_broken,
+                And_the_customer_notification_service_does_not_notify_the_customer,
+                And_the_account_status_service_activates_an_inactive_account);
         }
     }
 }
