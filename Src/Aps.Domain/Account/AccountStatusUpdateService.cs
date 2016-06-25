@@ -1,6 +1,3 @@
-using Aps.Domain.Credential;
-using Aps.Domain.Customers;
-
 namespace Aps.Domain.Account
 {
     public struct AccountStatusUpdateService
