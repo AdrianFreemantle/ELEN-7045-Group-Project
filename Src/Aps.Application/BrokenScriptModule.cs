@@ -1,7 +1,7 @@
 using Aps.Domain.Companies;
 using Aps.Domain.Scraping;
 
-namespace Aps.Domain.Services.ScrapeSessionResultPipeline
+namespace Aps.Application
 {
     public class BrokenScriptModule : IPipelineModule<ScrapeSessionResult>
     {

@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountStatements\AccountStatement.cs" />
-    <Compile Include="AccountStatements\IAccountStatmentCreationService.cs" />
+    <Compile Include="AccountStatements\IAccountStatementCreationService.cs" />
     <Compile Include="AccountStatements\StatementEntryDisplayValue.cs" />
     <Compile Include="AccountStatements\AccountStatementFactory.cs" />
     <Compile Include="AccountStatements\AccountStatementId.cs" />
@@ -134,7 +134,6 @@
     <Compile Include="Credential\EmailAddress.cs" />
     <Compile Include="Credential\UserName.cs" />
     <Compile Include="DomainException.cs" />
-    <Compile Include="IAccountStatementCreationService.cs" />
     <Compile Include="ICompanyName.cs" />
     <Compile Include="ICustomerId.cs" />
     <Compile Include="IAccountId.cs" />

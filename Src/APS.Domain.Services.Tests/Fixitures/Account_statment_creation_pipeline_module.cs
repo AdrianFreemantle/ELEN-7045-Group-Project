@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Aps;
-using Aps.Domain;
+using Aps.Application;
 using Aps.Domain.Account;
-using Aps.Domain.AccountStatements;
 using Aps.Domain.Common;
 using Aps.Domain.Companies;
 using Aps.Domain.Notifications;
 using Aps.Domain.Scraping;
-using Aps.Domain.Services;
-using Aps.Domain.Services.ScrapeSessionResultPipeline;
 using APS.Domain.Services.Tests.Stubs;
 using LightBDD;
 using Moq;
+using IAccountStatementCreationService = Aps.Domain.AccountStatements.IAccountStatementCreationService;
 
 // ReSharper disable once CheckNamespace
 namespace APS.Domain.Services.Tests
@@ -20,7 +18,7 @@ namespace APS.Domain.Services.Tests
     public partial class Account_statment_creation_pipeline_module : FeatureFixture
     {
         private readonly PipelineFactory<ScrapeSessionResult> scrapeSessionResultPipelineFactory = new PipelineFactory<ScrapeSessionResult>();
-        private Mock<IAccountStatmentCreationService> accountStatmentCreationServiceMock;
+        private Mock<IAccountStatementCreationService> accountStatmentCreationServiceMock;
         private Mock<INotificationService> customerNotificationServiceMock;
         private Mock<IAccountStatusUpdateService> accountStatusUpdateServiceMock;
         private Mock<ICompanyScriptService> companyScriptServiceMock;
@@ -72,7 +70,7 @@ namespace APS.Domain.Services.Tests
 
         private void And_an_scrape_session_result_pipeline()
         {
-            scrapeSessionResultPipelineFactory.Register(new AccountStatmentCreationModule(accountStatmentCreationServiceMock.Object));
+            scrapeSessionResultPipelineFactory.Register(new AccountStatementCreationModule(accountStatmentCreationServiceMock.Object));
             scrapeSessionResultPipelineFactory.Register(new AccountStatusUpdateModule(accountStatusUpdateServiceMock.Object));
             scrapeSessionResultPipelineFactory.Register(new BrokenScriptModule(companyScriptServiceMock.Object));
             scrapeSessionResultPipelineFactory.Register(new CustomerNotificationModule(customerNotificationServiceMock.Object));
@@ -81,7 +79,7 @@ namespace APS.Domain.Services.Tests
 
         private void And_an_account_statment_creation_service()
         {
-            accountStatmentCreationServiceMock = new Mock<IAccountStatmentCreationService>();
+            accountStatmentCreationServiceMock = new Mock<IAccountStatementCreationService>();
             accountStatmentCreationServiceMock.Setup(e => e.CreateAccountStatementFromScrapeResult(scrapeSessionResult));
         }
 

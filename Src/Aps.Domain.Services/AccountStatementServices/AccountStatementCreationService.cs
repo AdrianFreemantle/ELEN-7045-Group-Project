@@ -6,12 +6,12 @@ using Aps.Domain.Scraping;
 
 namespace Aps.Domain.Services.AccountStatementServices
 {
-    public class AccountStatmentCreationService : IAccountStatmentCreationService
+    public class AccountStatementCreationService : AccountStatements.IAccountStatementCreationService
     {
         private readonly ICompanyRepository companyRepository;
         private readonly IAccountStatementRepository accountStatementRepository;
 
-        public AccountStatmentCreationService(IAccountStatementRepository accountStatementRepository, ICompanyRepository companyRepository)
+        public AccountStatementCreationService(IAccountStatementRepository accountStatementRepository, ICompanyRepository companyRepository)
         {
             Guard.ThatParameterNotNull(accountStatementRepository, "accountStatementRepository");
             Guard.ThatParameterNotNull(companyRepository, "companyRepository");

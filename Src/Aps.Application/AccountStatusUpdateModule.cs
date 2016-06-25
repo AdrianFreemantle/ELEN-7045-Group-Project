@@ -1,7 +1,7 @@
 using Aps.Domain.Account;
 using Aps.Domain.Scraping;
 
-namespace Aps.Domain.Services.ScrapeSessionResultPipeline
+namespace Aps.Application
 {
     public class AccountStatusUpdateModule : IPipelineModule<ScrapeSessionResult>
     {
