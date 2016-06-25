@@ -8,18 +8,13 @@ namespace Aps.Domain.Account
         private readonly AccountNumber accountNumber;
         private readonly ICompanyName companyName;
 
-        private AccountId(ICompanyName companyName, AccountNumber accountNumber)
-        {
-            this.companyName = companyName;
-            this.accountNumber = accountNumber;
-        }
-
-        public static AccountId Create<TCompanyName>(TCompanyName companyName, AccountNumber accountNumber) where TCompanyName : struct, ICompanyName
+        public  AccountId(ICompanyName companyName, AccountNumber accountNumber)
         {
             Guard.ThatValueTypeNotDefaut(companyName, "companyName");
             Guard.ThatValueTypeNotDefaut(accountNumber, "accountNumber");
 
-            return new AccountId(companyName, accountNumber);
+            this.companyName = companyName;
+            this.accountNumber = accountNumber;
         }
 
         public AccountNumber GetAccountNumber()

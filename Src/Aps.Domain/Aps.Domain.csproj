@@ -92,6 +92,7 @@
     <Compile Include="Account\AccountRepository.cs" />
     <Compile Include="Account\AccountStatus.cs" />
     <Compile Include="Account\Credentials.cs" />
+    <Compile Include="Account\AccountStatusUpdateService.cs" />
     <Compile Include="Account\IAccountStatusUpdateService.cs" />
     <Compile Include="Companies\BaseUrl.cs" />
     <Compile Include="Companies\BillingCycle.cs" />

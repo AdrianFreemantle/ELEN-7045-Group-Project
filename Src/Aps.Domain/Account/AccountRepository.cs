@@ -1,16 +1,20 @@
 ﻿using System.Collections.Generic;
+using Aps.Domain.Common;
+using Aps.Domain.Credential;
+using Aps.Domain.Customers;
 
 namespace Aps.Domain.Account
 {
     public interface IAccountRepository
     {
         bool SaveAccount(Account newaccount);
+        Account GetAccount(AccountId accountId);
         int Count();
     }
 
     public class AccountRepository : IAccountRepository
     {
-        private readonly List<Account> repo = new List<Account>(); 
+        private readonly List<Account> repo = new List<Account>();
 
         public bool SaveAccount(Account newaccount)
         {
@@ -26,15 +30,25 @@ namespace Aps.Domain.Account
         {
             return repo.Count;
         }
+
+        public Account GetAccount(AccountId accountId)
+        {
+            // To-Do Add GetAccount functionality
+
+            if (repo.Count == 0)
+                throw new DomainException("Account Repository", "No Accounts stored");
+
+
+
+            return repo[0];
+
+            IEncryptionService encryptionService = new Encryption();
+            var credentials = Credentials.Create(new EmailAddress("chrisv@live.co.za"), new Password("123", "123", encryptionService));
+
+            return new Account(new CustomerId(new EmailAddress("chrisv@live.co.za")), accountId, credentials);
+        }
+
         //public bool RemoveAccount(ICustomerId customerId, AccountId accountId)
-        //{
-        //    if (!repo.Contains(accountToBeRemoved))
-        //    {
-        //        throw new DomainException("Account Repository", "Account does not exist.");
-        //    }
-        //    repo.Remove(accountToBeRemoved);
-        //}
-        //public Account GetAccount(ICustomerId customerId, AccountId accountId)
         //{
         //    if (!repo.Contains(accountToBeRemoved))
         //    {

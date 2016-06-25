@@ -9,7 +9,7 @@ namespace Aps.Domain.Account
         private readonly AccountId accountId;
         private readonly Credentials credentials;
         private readonly DateTime dateAdded;
-        private readonly AccountStatus accountStatus;
+        private AccountStatus accountStatus;
 
         protected Account()
         {            
@@ -61,5 +61,12 @@ namespace Aps.Domain.Account
         {
             return accountStatus;
         }
+        public bool SetAccountStatus(AccountStatus accountStatus)
+        {
+            this.accountStatus = accountStatus; 
+            return true;
+        }
+
+
     }
 }
