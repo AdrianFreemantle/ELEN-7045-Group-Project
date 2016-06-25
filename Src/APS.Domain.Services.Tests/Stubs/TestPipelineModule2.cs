@@ -1,4 +1,5 @@
-﻿using Aps.Domain.Services;
+﻿using Aps;
+using Aps.Domain.Services;
 
 namespace APS.Domain.Services.Tests.Stubs
 {
