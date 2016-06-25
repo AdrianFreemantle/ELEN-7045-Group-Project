@@ -53,5 +53,10 @@ namespace Aps.Domain.Companies
         {
             return CompanyName.Equals(other.CompanyName);
         }
+
+        public void SetScriptAsBroken()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AccountStatementServices\AccountStatementCreationService.cs" />
     <Compile Include="AccountStatementServices\AccountStatmentDisplayService.cs" />
+    <Compile Include="CompanyServices\CompanyScriptService.cs" />
     <Compile Include="CustomerServices\CustomerRegistrationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

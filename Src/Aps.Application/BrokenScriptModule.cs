@@ -1,3 +1,4 @@
+using System.Xml.Schema;
 using Aps.Domain.Companies;
 using Aps.Domain.Scraping;
 
@@ -17,7 +18,8 @@ namespace Aps.Application
         {
             if (scrapeSessionResult.ResultCode.Equals(ScrapeSessionResultCode.BrokenScript))
             {
-                companyScriptService.SetScriptAsBroken(scrapeSessionResult.AccountId.CompanyName);
+                var companyName = scrapeSessionResult.AccountId.CompanyName;
+                companyScriptService.SetScriptAsBroken(companyName);
             }
         }
     }
