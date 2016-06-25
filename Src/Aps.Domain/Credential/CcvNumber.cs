@@ -15,7 +15,12 @@ namespace Aps.Domain.Credential
         {
             Guard.ThatParameterNotNullOrEmpty(ccvnumber , "Ccv Number");
 
-            if (!Validator.CcvIsValid(ccvnumber))
+            if (ccvnumber.Length != 3)
+            {
+                throw new DomainException("Ccv Number", "Invalid Ccv Number passed");
+            }
+
+            if (!ccvnumber.All(c => c >= '0' && c <= '9'))
             {
                 throw new DomainException("Ccv Number", "Invalid Ccv Number passed");
             }

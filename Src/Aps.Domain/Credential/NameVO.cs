@@ -15,7 +15,7 @@ namespace Aps.Domain.Credential
         {
             Guard.ThatParameterNotNullOrEmpty(namevo, "First Name");
 
-            if (!Validator.NameVoIsValid(namevo))
+            if (namevo.Length > 100)
             {
                 throw new DomainException("First name credential", "First Name Invalid");
             }

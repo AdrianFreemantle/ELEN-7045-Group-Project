@@ -14,7 +14,8 @@ namespace Aps.Domain.Credential
         public SurnameVO(string surnamevo)
         {
             Guard.ThatParameterNotNullOrEmpty(surnamevo , "Surname");
-            if (!Validator.SurnameVoIsValid(surnamevo))
+
+            if (surnamevo.Length > 100)
             {
                 throw new DomainException("Surname credential", "Surname Invalid");
             }
