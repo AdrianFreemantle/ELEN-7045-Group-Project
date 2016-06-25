@@ -14,7 +14,7 @@ namespace Aps.Domain.Credential
 
             Console.WriteLine("Username  : "  + userName);
 
-            if (!Validator.CredentialIsValid(userName))
+            if (userName.Length > 100)
             {
                 throw new DomainException("User Name Credential", "Invalid User Name passed");
             }            
