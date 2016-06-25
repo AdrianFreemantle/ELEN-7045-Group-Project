@@ -154,7 +154,6 @@
     <Compile Include="Scraping\ScrapeSessionResult.cs" />
     <Compile Include="Scraping\ScrapeSessionResultCode.cs" />
     <Compile Include="Scraping\StatusNotificationRuleAttribute.cs" />
-    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aps\Aps.csproj">

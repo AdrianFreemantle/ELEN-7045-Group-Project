@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Aps.Domain.Credential
@@ -13,7 +14,9 @@ namespace Aps.Domain.Credential
         public TelephoneNumber(string telephonenumber)
         {
             Guard.ThatParameterNotNullOrEmpty(telephonenumber, "Telephone Number");
-            if (!Validator.PhoneIsValid(telephonenumber))
+
+            Regex ValidPhoneNoRegex = CreateValidPhoneRegex();
+            if (!ValidPhoneNoRegex.IsMatch(telephonenumber))
             {
                 throw new DomainException("Phone Number Credential", "Invalid Telephone Number");
             }
@@ -24,6 +27,13 @@ namespace Aps.Domain.Credential
         public override string ToString()
         {
             return _telephonenumber;
+        }
+
+        private static Regex CreateValidPhoneRegex()
+        {
+            string validPhonePattern = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
+
+            return new Regex(validPhonePattern, RegexOptions.IgnoreCase);
         }
     }
 }
