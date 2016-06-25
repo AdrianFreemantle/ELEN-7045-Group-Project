@@ -12,8 +12,8 @@ namespace Aps.Domain.Account.Tests
         [TestMethod]
         public void Two_accountid_identities_with_the_same_company_name_and_account_number_are_equal()
         {
-            var first = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
-            var second = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
+            var first = new AccountId(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
+            var second = new AccountId(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
 
             Runner.RunScenario(
             given => account_id(first),
@@ -25,8 +25,8 @@ namespace Aps.Domain.Account.Tests
         [TestMethod]
         public void Two_accountid_identities_with_diferent_company_name_and_account_number_are_not_equal()
         {
-            var first = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
-            var second = AccountId.Create(new CompanyName("JCSE Ltd"), new AccountNumber("1234567890"));
+            var first = new AccountId(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
+            var second = new AccountId(new CompanyName("JCSE Ltd"), new AccountNumber("1234567890"));
 
             Runner.RunScenario(
             given => account_id(first),
@@ -38,8 +38,8 @@ namespace Aps.Domain.Account.Tests
         [TestMethod]
         public void Two_accountid_identities_with_the_same_company_name_but_different_account_numbers_are_not_equal()
         {
-            var first = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
-            var second = AccountId.Create(new CompanyName("Acme Ltd"), new AccountNumber("0987654321"));
+            var first = new AccountId(new CompanyName("Acme Ltd"), new AccountNumber("1234567890"));
+            var second = new AccountId(new CompanyName("Acme Ltd"), new AccountNumber("0987654321"));
 
             Runner.RunScenario(
             given => account_id(first),

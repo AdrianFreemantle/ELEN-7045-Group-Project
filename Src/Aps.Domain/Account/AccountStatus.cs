@@ -14,11 +14,9 @@ namespace Aps.Domain.Account
             [System.ComponentModel.Description("Unknown Account Status")]
             Unknown,
             Register,
-            Rejected,
             [StatusNotificationRule(ShouldNotifyCustomer = true)]
             Active,
             Inactive,
-            Trying,
             UpdateCredentials,
             NotSignedUpForEBilling,
             ActionRequired,
@@ -30,7 +28,6 @@ namespace Aps.Domain.Account
         public static AccountStatus Register { get { return new AccountStatus(AccountStatusType.Register); } }
         public static AccountStatus Active { get { return new AccountStatus(AccountStatusType.Active); } }
         public static AccountStatus Inactive { get { return new AccountStatus(AccountStatusType.Inactive); } }
-        public static AccountStatus Trying { get { return new AccountStatus(AccountStatusType.Trying); } }
         public static AccountStatus UpdateCredentials { get { return new AccountStatus(AccountStatusType.UpdateCredentials); } }
         public static AccountStatus NotSignedUpForEBilling { get { return new AccountStatus(AccountStatusType.NotSignedUpForEBilling); } }
         public static AccountStatus ActionRequired { get { return new AccountStatus(AccountStatusType.ActionRequired); } }
