@@ -140,6 +140,7 @@
     <Compile Include="IAccountId.cs" />
     <Compile Include="IScrapeSessionResultCode.cs" />
     <Compile Include="Notifications\AccountActivityNotification.cs" />
+    <Compile Include="Notifications\AccountActivityNotificationFactory.cs" />
     <Compile Include="Notifications\AccountActivityNotificationId.cs" />
     <Compile Include="Notifications\INotificationService.cs" />
     <Compile Include="Notifications\NotificationStatus.cs" />
