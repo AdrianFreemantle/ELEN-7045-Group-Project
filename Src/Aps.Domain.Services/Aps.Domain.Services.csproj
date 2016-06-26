@@ -43,6 +43,7 @@
     <Compile Include="AccountStatementServices\AccountStatmentDisplayService.cs" />
     <Compile Include="CompanyServices\CompanyScriptService.cs" />
     <Compile Include="CustomerServices\CustomerRegistrationService.cs" />
+    <Compile Include="NotificationServices\AccountActivityNotificationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,9 +56,7 @@
       <Name>Aps</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NotificationServices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
