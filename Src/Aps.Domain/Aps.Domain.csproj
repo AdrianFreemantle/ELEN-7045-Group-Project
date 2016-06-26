@@ -123,6 +123,7 @@
     <Compile Include="Credential\Password.cs" />
     <Compile Include="Credential\SecurityCode.cs" />
     <Compile Include="Credential\PinNumber.cs" />
+    <Compile Include="IAccountActivityNotificationRepository.cs" />
     <Compile Include="IAccountNumber.cs" />
     <Compile Include="INotificationService.cs" />
     <Compile Include="IScrapeSessionId.cs" />
