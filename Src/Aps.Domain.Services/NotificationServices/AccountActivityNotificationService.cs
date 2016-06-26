@@ -26,13 +26,13 @@ namespace Aps.Domain.Services.NotificationServices
             factory = new AccountActivityNotificationFactory();
         }
 
-        public void NotifyCustomerOfInvalidCredentialsForAccount(IAccountId accountId)
+        public void NotifyCustomerOfInvalidCredentialsForAccount(AccountId accountId)
         {
             Guard.ThatValueTypeNotDefaut(accountId, "accountId");
-            //   Account.Account account = accountRepository.FetchById(accountId);
+            Account.Account account = accountRepository.FetchById(accountId);
 
-            //  var notifcation = factory.Create(account, NotificationType.InvalidAccountCredentials);
-            //  accountActivityNotificationRepository.Save(notifcation);
+            var notifcation = factory.Create(account, NotificationType.InvalidAccountCredentials);
+            accountActivityNotificationRepository.Save(notifcation);
 
         }
     }

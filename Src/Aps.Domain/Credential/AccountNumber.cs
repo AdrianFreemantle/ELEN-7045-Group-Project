@@ -1,6 +1,6 @@
 namespace Aps.Domain.Credential
 {
-    public struct AccountNumber
+    public struct AccountNumber :IAccountNumber
     {
         private readonly string accountnumber;
 

@@ -1,4 +1,5 @@
 using System;
+using Aps.Domain.Companies;
 using Aps.Domain.Credential;
 
 namespace Aps.Domain.Account
@@ -6,9 +7,9 @@ namespace Aps.Domain.Account
     public struct AccountId
     {
         private readonly AccountNumber accountNumber;
-        private readonly ICompanyName companyName;
+        private readonly CompanyName companyName;
 
-        public  AccountId(ICompanyName companyName, AccountNumber accountNumber)
+        public  AccountId(CompanyName companyName, AccountNumber accountNumber)
         {
             Guard.ThatValueTypeNotDefaut(companyName, "companyName");
             Guard.ThatValueTypeNotDefaut(accountNumber, "accountNumber");
@@ -22,7 +23,7 @@ namespace Aps.Domain.Account
             return accountNumber;
         }
 
-        public ICompanyName GetCompanyName()
+        public CompanyName GetCompanyName()
         {
             return companyName;
         }
