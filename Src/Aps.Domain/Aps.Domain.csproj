@@ -139,6 +139,7 @@
     <Compile Include="ICustomerId.cs" />
     <Compile Include="IAccountId.cs" />
     <Compile Include="IScrapeSessionResultCode.cs" />
+    <Compile Include="Notifications\AccountActivityNotificationId.cs" />
     <Compile Include="Notifications\INotificationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\ScrapeResultDataPair.cs" />
