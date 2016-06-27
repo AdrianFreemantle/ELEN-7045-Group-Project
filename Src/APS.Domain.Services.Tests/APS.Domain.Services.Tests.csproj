@@ -70,8 +70,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Fixitures\Pipeline_modules.Fixture.cs" />
-    <Compile Include="Fixitures\Account_statment_creation_pipeline_module.cs" />
-    <Compile Include="Account_statment_creation_pipeline_module.cs" />
+    <Compile Include="Fixitures\Account_statement_creation_pipeline_module.cs" />
+    <Compile Include="Account_statement_creation_pipeline_module.cs" />
     <Compile Include="Stubs\AccountIdStub.cs" />
     <Compile Include="Stubs\TestPipelineModule1.cs" />
     <Compile Include="Stubs\TestPipelineModule2.cs" />

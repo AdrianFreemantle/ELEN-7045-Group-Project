@@ -4,7 +4,7 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
-    public interface IAccountStatmentDisplayAdapter
+    public interface IAccountStatementDisplayAdapter
     {
         void Display(IAccountNumber accountNumber, ICompanyName companyName, CalendarMonth billingMonth, IEnumerable<StatementEntryDisplayValue> statementEntries);
     }

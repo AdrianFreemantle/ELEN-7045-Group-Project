@@ -17,9 +17,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.TotalDue),
+            and => an_account_statement_entry_type(StatementEntryType.TotalDue),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Total Amount Due", "1500"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Total Due"), 
             and => the_value_should_be_expected("R1,500.00"));
@@ -30,9 +30,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.StatementNumber),
+            and => an_account_statement_entry_type(StatementEntryType.StatementNumber),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Stat. No", "1601-34567890"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Statement Number"),
             and => the_value_should_be_expected("1601-34567890"));
@@ -43,9 +43,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.ElectricityUsed),
+            and => an_account_statement_entry_type(StatementEntryType.ElectricityUsed),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Elec. Use", "567kwh"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Electricity Used"),
             and => the_value_should_be_expected("567 kWh"));
@@ -56,9 +56,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.InterestRate),
+            and => an_account_statement_entry_type(StatementEntryType.InterestRate),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Interest Rt.", "12"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Interest Rate"),
             and => the_value_should_be_expected("12.0 %"));
@@ -69,9 +69,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.TotalCallDuration),
+            and => an_account_statement_entry_type(StatementEntryType.TotalCallDuration),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Call Length", "00:12:25"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Total Call Duration"),
             and => the_value_should_be_expected("00:12:25"));
@@ -82,9 +82,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.DueDate),
+            and => an_account_statement_entry_type(StatementEntryType.DueDate),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Due by", "2016-01-31"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Due Date"),
             and => the_value_should_be_expected("2016/01/31"));
@@ -95,9 +95,9 @@ namespace Aps.Domain.AccountStatements.Tests
         {
             Runner.RunScenario(
             given => an_account_statement_entry_factory(),
-            and => an_account_statment_entry_type(StatmentEntryType.StatementMonth),
+            and => an_account_statement_entry_type(StatementEntryType.StatementMonth),
             and => a_scrape_result_data_pair_with_id_and_description_and_value("001", "Month", "03"),
-            when => building_an_account_statment_entry(),
+            when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Statement Month"),
             and => the_value_should_be_expected("Mar"));

@@ -6,7 +6,7 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements.Tests.Stubs
 {
-    public class AccountStatmentRepositoryStub : IAccountStatementRepository
+    public class AccountStatementRepositoryStub : IAccountStatementRepository
     {
         private readonly List<AccountStatement> savedAccountStatements = new List<AccountStatement>();
  

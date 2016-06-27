@@ -8,7 +8,7 @@ namespace Aps.Domain.Companies
     {
         private readonly List<IDataIntegrityCheck> integrityChecks;
         private readonly List<IDataIntegrityCheckOverride> integrityCheckOverrides;
-        private readonly List<AccountStatmentEntryMapping> mappings;
+        private readonly List<AccountStatementEntryMapping> mappings;
 
         public CompanyName CompanyName { get; private set; }
         public CompanyType CompanyType { get; private set; }
@@ -26,7 +26,7 @@ namespace Aps.Domain.Companies
             get { return integrityCheckOverrides; }
         }
 
-        public IEnumerable<AccountStatmentEntryMapping> Mappings
+        public IEnumerable<AccountStatementEntryMapping> Mappings
         {
             get { return mappings; }
         }
@@ -46,7 +46,7 @@ namespace Aps.Domain.Companies
 
             integrityChecks = new List<IDataIntegrityCheck>();
             integrityCheckOverrides = new List<IDataIntegrityCheckOverride>();
-            mappings = new List<AccountStatmentEntryMapping>();
+            mappings = new List<AccountStatementEntryMapping>();
         }
 
         public bool Equals(Company other)

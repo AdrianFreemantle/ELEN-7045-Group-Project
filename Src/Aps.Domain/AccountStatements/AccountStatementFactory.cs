@@ -11,34 +11,34 @@ namespace Aps.Domain.AccountStatements
 {
     public class AccountStatementFactory
     {
-        private readonly StatmentEntryFactory statmentEntryFactory;
+        private readonly StatementEntryFactory statementEntryFactory;
 
-        public AccountStatementFactory(StatmentEntryFactory statmentEntryFactory)
+        public AccountStatementFactory(StatementEntryFactory statementEntryFactory)
         {
-            Guard.ThatParameterNotNull(statmentEntryFactory, "accountStatmentEntryFactory");
+            Guard.ThatParameterNotNull(statementEntryFactory, "accountStatementEntryFactory");
 
-            this.statmentEntryFactory = statmentEntryFactory;
+            this.statementEntryFactory = statementEntryFactory;
         }
 
-        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
+        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatementEntryMapping> mappings)
         {
             return CreateAccountStatement(scrapeSessionResult, mappings, new IDataIntegrityCheck[0], new IDataIntegrityCheckOverride[0]);
         }
 
-        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks)
+        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatementEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks)
         {
             return CreateAccountStatement(scrapeSessionResult, mappings, integrityChecks, new IDataIntegrityCheckOverride[0]);
         }
 
-        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks, ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides)
+        public AccountStatement CreateAccountStatement(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatementEntryMapping> mappings, ICollection<IDataIntegrityCheck> integrityChecks, ICollection<IDataIntegrityCheckOverride> integrityCheckOverrides)
         {
             Guard.ThatValueTypeNotDefaut(scrapeSessionResult, "scrapeSessionResult");
             Guard.ThatParameterNotNull(mappings, "mappings");
             Guard.ThatParameterNotNull(integrityChecks, "integrityChecks");
             Guard.ThatParameterNotNull(integrityCheckOverrides, "integrityCheckOverrides");
-            Guard.ThatParameterNotNull(statmentEntryFactory, "accountStatmentEntryFactory");
+            Guard.ThatParameterNotNull(statementEntryFactory, "accountStatementEntryFactory");
 
-            var entries = BuildAccountStatmentEntries(scrapeSessionResult, mappings);
+            var entries = BuildAccountStatementEntries(scrapeSessionResult, mappings);
 
             foreach (var integrityCheck in integrityChecks.Where(i => !integrityCheckOverrides.Any(o => o.Override(i)))) 
             {
@@ -57,15 +57,15 @@ namespace Aps.Domain.AccountStatements
             return new AccountStatement(accountStatementId, entries);
         }
 
-        private ICollection<StatmentEntry> BuildAccountStatmentEntries(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatmentEntryMapping> mappings)
+        private ICollection<StatementEntry> BuildAccountStatementEntries(ScrapeSessionResult scrapeSessionResult, ICollection<AccountStatementEntryMapping> mappings)
         {
-            List<StatmentEntry> entries = new List<StatmentEntry>();
+            List<StatementEntry> entries = new List<StatementEntry>();
 
             foreach (ScrapeResultDataPair scrapeResultDataPair in scrapeSessionResult.TextValuePairs)
             {
-                AccountStatmentEntryMapping mapping = mappings.SingleOrDefault(m => m.FieldId.Equals(scrapeResultDataPair.Id)); //todo: throw appropriate error
+                AccountStatementEntryMapping mapping = mappings.SingleOrDefault(m => m.FieldId.Equals(scrapeResultDataPair.Id)); //todo: throw appropriate error
 
-                StatmentEntry entry = statmentEntryFactory.Build(mapping.EntryType, scrapeResultDataPair); 
+                StatementEntry entry = statementEntryFactory.Build(mapping.EntryType, scrapeResultDataPair); 
                 entries.Add(entry);
             }
 

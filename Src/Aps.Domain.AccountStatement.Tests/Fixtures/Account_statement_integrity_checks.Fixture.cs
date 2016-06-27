@@ -13,14 +13,14 @@ namespace Aps.Domain.AccountStatements.Tests
     public partial class Account_statement_integrity_checks : FeatureFixture
     {
         private List<IDataIntegrityCheck> dataIntegrityChecks;
-        private List<AccountStatmentEntryMapping> mappings;
+        private List<AccountStatementEntryMapping> mappings;
         private List<ScrapeResultDataPair> textValuePairs;
 
         private AccountStatementFactory accountStatementFactory;
-        private StatmentEntryFactory statmentEntryFactory;
+        private StatementEntryFactory _statementEntryFactory;
         private ScrapeSessionResult scrapeSessionResult;
         private ScrapeSessionResultCode resultCode;
-        private AccountStatement accountStatment;
+        private AccountStatement accountStatement;
         private IAccountId accountId;
         private DataIntegrityCheckFailedException dataIntegrityCheckFailedException;
 
@@ -28,13 +28,13 @@ namespace Aps.Domain.AccountStatements.Tests
         public void Initialize()
         {
             dataIntegrityChecks = new List<IDataIntegrityCheck>();
-            mappings = new List<AccountStatmentEntryMapping>();
+            mappings = new List<AccountStatementEntryMapping>();
             textValuePairs = new List<ScrapeResultDataPair>();
         }
 
-        private void a_mapping_code_id_for_entryType(string id, StatmentEntryType entryType)
+        private void a_mapping_code_id_for_entryType(string id, StatementEntryType entryType)
         {
-            var mapping = AccountStatmentEntryMapping.MapNumericValue(entryType, id);
+            var mapping = AccountStatementEntryMapping.MapNumericValue(entryType, id);
             mappings.Add(mapping);
         }
 
@@ -50,16 +50,16 @@ namespace Aps.Domain.AccountStatements.Tests
             resultCode = ScrapeSessionResultCode.Complete;
         }
 
-        public void creating_an_account_statment()
+        public void creating_an_account_statement()
         {
             try
             {
                 scrapeSessionResult = new ScrapeSessionResult(resultCode, accountId, DateTime.Now, textValuePairs);
                 IDataIntegrityCheck check = new AdditionIntegrityCheck();
                 dataIntegrityChecks.Add(check);
-                statmentEntryFactory = new StatmentEntryFactory();
-                accountStatementFactory = new AccountStatementFactory(statmentEntryFactory);
-                accountStatment = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, dataIntegrityChecks);
+                _statementEntryFactory = new StatementEntryFactory();
+                accountStatementFactory = new AccountStatementFactory(_statementEntryFactory);
+                accountStatement = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, dataIntegrityChecks);
             }
             catch (DataIntegrityCheckFailedException ex)
             {

@@ -5,17 +5,17 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
-    public class StatmentEntry : IEquatable<StatmentEntry>
+    public class StatementEntry : IEquatable<StatementEntry>
     {
-        private readonly StatmentEntryId id;
+        private readonly StatementEntryId id;
         private readonly IAccountStatementEntryData value;
-        private readonly StatmentEntryType entryType;
+        private readonly StatementEntryType entryType;
 
-        protected StatmentEntry()
+        protected StatementEntry()
         {
         }
 
-        internal StatmentEntry(StatmentEntryId id, StatmentEntryType entryType, IAccountStatementEntryData value)
+        internal StatementEntry(StatementEntryId id, StatementEntryType entryType, IAccountStatementEntryData value)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
@@ -48,7 +48,7 @@ namespace Aps.Domain.AccountStatements
             return true;
         }
 
-        public bool Equals(StatmentEntry other)
+        public bool Equals(StatementEntry other)
         {
             if (other == null)
                 return false;
@@ -56,7 +56,7 @@ namespace Aps.Domain.AccountStatements
             return other.id.Equals(id);
         }
 
-        public bool EntryTypeEquals(StatmentEntryType other)
+        public bool EntryTypeEquals(StatementEntryType other)
         {
             return entryType.Equals(other);
         }

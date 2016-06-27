@@ -37,8 +37,8 @@ namespace Aps.Domain.AccountStatements.Tests
             var id1 = AccountStatementId.Create(accountId1, callCalendarMonth1);
             var id2 = AccountStatementId.Create(accountId2, callCalendarMonth2);
 
-            statement1 = new AccountStatement(id1, new List<StatmentEntry>());
-            statement2 = new AccountStatement(id2, new List<StatmentEntry>());
+            statement1 = new AccountStatement(id1, new List<StatementEntry>());
+            statement2 = new AccountStatement(id2, new List<StatementEntry>());
         }
 
         private void two_account_statements_for_calendar_month(DateTime runTime)

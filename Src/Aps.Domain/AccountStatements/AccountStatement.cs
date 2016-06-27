@@ -9,25 +9,25 @@ namespace Aps.Domain.AccountStatements
     public class AccountStatement
     {
         private readonly AccountStatementId id;
-        private readonly ICollection<StatmentEntry> accountStatmentEntries;
+        private readonly ICollection<StatementEntry> accountStatementEntries;
 
         //just to ensure that the default constructor can't be called
         protected AccountStatement()
         {
         }
 
-        internal AccountStatement(AccountStatementId id, ICollection<StatmentEntry> entries)
+        internal AccountStatement(AccountStatementId id, ICollection<StatementEntry> entries)
         {
             Guard.ThatValueTypeNotDefaut(id, "id");
             Guard.ThatParameterNotNull(entries, "entries");
 
             this.id = id;
-            this.accountStatmentEntries = new List<StatmentEntry>(entries); //we create a new list so as to not be affected by changes to the collection passed in
+            this.accountStatementEntries = new List<StatementEntry>(entries); //we create a new list so as to not be affected by changes to the collection passed in
         }
 
-        public void Display(IAccountStatmentDisplayAdapter displayAdapter)
+        public void Display(IAccountStatementDisplayAdapter displayAdapter)
         {
-            IEnumerable<StatementEntryDisplayValue> displayValues = accountStatmentEntries.Select(e => e.GetDisplayValue());
+            IEnumerable<StatementEntryDisplayValue> displayValues = accountStatementEntries.Select(e => e.GetDisplayValue());
             displayAdapter.Display(id.AccountNumber, id.CompanyName, id.CalendarMonth, displayValues);
         }
 

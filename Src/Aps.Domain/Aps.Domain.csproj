@@ -55,10 +55,10 @@
     <Compile Include="AccountStatements\StatementEntryDisplayValue.cs" />
     <Compile Include="AccountStatements\AccountStatementFactory.cs" />
     <Compile Include="AccountStatements\AccountStatementId.cs" />
-    <Compile Include="AccountStatements\StatmentEntry.cs" />
-    <Compile Include="AccountStatements\StatmentEntryFactory.cs" />
-    <Compile Include="AccountStatements\StatmentEntryId.cs" />
-    <Compile Include="AccountStatements\StatmentEntryType.cs" />
+    <Compile Include="AccountStatements\StatementEntry.cs" />
+    <Compile Include="AccountStatements\StatementEntryFactory.cs" />
+    <Compile Include="AccountStatements\StatementEntryId.cs" />
+    <Compile Include="AccountStatements\StatementEntryType.cs" />
     <Compile Include="AccountStatements\AccountStatementIntegrityChecks\AdditionIntegrityCheck.cs" />
     <Compile Include="AccountStatements\AccountStatementIntegrityChecks\DataIntegrityCheckBase.cs" />
     <Compile Include="AccountStatements\AccountStatementIntegrityChecks\DataIntegrityCheckFailedException.cs" />
@@ -82,7 +82,7 @@
     <Compile Include="AccountStatements\StatementEntryDataTypes\TextValue.cs" />
     <Compile Include="AccountStatements\IAccountStatementEntryData.cs" />
     <Compile Include="AccountStatements\IAccountStatementRepository.cs" />
-    <Compile Include="AccountStatements\IAccountStatmentDisplayAdapter.cs" />
+    <Compile Include="AccountStatements\IAccountStatementDisplayAdapter.cs" />
     <Compile Include="AccountStatements\IDataIntegrityCheck.cs" />
     <Compile Include="AccountStatements\IDataTypeConverter.cs" />
     <Compile Include="AccountStatements\StatementEntryDataTypeAttribute.cs" />
@@ -103,7 +103,7 @@
     <Compile Include="Companies\ICompanyRepository.cs" />
     <Compile Include="Companies\ICompanyScriptService.cs" />
     <Compile Include="Companies\IDataIntegrityCheckOverride.cs" />
-    <Compile Include="Companies\AccountStatmentEntryMapping.cs" />
+    <Compile Include="Companies\AccountStatementEntryMapping.cs" />
     <Compile Include="Companies\CompanyName.cs" />
     <Compile Include="Companies\LeadTime.cs" />
     <Compile Include="Companies\NumberOfDaysPerCycle.cs" />

@@ -7,11 +7,11 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.AccountStatements
 {
-    public class StatmentEntryFactory
+    public class StatementEntryFactory
     {
         private readonly ICollection<IDataTypeConverter> dataTypeConverters;
 
-        public StatmentEntryFactory()
+        public StatementEntryFactory()
         {
             dataTypeConverters = new IDataTypeConverter[]
             {
@@ -25,30 +25,30 @@ namespace Aps.Domain.AccountStatements
             };
         }
 
-        public StatmentEntryFactory(ICollection<IDataTypeConverter> dataTypeConverters)
+        public StatementEntryFactory(ICollection<IDataTypeConverter> dataTypeConverters)
         {
             Guard.ThatParameterNotNullOrEmpty(dataTypeConverters, "dataTypeConverters");
         }
 
-        public StatmentEntry Build(StatmentEntryType entryType, ScrapeResultDataPair dataPair)
+        public StatementEntry Build(StatementEntryType entryType, ScrapeResultDataPair dataPair)
         {
             Guard.ThatValueTypeNotDefaut(dataPair, "dataPair");
             Guard.ThatValueTypeNotDefaut(entryType, "entryType");
 
             IDataTypeConverter converter = GetDataTypeConverter(entryType);
 
-            return BuildAccountStatmentEntry(entryType, dataPair, converter);
+            return BuildAccountStatementEntry(entryType, dataPair, converter);
         }
 
-        private static StatmentEntry BuildAccountStatmentEntry(StatmentEntryType entryType, ScrapeResultDataPair dataPair, IDataTypeConverter converter)
+        private static StatementEntry BuildAccountStatementEntry(StatementEntryType entryType, ScrapeResultDataPair dataPair, IDataTypeConverter converter)
         {
             IAccountStatementEntryData accountStatementEntryData = converter.ConvertToStatementEntryDataType(dataPair);
             int id = NumericValue.Parse(dataPair.Id).ToInt32();
-            StatmentEntryId entryId = new StatmentEntryId(id);
-            return new StatmentEntry(entryId, entryType, accountStatementEntryData);
+            StatementEntryId entryId = new StatementEntryId(id);
+            return new StatementEntry(entryId, entryType, accountStatementEntryData);
         }
 
-        private IDataTypeConverter GetDataTypeConverter(StatmentEntryType entryType)
+        private IDataTypeConverter GetDataTypeConverter(StatementEntryType entryType)
         {
             StatementEntryDataType type = entryType.GetDataType();
 

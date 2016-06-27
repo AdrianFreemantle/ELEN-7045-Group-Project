@@ -4,12 +4,12 @@ using Aps.Domain.Common;
 
 namespace Aps.Domain.Services.AccountStatementServices
 {
-    public class AccountStatmentDisplayService
+    public class AccountStatementDisplayService
     {
         private readonly IAccountStatementRepository accountStatementRepository;
-        private readonly IAccountStatmentDisplayAdapter displayAdapter;
+        private readonly IAccountStatementDisplayAdapter displayAdapter;
 
-        public AccountStatmentDisplayService(IAccountStatementRepository accountStatementRepository, IAccountStatmentDisplayAdapter displayAdapter)
+        public AccountStatementDisplayService(IAccountStatementRepository accountStatementRepository, IAccountStatementDisplayAdapter displayAdapter)
         {
             Guard.ThatParameterNotNull(accountStatementRepository, "accountStatementRepository");
             Guard.ThatParameterNotNull(displayAdapter, "displayAdapter");

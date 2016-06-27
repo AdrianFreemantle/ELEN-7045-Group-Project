@@ -6,7 +6,7 @@ namespace Aps.Domain.AccountStatements.Tests
 {
     [TestClass]
     [ScenarioCategory("Account Statements")]
-    [FeatureDescription(@"Account statments should be equatable based on identity and not on internal state")]
+    [FeatureDescription(@"Account statements should be equatable based on identity and not on internal state")]
     public partial class Account_statement_equality : FeatureFixture
     {
         [TestMethod]

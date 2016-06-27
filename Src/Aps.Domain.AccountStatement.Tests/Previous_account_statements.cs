@@ -9,7 +9,7 @@ namespace Aps.Domain.AccountStatements.Tests
     public partial class Previous_account_statements
     {
         [TestMethod]
-        public void Account_statement_repository_cant_fetch_all_prior_statments_for_an_account()
+        public void Account_statement_repository_cant_fetch_all_prior_statements_for_an_account()
         {
             string accountNumber = "12345";
 

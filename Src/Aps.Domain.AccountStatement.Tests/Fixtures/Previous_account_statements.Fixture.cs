@@ -12,7 +12,7 @@ namespace Aps.Domain.AccountStatements.Tests
 {
     public partial class Previous_account_statements : FeatureFixture
     {
-        private AccountStatmentRepositoryStub repository;
+        private AccountStatementRepositoryStub repository;
         private AccountIdStub accountId;
         private CalendarMonth month;
         private AccountStatementId accountStatementId;
@@ -34,13 +34,13 @@ namespace Aps.Domain.AccountStatements.Tests
             month = new CalendarMonth(DateTime.Now);
             accountId = new AccountIdStub(accountNumber);
             accountStatementId = AccountStatementId.Create(accountId, month);
-            statement = new AccountStatement(accountStatementId, new List<StatmentEntry>());
+            statement = new AccountStatement(accountStatementId, new List<StatementEntry>());
             repository.Save(statement);
         }
 
         private void an_account_statement_repository()
         {
-            repository = new AccountStatmentRepositoryStub();
+            repository = new AccountStatementRepositoryStub();
         }
     }
 }

@@ -15,10 +15,10 @@ using IAccountStatementCreationService = Aps.Domain.AccountStatements.IAccountSt
 // ReSharper disable once CheckNamespace
 namespace APS.Domain.Services.Tests
 {
-    public partial class Account_statment_creation_pipeline_module : FeatureFixture
+    public partial class Account_statement_creation_pipeline_module : FeatureFixture
     {
         private readonly PipelineFactory<ScrapeSessionResult> scrapeSessionResultPipelineFactory = new PipelineFactory<ScrapeSessionResult>();
-        private Mock<IAccountStatementCreationService> accountStatmentCreationServiceMock;
+        private Mock<IAccountStatementCreationService> accountStatementCreationServiceMock;
         private Mock<INotificationService> customerNotificationServiceMock;
         private Mock<IAccountStatusUpdateService> accountStatusUpdateServiceMock;
         private Mock<ICompanyScriptService> companyScriptServiceMock;
@@ -58,9 +58,9 @@ namespace APS.Domain.Services.Tests
             accountStatusUpdateServiceMock.Verify(service => service.ActivateAccount(scrapeSessionResult.AccountId), () => Times.Exactly(1));
         }
 
-        private void Then_the_account_statment_creation_service_creates_an_account_statement()
+        private void Then_the_account_statement_creation_service_creates_an_account_statement()
         {
-            accountStatmentCreationServiceMock.Verify(service => service.CreateAccountStatementFromScrapeResult(scrapeSessionResult), () => Times.Exactly(1));
+            accountStatementCreationServiceMock.Verify(service => service.CreateAccountStatementFromScrapeResult(scrapeSessionResult), () => Times.Exactly(1));
         }
 
         private void When_the_pipeline_is_invoked()
@@ -70,17 +70,17 @@ namespace APS.Domain.Services.Tests
 
         private void And_an_scrape_session_result_pipeline()
         {
-            scrapeSessionResultPipelineFactory.Register(new AccountStatementCreationModule(accountStatmentCreationServiceMock.Object));
+            scrapeSessionResultPipelineFactory.Register(new AccountStatementCreationModule(accountStatementCreationServiceMock.Object));
             scrapeSessionResultPipelineFactory.Register(new AccountStatusUpdateModule(accountStatusUpdateServiceMock.Object));
             scrapeSessionResultPipelineFactory.Register(new BrokenScriptModule(companyScriptServiceMock.Object));
             scrapeSessionResultPipelineFactory.Register(new CustomerNotificationModule(customerNotificationServiceMock.Object));
             pipeline = scrapeSessionResultPipelineFactory.Build();
         }
 
-        private void And_an_account_statment_creation_service()
+        private void And_an_account_statement_creation_service()
         {
-            accountStatmentCreationServiceMock = new Mock<IAccountStatementCreationService>();
-            accountStatmentCreationServiceMock.Setup(e => e.CreateAccountStatementFromScrapeResult(scrapeSessionResult));
+            accountStatementCreationServiceMock = new Mock<IAccountStatementCreationService>();
+            accountStatementCreationServiceMock.Setup(e => e.CreateAccountStatementFromScrapeResult(scrapeSessionResult));
         }
 
         private void Given_a_completed_scrape_session_result()

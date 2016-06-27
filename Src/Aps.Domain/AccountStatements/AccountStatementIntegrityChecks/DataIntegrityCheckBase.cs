@@ -6,14 +6,14 @@ namespace Aps.Domain.AccountStatements.AccountStatementIntegrityChecks
 {
     public abstract class DataIntegrityCheckBase
     {
-        protected Balance GetBalanceValue(ICollection<StatmentEntry> statmentEntries, StatmentEntryType entryType)
+        protected Balance GetBalanceValue(ICollection<StatementEntry> statementEntries, StatementEntryType entryType)
         {
-            Guard.ThatParameterNotNullOrEmpty(statmentEntries, "statmentEntries");
+            Guard.ThatParameterNotNullOrEmpty(statementEntries, "statementEntries");
             Guard.ThatValueTypeNotDefaut(entryType, "type");
 
-            var openingBalance = statmentEntries.FirstOrDefault(e => e.EntryTypeEquals(entryType));
+            var openingBalance = statementEntries.FirstOrDefault(e => e.EntryTypeEquals(entryType));
 
-            // if the statment does not contain the value then just return a default as not all statments contain all fields
+            // if the statement does not contain the value then just return a default as not all statements contain all fields
             if (openingBalance == null)
                 return new Balance();
 

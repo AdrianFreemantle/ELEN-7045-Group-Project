@@ -22,8 +22,8 @@ namespace Aps.Domain.Services.AccountStatementServices
 
         public void CreateAccountStatementFromScrapeResult(ScrapeSessionResult scrapeSessionResult)
         {
-            var accountStatmentEntryFactory = new StatmentEntryFactory();
-            var accountStatementFactory = new AccountStatementFactory(accountStatmentEntryFactory);
+            var accountStatementEntryFactory = new StatementEntryFactory();
+            var accountStatementFactory = new AccountStatementFactory(accountStatementEntryFactory);
 
             var companyName = scrapeSessionResult.AccountId.CompanyName;
             Company company = companyRepository.FetchByName(companyName);
@@ -32,8 +32,8 @@ namespace Aps.Domain.Services.AccountStatementServices
             var integrityChecks = company.IntegrityChecks.ToArray();
             var integrityCheckOverrides = company.IntegrityCheckOverrides.ToArray();
 
-            var accountStatment = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, integrityChecks, integrityCheckOverrides);
-            accountStatementRepository.Save(accountStatment);
+            var accountStatement = accountStatementFactory.CreateAccountStatement(scrapeSessionResult, mappings, integrityChecks, integrityCheckOverrides);
+            accountStatementRepository.Save(accountStatement);
         }
     }
 }

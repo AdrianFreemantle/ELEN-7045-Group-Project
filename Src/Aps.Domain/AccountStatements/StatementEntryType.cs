@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace Aps.Domain.AccountStatements
 {
-    public struct StatmentEntryType
+    public struct StatementEntryType
     {
         private readonly AccountStatementEntryEnum entryType;
 
@@ -64,92 +64,92 @@ namespace Aps.Domain.AccountStatements
             TotalCallDuration
         }
 
-        public static StatmentEntryType AccountNumber
+        public static StatementEntryType AccountNumber
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.AccountNumber); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.AccountNumber); }
         }
 
-        public static StatmentEntryType AccountHolderName
+        public static StatementEntryType AccountHolderName
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.AccountHolderName); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.AccountHolderName); }
         }
 
-        public static StatmentEntryType StatementDate
+        public static StatementEntryType StatementDate
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.StatementDate); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.StatementDate); }
         }
 
-        public static StatmentEntryType StatementNumber
+        public static StatementEntryType StatementNumber
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.StatementNumber); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.StatementNumber); }
         }
 
-        public static StatmentEntryType StatementMonth
+        public static StatementEntryType StatementMonth
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.StatementMonth); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.StatementMonth); }
         }
 
-        public static StatmentEntryType TotalDue
+        public static StatementEntryType TotalDue
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.TotalDue); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.TotalDue); }
         }
 
-        public static StatmentEntryType DueDate
+        public static StatementEntryType DueDate
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.DueDate); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.DueDate); }
         }
 
-        public static StatmentEntryType ClosingBalance
+        public static StatementEntryType ClosingBalance
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.ClosingBalance); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.ClosingBalance); }
         }
 
-        public static StatmentEntryType PaymentReceived
+        public static StatementEntryType PaymentReceived
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.PaymentReceived); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.PaymentReceived); }
         }
 
-        public static StatmentEntryType NewCharges
+        public static StatementEntryType NewCharges
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.NewCharges); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.NewCharges); }
         }
 
-        public static StatmentEntryType Deductions
+        public static StatementEntryType Deductions
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.Deductions); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.Deductions); }
         }
 
-        public static StatmentEntryType OpeningBalance
+        public static StatementEntryType OpeningBalance
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.OpeningBalance); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.OpeningBalance); }
         }
 
-        public static StatmentEntryType Discount
+        public static StatementEntryType Discount
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.Discount); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.Discount); }
         }
 
-        public static StatmentEntryType VatAmount
+        public static StatementEntryType VatAmount
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.VatAmount); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.VatAmount); }
         }
 
-        public static StatmentEntryType ElectricityUsed
+        public static StatementEntryType ElectricityUsed
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.ElectricityUsed); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.ElectricityUsed); }
         }
 
-        public static StatmentEntryType InterestRate
+        public static StatementEntryType InterestRate
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.InterestRate); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.InterestRate); }
         }
 
-        public static StatmentEntryType TotalCallDuration
+        public static StatementEntryType TotalCallDuration
         {
-            get { return new StatmentEntryType(AccountStatementEntryEnum.TotalCallDuration); }
+            get { return new StatementEntryType(AccountStatementEntryEnum.TotalCallDuration); }
         }
 
-        private StatmentEntryType(AccountStatementEntryEnum entryType)
+        private StatementEntryType(AccountStatementEntryEnum entryType)
         {
             this.entryType = entryType;
         }

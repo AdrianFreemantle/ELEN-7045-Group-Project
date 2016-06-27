@@ -7,10 +7,10 @@ namespace Aps.Domain.AccountStatements.Tests
 {
     public partial class Consistent_representation_of_entry_types : FeatureFixture
     {
-        private StatmentEntryType statmentEntryType;
-        private StatmentEntryFactory statmentEntryFactory;
+        private StatementEntryType _statementEntryType;
+        private StatementEntryFactory _statementEntryFactory;
         private ScrapeResultDataPair scrapeResultDataPair;
-        private StatmentEntry statmentEntry;
+        private StatementEntry _statementEntry;
         private StatementEntryDisplayValue displayValue;
 
         private void the_value_should_be_expected(string expected)
@@ -25,12 +25,12 @@ namespace Aps.Domain.AccountStatements.Tests
 
         private void getting_the_account_statement_entry_display_value()
         {
-            displayValue = statmentEntry.GetDisplayValue();
+            displayValue = _statementEntry.GetDisplayValue();
         }
 
-        private void building_an_account_statment_entry()
+        private void building_an_account_statement_entry()
         {
-            statmentEntry = statmentEntryFactory.Build(statmentEntryType, scrapeResultDataPair);
+            _statementEntry = _statementEntryFactory.Build(_statementEntryType, scrapeResultDataPair);
         }
 
         private void a_scrape_result_data_pair_with_id_and_description_and_value(string id, string description, string value)
@@ -38,14 +38,14 @@ namespace Aps.Domain.AccountStatements.Tests
             scrapeResultDataPair = new ScrapeResultDataPair(id, description, value);
         }
 
-        private void an_account_statment_entry_type(StatmentEntryType type)
+        private void an_account_statement_entry_type(StatementEntryType type)
         {
-            statmentEntryType = type;
+            _statementEntryType = type;
         }
 
         private void an_account_statement_entry_factory()
         {
-            statmentEntryFactory = new StatmentEntryFactory();
+            _statementEntryFactory = new StatementEntryFactory();
         }
     }
 }

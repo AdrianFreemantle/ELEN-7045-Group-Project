@@ -84,7 +84,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Fixtures\Previous_account_statements.Fixture.cs" />
     <Compile Include="Previous_account_statements.cs" />
-    <Compile Include="Stubs\AccountStatmentRepositoryStub.cs" />
+    <Compile Include="Stubs\AccountStatementRepositoryStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
