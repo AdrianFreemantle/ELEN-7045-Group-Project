@@ -32,13 +32,13 @@ namespace Aps.Domain.AccountStatements.Tests
             textValuePairs = new List<ScrapeResultDataPair>();
         }
 
-        private void a_mapping_code_id_for_entryType(string id, StatementEntryType entryType)
+        private void a_mapping_for_entryType(string id, StatementEntryType entryType)
         {
             var mapping = AccountStatementEntryMapping.MapNumericValue(entryType, id);
             mappings.Add(mapping);
         }
 
-        private void a_scrape_result_data_pair_with_id_and_description_and_value(string id, string description, string value)
+        private void a_scrape_result_data_pair(string id, string description, string value)
         {
             var scrapeResultDataPair = new ScrapeResultDataPair(id, description, value);
             textValuePairs.Add(scrapeResultDataPair);
