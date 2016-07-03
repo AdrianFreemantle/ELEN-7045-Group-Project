@@ -16,11 +16,13 @@ namespace Aps.Domain.Customer.Tests
     public partial class Customer_Registration_Service
     {
         private CustomerExistsRepositoryStub existsRepositoryStub;
+        private CustomerDoesNotExistRepositoryStub notExistRepositoryStub;
         private CustomerRegistrationService custregistrationService;
         private IIdentificationField identificationField;
         string name;
         string surname;
         string email;
+        private bool result;
         Exception expectedError = null;
 
         private void Given_the_CustomerExistsRepositoryStub()
@@ -68,6 +70,34 @@ namespace Aps.Domain.Customer.Tests
         private void And_a_customer_registration_service()
         {
             custregistrationService = new CustomerRegistrationService(existsRepositoryStub);
+        }
+
+        private void Given_the_CustomerDoesNotExistsRepositoryStub()
+        {
+            notExistRepositoryStub = new CustomerDoesNotExistRepositoryStub();
+        }
+
+        private void When_registering_a_customer_without_an_exiting_username()
+        {
+            try
+            {
+                custregistrationService.RegisterNewCustomer(identificationField, name, surname, email);
+            }
+            catch (Exception ex)
+            {
+                expectedError = ex;
+            }
+        }
+
+        private void And_a_customer_registration_valid_service()
+        {
+            custregistrationService = new CustomerRegistrationService(notExistRepositoryStub);
+        }
+
+        private void The_save_customer()
+        {
+            result = notExistRepositoryStub.SavedCustomer.Id.Equals(new CustomerId(identificationField));
+            Assert.IsTrue(result);
         }
     }
 }
