@@ -24,7 +24,6 @@ namespace Aps.Domain.AccountStatements.Tests
             then => the_description_should_be_expected("Total Due"), 
             and => the_value_should_be_expected("R1,500.00"));
         }
-
         [TestMethod]
         public void A_scrape_result_data_pair_for_an_account_statement_number_statement_field_is_converted_and_presented_correctly()
         {
@@ -87,7 +86,7 @@ namespace Aps.Domain.AccountStatements.Tests
             when => building_an_account_statement_entry(),
             and => getting_the_account_statement_entry_display_value(),
             then => the_description_should_be_expected("Due Date"),
-            and => the_value_should_be_expected("2016/01/31"));
+            and => the_value_should_be_expected(new DateTime(2016, 01, 31).ToShortDateString()));
         }
 
         [TestMethod]

@@ -4,6 +4,7 @@ namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
 {
     public struct NumericValue : IAccountStatementEntryData
     {
+        private static readonly DefaultFormatProviderSettings FormatProvider = new DefaultFormatProviderSettings();
         private const string DefaultNumberFormat = "{0:0}";
         private readonly decimal value;
 
@@ -54,7 +55,8 @@ namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
             {
                 string integerPart = split[0].GetAllDigits();
                 string fractionalPart = split[1].GetAllDigits();
-                return String.Format("{0},{1}", integerPart, fractionalPart);
+                
+                return String.Format("{0}{1}{2}", integerPart, FormatProvider.NumberDecimalSeparator, fractionalPart);
             }
 
             throw new ArgumentException("Value pair does not contain a numeric value");

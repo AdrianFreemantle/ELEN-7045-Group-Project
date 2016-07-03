@@ -11,11 +11,16 @@ namespace Aps
         public IFormatProvider NumberFormat
         {
             get { return DefaultNumberFormat; }
-        }
+        }        
 
         public IFormatProvider DateFormat
         {
             get { return DefaultDateFormat; }
+        }
+
+        public string NumberDecimalSeparator
+        {
+            get { return DefaultNumberFormat.NumberDecimalSeparator; }
         }
 
         static DefaultFormatProviderSettings()
