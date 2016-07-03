@@ -31,7 +31,7 @@ namespace Aps.Domain.Account.Tests
                 and => creating_another_account(),
                 and => an_account_scraper_validation_succeeded(),
                 and => another_account_scraper_validation_succeeded(),
-                and => persisting_an_account(),
+                and => persisting_an_account_in_a_clean_repository(),
                 and => persisting_another_account());
         }
 
@@ -54,10 +54,10 @@ namespace Aps.Domain.Account.Tests
                 and => creating_another_account(),
                 and => an_account_scraper_validation_succeeded(),
                 and => another_account_scraper_validation_succeeded(),
-                and => persisting_an_account(),
+                and => persisting_an_account_in_a_clean_repository(),
                 and => persisting_another_account(),
                 and => getting_the_total_accounts_persisted(),
-                then => then_two_accounts_should_be_persisted());
+                then => two_accounts_should_be_persisted());
         }
 
         [TestMethod]
@@ -75,12 +75,30 @@ namespace Aps.Domain.Account.Tests
                 and => account_credentials(credentials),
                 when => creating_an_account(),
                 and => an_account_scraper_validation_failed(),
-                and => persisting_an_account(),
+                and => persisting_an_account_in_a_clean_repository(),
                 and => getting_the_total_accounts_persisted(),
-                then => then_zero_accounts_should_be_persisted());
+                then => zero_accounts_should_be_persisted());
         }
 
+        [TestMethod]
+        public void Customer_registered_account_with_valid_accountnumber()
+        {
+            var customerid = new CustomerId(new EmailAddress("chrisv@live.co.za"));
+            var first = new AccountId(new CompanyName("Acme Ltd"), new AccountNumber("123456789"));
 
+            IEncryptionService encryptionService = new Encryption();
+            var credentials = Credentials.Create(new EmailAddress("chrisv@live.co.za"), new Password("123", "123", encryptionService));
+
+            Runner.RunScenario(
+                given => customer(customerid),
+                and => account_id(first),
+                and => account_credentials(credentials),
+                when => creating_an_account(),
+                and => an_account_scraper_validation_succeeded(),
+                and => persisting_an_account_in_a_clean_repository(),
+                and => getting_the_total_accounts_persisted(),
+                then => one_accounts_should_be_persisted());
+        }
 
     }
 }

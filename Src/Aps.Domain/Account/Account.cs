@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Aps.Domain.Customers;
 
 namespace Aps.Domain.Account
@@ -8,7 +9,6 @@ namespace Aps.Domain.Account
         private readonly CustomerId customerId;
         private readonly AccountId accountId;
         private readonly Credentials credentials;
-        private readonly DateTime dateAdded;
         private AccountStatus accountStatus;
 
         protected Account()
@@ -17,11 +17,19 @@ namespace Aps.Domain.Account
 
         internal Account(CustomerId customerId, AccountId accountId, Credentials credentials)
         {
+            Guard.ThatValueTypeNotDefaut(customerId, "customerId");
+            Guard.ThatValueTypeNotDefaut(accountId, "accountId");
+            Guard.ThatValueTypeNotDefaut(credentials, "credentials");
+
             this.customerId = customerId;
             this.accountId = accountId;
             this.credentials = credentials;
-            dateAdded = DateTime.Now;
             this.accountStatus = new AccountStatus(AccountStatus.AccountStatusType.Register);
+        }
+
+        public void Display(IAccountDisplayAdapter displayAdapter)
+        {
+           displayAdapter.Display(accountId);
         }
 
         public bool Equals(AccountId other)

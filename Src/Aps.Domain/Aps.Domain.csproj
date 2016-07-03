@@ -93,6 +93,8 @@
     <Compile Include="Account\AccountStatus.cs" />
     <Compile Include="Account\Credentials.cs" />
     <Compile Include="Account\AccountStatusUpdateService.cs" />
+    <Compile Include="Account\IAccountCreationService.cs" />
+    <Compile Include="Account\IAccountDisplayAdapter.cs" />
     <Compile Include="Account\IAccountStatusUpdateService.cs" />
     <Compile Include="Companies\BaseUrl.cs" />
     <Compile Include="Companies\BillingCycle.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Credential\SecurityCode.cs" />
     <Compile Include="Credential\PinNumber.cs" />
     <Compile Include="IAccountActivityNotificationRepository.cs" />
+    <Compile Include="IAccountId.cs" />
     <Compile Include="IAccountNumber.cs" />
     <Compile Include="INotificationService.cs" />
     <Compile Include="IScrapeSessionId.cs" />
@@ -139,7 +142,6 @@
     <Compile Include="DomainException.cs" />
     <Compile Include="ICompanyName.cs" />
     <Compile Include="ICustomerId.cs" />
-    <Compile Include="IAccountId.cs" />
     <Compile Include="IScrapeSessionResultCode.cs" />
     <Compile Include="Notifications\AccountActivityNotification.cs" />
     <Compile Include="Notifications\AccountActivityNotificationFactory.cs" />

@@ -1,6 +1,6 @@
 namespace Aps.Domain.Account
 {
-    public struct AccountStatusUpdateService
+    public class AccountStatusUpdateService
     {
         public void ActivateAccount(AccountId accountId)
         {

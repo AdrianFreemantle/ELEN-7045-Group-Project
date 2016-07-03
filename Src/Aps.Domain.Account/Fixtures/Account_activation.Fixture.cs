@@ -83,7 +83,7 @@ namespace Aps.Domain.Account.Tests
             secondAccount = accountFactory.CreateAccount(_customerId, _accountid2, _credentials);
         }
 
-        private void persisting_an_account()
+        private void persisting_an_account_in_a_clean_repository()
         {
             if (_scapervalidation1)
                 accountRepository.SaveAccount(firstAccount);
@@ -99,11 +99,15 @@ namespace Aps.Domain.Account.Tests
             _totAccounts = accountRepository.Count();            
         }
 
-        private void then_two_accounts_should_be_persisted()
+        private void one_accounts_should_be_persisted()
+        {
+            _totAccounts.ShouldBe(1);
+        }
+        private void two_accounts_should_be_persisted()
         {
             _totAccounts.ShouldBe(2);
         }
-        private void then_zero_accounts_should_be_persisted()
+        private void zero_accounts_should_be_persisted()
         {
             _totAccounts.ShouldBe(0);
         }
