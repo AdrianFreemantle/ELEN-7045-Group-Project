@@ -8,7 +8,7 @@ namespace Aps.Domain.Account
     {
         private readonly CustomerId customerId;
         private readonly AccountId accountId;
-        private readonly Credentials credentials;
+        private Credentials credentials;
         private AccountStatus accountStatus;
 
         protected Account()
@@ -30,6 +30,11 @@ namespace Aps.Domain.Account
         public void Display(IAccountDisplayAdapter displayAdapter)
         {
            displayAdapter.Display(accountId);
+        }
+
+        public void UpdateCredentials(Credentials credetnials)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Equals(AccountId other)
