@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
 {
@@ -55,8 +56,8 @@ namespace Aps.Domain.AccountStatements.StatementEntryDataTypes
             {
                 string integerPart = split[0].GetAllDigits();
                 string fractionalPart = split[1].GetAllDigits();
-                
-                return String.Format("{0}{1}{2}", integerPart, FormatProvider.NumberDecimalSeparator, fractionalPart);
+
+                return String.Format("{0}{1}{2}", integerPart, CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator, fractionalPart);
             }
 
             throw new ArgumentException("Value pair does not contain a numeric value");
